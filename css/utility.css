@@ -19,6 +19,17 @@
    position: sticky !important;
 }
 
+.overflow-hidden {
+   overflow: hidden !important;
+}
+
+.float-l {
+   float: left !important;
+}
+.float-r {
+   float: left !important;
+}
+
 .m-1 {
    margin: 1rem !important;
 }
