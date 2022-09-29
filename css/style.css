@@ -416,6 +416,10 @@ h1 {
    }
 }
 
+.infoCard {
+   color: #004b77;
+}
+
 @keyframes arrow {
    from {
       transform: translateY(-50%) rotate(45deg);

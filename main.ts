@@ -1,5 +1,5 @@
 const accordionList = document.getElementsByClassName("accordion");
-const navListIds = ["introduction", "vsc", "github", "git", "practical", "evaluation", "subission"];
+const navListIds = ["introduction", "vsc", "github", "git", "practical", "evaluation", "subission", "basics"];
 const goTopBtn: HTMLButtonElement = <HTMLButtonElement>document.getElementById("goTopBtn");
 const collapseBtn: HTMLButtonElement = <HTMLButtonElement>document.getElementById("collapseBtn");
 const headerBtn: HTMLAnchorElement = <HTMLAnchorElement>document.getElementById("title");
