@@ -1,5 +1,5 @@
 const accordionList = document.getElementsByClassName("accordion");
-const navListIds = ["introduction", "vsc", "github", "git", "practical", "evaluation", "subission", "basics"];
+const navListIds = ["motivation", "introduction", "teamwork", "files", "exam", "vsc", "github", "git", "practical", "evaluation", "subission"];
 const goTopBtn = document.getElementById("goTopBtn");
 const collapseBtn = document.getElementById("collapseBtn");
 const headerBtn = document.getElementById("title");
@@ -15,16 +15,16 @@ headerBtn.addEventListener("click", () => {
     goTopBtn.click();
     closeAll();
 });
-console.log(sideNavBtn);
 sideNavBtn.addEventListener("click", () => {
     if (sideNavBtn.firstElementChild.className != "navListRight") {
-        console.log("isLeft");
         navList.style.left = "0rem";
         sideNavBtn.firstElementChild.classList.add("navListRight");
     }
     else {
-        console.log("isRight");
-        navList.style.left = "-17.6rem";
+        if (window.matchMedia("(max-width: 992px)").matches)
+            navList.style.left = "-10.3rem";
+        else
+            navList.style.left = "-13.1rem";
         sideNavBtn.firstElementChild.classList.remove("navListRight");
     }
 });

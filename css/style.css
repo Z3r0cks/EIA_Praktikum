@@ -375,6 +375,15 @@ h1 {
    float: left;
 }
 
+.vid {
+   color: #84b5d3;
+}
+
+
+.infoCard {
+   color: #004b77;
+}
+
 @keyframes collapse {
    0% {
       right: 5rem;
@@ -414,10 +423,6 @@ h1 {
       transform: translateY(-50%) rotate(45deg);
       -webkit-transform: translateY(-50%) rotate(45deg);
    }
-}
-
-.infoCard {
-   color: #004b77;
 }
 
 @keyframes arrow {

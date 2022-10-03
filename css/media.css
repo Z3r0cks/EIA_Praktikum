@@ -5,7 +5,8 @@
    h2 {
       font-size: 0.8rem;
    }
-   h3 {
+   h3,
+   .vid {
       font-size: 0.6rem;
    }
    h4,
@@ -27,7 +28,8 @@
    h2 {
       font-size: 1.3rem;
    }
-   h3 {
+   h3,
+   .vid {
       font-size: 1.1rem;
    }
    h4,
@@ -51,11 +53,11 @@
       margin: 0.6rem 0rem;
    }
    .navList {
-      left: -17.6rem;
+      left: -10.3rem;
    }
 
-   .navList > div{
-      left: 17.68rem;
+   .navList > div {
+      left: 10.33rem;
    }
 }
 @media (min-width: 992px) {
@@ -65,7 +67,8 @@
    h2 {
       font-size: 1.8rem;
    }
-   h3 {
+   h3,
+   .vid {
       font-size: 1.6rem;
    }
    h4,
@@ -88,6 +91,12 @@
    .topic__subheader {
       margin: 0.6rem 0rem;
    }
+   .navList {
+      left: -13.2rem;
+   }
+   .navList > div {
+      left: 13.15rem;
+   }
 }
 @media (min-width: 1200px) {
    .navBtnWrapper {
@@ -99,7 +108,8 @@
    h2 {
       font-size: 2.1rem;
    }
-   h3 {
+   h3,
+   .vid {
       font-size: 1.9rem;
    }
    .topic__header,
