@@ -1,1 +1,1 @@
-# EIA_Classrom
+# EIA_Praktikum
