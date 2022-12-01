@@ -585,17 +585,126 @@
          <div class="panel">
             <div class="overflow-hidden">
                <h3 class="mb-5">Collatz-Problem</h3>
-               <p>Schreiben Sie ein Programm, welches die Collatz-Folge für eine beliebige Zahl berechnet.
+
+               <p>Schreiben Sie ein Programm, welches die Collatz-Folge für eine beliebige Zahl n (natürliche Zahl > 0)
+                  berechnet, und die jede
+                  Zahl der Zahlenfolge in der Konsole ausgibt.
                   Die Collatz-Folge ist eine Folge von Zahlen, die durch folgende Regeln definiert ist:</p>
                <ul>
                   <li>Wenn die Zahl gerade ist, teilen Sie sie durch 2.</li>
                   <li>Wenn die Zahl ungerade ist, multiplizieren Sie sie mit 3 und addieren 1 hinzu.</li>
                   <li>Wenn die Zahl 1 ist, ist die Folge beendet.</li>
                </ul>
+               <p>Wenn somit die Zahl 7 der Funktion übergeben wird, wirft diese mehrere Zahlen in der Konsole
+                  (console.log()) aus, bis die 1 erreicht wurde, dann hört die Funktion auf.</p>
                <p>Beispiel: Die Collatz-Folge für die Zahl 7 ist:</p>
-               <p> 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1</p>
-
+               <p> 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1</p> <br>
+               <a target="_blank" href="https://de.wikipedia.org/wiki/Collatz-Problem">Collatz auf Wikipedia</a>
                <br>
+               <h3 id="collatzTipps" class="topic__subheader accordion">Lösungsansätze<span class="arrow right"></span>
+               </h3>
+               <div class="panel">
+                  <ul>
+                     <li>
+                        <p>Die Funktion soll die Zahlenfolge berechnen, nachdem Sie die Startzahl (n) übergeben haben.
+                           Entsprechend ist ein Parameter wichtig</p>
+                     </li> <br>
+                     <li>
+                        <p>Zu Ausgabe jeder Zahlfolge ist eine console.log() nötig, natürlich lässt es sich auch als
+                           HTML
+                           erstellen. Je nachdem ist es wichtig, ob deine Funktion einen Rückgabewert hat oder nicht</p>
+                     </li><br>
+                     <li>
+                        <p>Die Funktion muss Bedingungen abfragen (if/else). Die Zahlenfolge endet immer mit: "4 2 1.
+                           Somit muss
+                           bei 1
+                           etwas anderes passieren als bei einer ungerade oder geraden Zahl</p>
+                     </li><br>
+                     <li>
+                        <p>Suche eine Möglichkeit, damit das Programm herausfinden kann, ob die eingebeben Zahl gerade
+                           oder
+                           ungerade ist. (Tipp: Modulo)</p>
+                     </li><br>
+                     <li>
+                        <p>Wenn die Zahlen 1 noch nicht erreicht wurde, ist die Zahlenfolge nicht zu Ende. Somit muss
+                           eine
+                           Möglichkeit gefunden werden, womit die Funktion erst aufhört zu arbeiten sobald die 1
+                           gefunden
+                           wurde, und die entsprechenden Prozesse so lange wiederholt, bis eine 1 ergibt. Hierbei gibt
+                           es
+                           mehrere Ansätze, der einfachste wäre die sogenannte Rekursion. Heißt, dass die Funktion sich
+                           selbst aufruft: <a target="_blank"
+                              href="https://de.wikipedia.org/wiki/Rekursive_Programmierung">Rekursion auf Wikipedia</a>
+                        </p> <br>
+                     </li>
+                     <li>
+                        <p>Bei der Verwerwendung der Rekursion muss immer darauf geachtet werde, dass das wiederaufrufen
+                           der eigenen Funktion irgendwann beendet wird.</p>
+                     </li>
+                  </ul>
+               </div>
+
+               <h3 id="collatzSolution" class="topic__subheader accordion">Hier klicken um die Lösung angezeigt
+                  zu
+                  bekommen<span class="arrow right"></span>
+               </h3>
+               <div class="panel">
+                  <p>Hinweis: Die Funktion ist rekursiv. Das heißt, dass diese Funktion sich selbst aufruft.
+                     Hierbei ist
+                     zu beachten, dass es auch einen Mechanismus geben muss, der den Prozess irgendwann
+                     beendet, so dass die
+                     Funktion sich nicht unendlich selbst aufruft. </p>
+                  <h4>Die Funktion im Ganzen:</h4>
+                  <pre>
+                     <code>
+   <span class="colorFunction">function</span> <span class="colorFunctionCall">collatz</span>(n: <span class="colorType">number</span>): <span class="colorType">void</span> {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(n);</span>
+      <span class="colorIf">if</span>(n == 1) {
+         <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>("End");</span>
+         <span class="colorIf">return</span>;
+      }
+      <span class="colorIf">if</span> (n % 2 == 0){
+         <span class="colorFunctionCall">collatz</span>(n / 2);
+      } <span class="colorIf">else</span> {
+         <span class="colorFunctionCall">collatz</span>(3 * n + 1);
+      }
+   }
+
+                     </code>
+                  </pre>
+                  <h4>Die Funktion mit Kommentaren:</h4>
+                  <pre>
+                     <code>
+   <span class="colorComment">// Die Funktion nimmt die Zahl (number) n entgegen und wirft nichts zurück (void)</span>
+   <span class="colorFunction">function</span> <span class="colorFunctionCall">collatz</span>(n: <span class="colorType">number</span>): <span class="colorType">void</span> {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(n);</span>
+
+      <span class="colorComment"></span>// Die If-Bedingung prüft ob die Zahl 1 ist, dann endet die Collatz-Folge</span>
+      <span class="colorIf">if</span>(n == 1) {
+         <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>("End");</span>
+
+         <span class="colorComment">// der return beendet die Funktion ohne etwas zurückzugeben. </span>
+         <span class="colorComment">// Hierdurch wird der Rest der Funktion unterhalb nicht ausgeführt</span>
+         <span class="colorIf">return</span>;
+      }
+
+      <span class="colorComment">// Die If-Abfrage prüft ob die Zahl gerade ist. Hier wird Modulo verwendet </span>
+      <span class="colorComment">// um den Rest zu erhalten. n Modulo 2 ergibt 0 wenn die Zahl gerade ist.</span>
+      <span class="colorIf">if</span> (n % 2 == 0) {
+         
+         <span class="colorComment">// Falls die Zahl gerade ist, wird die selbe Funktion noch einmal aufgerufen</span>
+         <span class="colorComment">// und als Parameter n / 2 übergeben.</span>
+         <span class="colorFunctionCall">collatz</span>(n / 2);
+      } <span class="colorIf">else</span> {
+         <span class="colorComment">// Falls die Zahl ungerade ist, wird die selbe Funktion ebenfalls noch einmal aufgerufen</span>
+         <span class="colorComment">// und als Parameter 3 * n + 1 übergeben.</span>
+         <span class="colorFunctionCall">collatz</span>(3 * n + 1);
+      }   
+   }
+
+                     </code>
+                  </pre>
+               </div>
 
             </div>
          </div>
@@ -608,7 +717,8 @@
             <div class="overflow-hidden">
                <p class="mb-3">Um zu erkennen, ob Sie die Inhalte verstanden haben können Sie hier die praktische
                   Prüfung des
-                  letzten Semesters anschauen. Dies dient als Referenz für die Inhalte, die Sie in diesem Modul erlernen
+                  letzten Semesters anschauen. Dies dient als Referenz für die Inhalte, die Sie in diesem Modul
+                  erlernen
                   sollen.
                   Außerdem können Sie hierdurch sehen wie eine solche praktische Prüfung aufgebaut ist.</p>
                <h1>Praktikum Endaufgabe SoSe22</h1>
@@ -617,33 +727,47 @@
                <ul>
                   <li>Zielgruppe sind <b> deutschsprachige Nutzer</b>, die <b>Spanisch </b> in einem Anfängerkurs
                      lernen wollen.</li>
-                  <li>Beim Start des Kurses in der Sprachlern-App wird zunächst ein Satz auf Deutsch angezeigt (bspw.:
+                  <li>Beim Start des Kurses in der Sprachlern-App wird zunächst ein Satz auf Deutsch angezeigt
+                     (bspw.:
                      "Ich heiße Gabriel").</li>
-                  <li>Ebenso werden die einzelnen Wörter der Übersetzung auf der zu erlernenden Sprache angezeigt, aber
+                  <li>Ebenso werden die einzelnen Wörter der Übersetzung auf der zu erlernenden Sprache angezeigt,
+                     aber
                      in einer zufälligen Reihenfolge (die Übersetzungswörter für oben genannten Satz in zufälliger
                      Reihenfolge wären bspw.: "Gabriel" "llamo" "Me").</li>
-                  <li>Der Nutzer muss nun die übersetzten Wörter in der richten Reihenfolge anklicken. Der erste Klick
-                     muss auf das Wort an erste Stelle des übersetzten Satzes gesetzt werden, der zweite Klick auf das
+                  <li>Der Nutzer muss nun die übersetzten Wörter in der richten Reihenfolge anklicken. Der erste
+                     Klick
+                     muss auf das Wort an erste Stelle des übersetzten Satzes gesetzt werden, der zweite Klick auf
+                     das
                      Wort an zweiter Stelle usw...</li>
                   <li>Klickt der Nutzer ein Wort richtig an, dann gibt es einen Punkt, das Wort wird in einem
-                     Übersetzungsbereich angezeigt (bspw.: "Me"). Der Nutzer kann danach ein anderes Wort anklicken.
+                     Übersetzungsbereich angezeigt (bspw.: "Me"). Der Nutzer kann danach ein anderes Wort
+                     anklicken.
                   </li>
-                  <li>Klickt der Nutzer wieder ein Wort richtig an, dann gibt es einen weiteren Punkt, das Wort wird
-                     ergänzend im Übersetzungsbereich angezeigt ("Me llamo"). Der Nutzer kann danach ein anderes Wort
+                  <li>Klickt der Nutzer wieder ein Wort richtig an, dann gibt es einen weiteren Punkt, das Wort
+                     wird
+                     ergänzend im Übersetzungsbereich angezeigt ("Me llamo"). Der Nutzer kann danach ein anderes
+                     Wort
                      anklicken.</li>
-                  <li>Klick der Nutzer ein falsches Wort an, gibt es einen Punkt Abzug, im Übersetzungsbereich werden
+                  <li>Klick der Nutzer ein falsches Wort an, gibt es einen Punkt Abzug, im Übersetzungsbereich
+                     werden
                      nur die bisher richtigen Wörter angezeigt.</li>
-                  <li>Das Punktekonto des Nutzers darf nicht in den Minusbereich gehen. Der aktuelle Punktestand ist für
+                  <li>Das Punktekonto des Nutzers darf nicht in den Minusbereich gehen. Der aktuelle Punktestand
+                     ist für
                      den Nutzer immer sichtbar.</li>
                   <li>Sobald die Übersetzung vollständig ist wechselt die Anwendung zum nächsten Übungssatz.</li>
-                  <li>Wenn alle Übungssätze abgeschlossen wurden wird dem Nutzer der finale Punktestand angezeigt und
+                  <li>Wenn alle Übungssätze abgeschlossen wurden wird dem Nutzer der finale Punktestand angezeigt
+                     und
                      zum Abschließen des Kurses gratuliert.
                      Beim Start bzw. Neustart der Anwendung werden die Übungssätze in einer zufälligen Reihenfolge
-                     durchgeführt. Ebenfalls zufällig werden immer die Worte in Ihrer Reihenfolge dargestellt.</li>
-                  <li>Sie können selbst die Übungssätze definieren. Ebenso können Sie selbst entscheiden, wie Sie Worte
-                     und Satzzeichen trennen (bspw. bei "¡La vida loca!" können die Ausrufezeichen separat oder als Teil
+                     durchgeführt. Ebenfalls zufällig werden immer die Worte in Ihrer Reihenfolge dargestellt.
+                  </li>
+                  <li>Sie können selbst die Übungssätze definieren. Ebenso können Sie selbst entscheiden, wie Sie
+                     Worte
+                     und Satzzeichen trennen (bspw. bei "¡La vida loca!" können die Ausrufezeichen separat oder
+                     als Teil
                      der Worte verstanden werden).</li>
-                  <li>Die Anwendung benötigt keine speziellen Animationen zwischen den Darstellungen. Die Inhalte können
+                  <li>Die Anwendung benötigt keine speziellen Animationen zwischen den Darstellungen. Die Inhalte
+                     können
                      einfach "sofort-artig" erscheinen.</li>
                   <li>Die Sprachlern-App kann in drei Schwierigkeitsstufen gespielt werden:
                      <ol>
@@ -652,11 +776,13 @@
                         <li>Schwer: der Kurs besteht aus 15 Übungssätzen.</li>
                      </ol>
                   </li>
-                  <li>Die Anwendung ist optimiert für eine Smartphone Darstellung im Portrait-Format (ca. 375 x 667
+                  <li>Die Anwendung ist optimiert für eine Smartphone Darstellung im Portrait-Format (ca. 375 x
+                     667
                      Pixel).</li>
                </ul>
                <h3>Beurteilung</h3>
-               <p>Note der End-Abgabe basiert auf den dafür ausgefüllten Anforderungs-Punkten (siehe unten). Bis zu ein
+               <p>Note der End-Abgabe basiert auf den dafür ausgefüllten Anforderungs-Punkten (siehe unten). Bis
+                  zu ein
                   Punkt darf dabei nicht erfüllt sein um die 1 zu erhalten. <br>
                   Jeder weitere fehlende Punkt verringert die Note um 1. (4.0 >= Bestanden)<br>
                   Jedes erfüllte optionale Ziel erhöht die Note um 1. (Maximale Bestnote: 1).<br>
@@ -664,13 +790,17 @@
                <h3>Tipps</h3>
                <p> Machen Sie sich ein Konzept! <br>
 
-                  Versuchen Sie den Anlauf der Sprachlern-App in einem Flowchart/Anwendungsfalldiagramm darzustellen. An
-                  welchen Punkten werden Entscheidungen gefällt? Muss der Computer gewisse Sachen abfragen? Wann muss
+                  Versuchen Sie den Anlauf der Sprachlern-App in einem Flowchart/Anwendungsfalldiagramm
+                  darzustellen. An
+                  welchen Punkten werden Entscheidungen gefällt? Muss der Computer gewisse Sachen abfragen? Wann
+                  muss
                   der
-                  Nutzer interagieren, wie interagiert er, was sind seine Optionen? Welchen Ablauf hat der Computer, wie
+                  Nutzer interagieren, wie interagiert er, was sind seine Optionen? Welchen Ablauf hat der
+                  Computer, wie
                   wählt er einen Satz aus? Wie werden die Inhalte dargestellt? Welche Elemente sind interaktiv und
                   können
-                  vom Nutzer ausgewählt werden? Machen Sie sich darüber Gedanken, wann sich die Darstellung für den
+                  vom Nutzer ausgewählt werden? Machen Sie sich darüber Gedanken, wann sich die Darstellung für
+                  den
                   Nutzer
                   ändert.</p>
                <h3>Anforderungspunkte</h3>
@@ -680,9 +810,11 @@
                      <b>Konzeptentwurf</b> <br>
                      <ul>
                         <li>In einem Flussdiagramm haben Sie den grundsätzlichen Interaktionspfad der Anwendung
-                           dargestellt (Interaktion des Nutzers und Verhalten des Systems). Den Papier-Entwurf bitte als
+                           dargestellt (Interaktion des Nutzers und Verhalten des Systems). Den Papier-Entwurf
+                           bitte als
                            Scan / Foto digitalisieren und beilegen.</li>
-                        <li>Bilden Sie ebenso in einer Skizze die Darstellung des GUIs ab und legen Sie die Darstellung
+                        <li>Bilden Sie ebenso in einer Skizze die Darstellung des GUIs ab und legen Sie die
+                           Darstellung
                            Ihrer Abgabe bei. Sie können ein Wireframing-Tool nutzen oder mit Papier und Bleistift
                            arbeiten (Papier-Entwurf bitte wieder scannen).</li>
                      </ul>
@@ -695,7 +827,8 @@
                      <ul>
                         <li>Die Fläche, auf der die Übungssätze dargestellt werden, besitzt eine passende
                            Hintergrundfarbe (oder Hintergrundtextur).</li>
-                        <li>Die Inhalte (Übungssatz, Übersetzungswörter, Übersetzungsbereich usw.) sind sinnvoll auf dem
+                        <li>Die Inhalte (Übungssatz, Übersetzungswörter, Übersetzungsbereich usw.) sind sinnvoll
+                           auf dem
                            Bildschirm verteilt, voneinander unterscheidbar und überlagern sich nicht.
                         </li>
                         <li>Die einzelnen Übersetzungswörter sind als auswählbare Elemente erkennbar.</li>
@@ -704,29 +837,38 @@
                      <b>Programmierung</b> <br>
                      <ul>
                         <li>Das Skript erzeugt keine Fehler in der Konsole.</li>
-                        <li>Ein Übungssatz mit seiner Übersetzung ist auf programmatischer Ebene sinnvoll als Objekt
+                        <li>Ein Übungssatz mit seiner Übersetzung ist auf programmatischer Ebene sinnvoll als
+                           Objekt
                            strukturiert.
                         </li>
                         <li>Das Skript bildet, je nach ausgewählter Schwierigkeitsstufe, eine bestimmte Anzahl von
                            Übungssätzen, die nacheinander ausgegeben werden.</li>
-                        <li>Die Reihenfolge der Übungssätze wird zufällig generiert und variiert daher bei jedem Start.
+                        <li>Die Reihenfolge der Übungssätze wird zufällig generiert und variiert daher bei jedem
+                           Start.
                            Jeder Übungssatz kommt nur einmal pro Kursdurchlauf vor.</li>
                         <li>Die Reihenfolge der Übersetzungswörter wird ebenfalls zufällig generiert.</li>
-                        <li>Das Skript erzeugt für jeden Übungssatz und den Übersetzungswörtern eine Darstellung mit
+                        <li>Das Skript erzeugt für jeden Übungssatz und den Übersetzungswörtern eine Darstellung
+                           mit
                            HTML-Elementen.</li>
                         <li>Die einzelnen Übersetzungswörter können vom Nutzer ausgewählt werden. Ein mehrfaches
                            Auswählen eines Wortes ist möglich.</li>
-                        <li>Das Skript überprüft bei Auswahl eines Übersetzungswortes, ob dieses Wort in der richtigen
+                        <li>Das Skript überprüft bei Auswahl eines Übersetzungswortes, ob dieses Wort in der
+                           richtigen
                            Reihenfolge ausgewählt wurde. Dafür muss das Skript für ein ausgewähltes Wort die
                            entsprechende Stelle im übersetzten Satz kennen.</li>
-                        <li>Das Skript übernimmt das Übersetzungswort in den Übersetzungsbereich, wenn das Wort an der
-                           richtigen Reihenfolge geklickt wurde und zählt den Punktestand des Nutzers um einen Punkt
+                        <li>Das Skript übernimmt das Übersetzungswort in den Übersetzungsbereich, wenn das Wort an
+                           der
+                           richtigen Reihenfolge geklickt wurde und zählt den Punktestand des Nutzers um einen
+                           Punkt
                            hoch.</li>
-                        <li>Das Skript reduziert den Punktestand des Nutzers um einen Punkt, wenn das ausgewählte Wort
-                           nicht korrekt ausgewählt wurde und gibt eine einfache Fehlermeldung (per Alert) aus.</li>
+                        <li>Das Skript reduziert den Punktestand des Nutzers um einen Punkt, wenn das ausgewählte
+                           Wort
+                           nicht korrekt ausgewählt wurde und gibt eine einfache Fehlermeldung (per Alert) aus.
+                        </li>
                         <li>Das Skript zeigt den nächsten Übungssatz an, sobald für den aktuellen Übungssatz die
                            Übersetzung vollständig ist.</li>
-                        <li>Das Skript zeigt am Ende, wenn alle Übungssätze abgeschlossen wurden, eine Zusammenfassung
+                        <li>Das Skript zeigt am Ende, wenn alle Übungssätze abgeschlossen wurden, eine
+                           Zusammenfassung
                            mit dem finalen Punktestand an.</li>
                      </ul>
                      <b>Annotationen</b> <br>
@@ -738,14 +880,20 @@
                      Bewertung mit ein (siehe oben).<br>
                      <ul>
                         <li>Visuell ansprechende Darstellung der Übungssätze und Übersetzungswörter.</li>
-                        <li>Das Auswählen von Wörtern und das positive Feedback an den Nutzer (richtiges / falsches
+                        <li>Das Auswählen von Wörtern und das positive Feedback an den Nutzer (richtiges /
+                           falsches
                            Wort), sowie das Wechseln von einem Übungssatz zum nächsten ist animiert.</li>
-                        <li>Relevante Aktionen in der Anwendung werden mit Sounds unterstützt (die Auswahl von einem
-                           Wort; das Feedback zur Auswahl falsch / richtig; nächster Übungssatz; Ende des Kurses).</li>
-                        <li>Um es für den Nutzer etwas schwerer zu machen werden zu den Worten, die im tatsächlichen
-                           Übersetzungssatz auch vorkommen, zusätzlich auch andere Worte angezeigt, die nicht vorkommen.
+                        <li>Relevante Aktionen in der Anwendung werden mit Sounds unterstützt (die Auswahl von
+                           einem
+                           Wort; das Feedback zur Auswahl falsch / richtig; nächster Übungssatz; Ende des Kurses).
                         </li>
-                        <li>Zum Anwendungsstart kann der Nutzer, neben Spanisch, auch eine andere Sprache wählen, die
+                        <li>Um es für den Nutzer etwas schwerer zu machen werden zu den Worten, die im
+                           tatsächlichen
+                           Übersetzungssatz auch vorkommen, zusätzlich auch andere Worte angezeigt, die nicht
+                           vorkommen.
+                        </li>
+                        <li>Zum Anwendungsstart kann der Nutzer, neben Spanisch, auch eine andere Sprache wählen,
+                           die
                            geübt werden soll. Besonders schön wäre eine Erweiterung, um Ukrainisch zu lernen.</li>
                         <li>Neben der Punktezahl wird ebenfalls der aktuelle Fortschritt als Text-Element (bspw.:
                            "Übungssatz 3 von 15") und in Form eines Balkens (Progressbar) angezeigt.</li>

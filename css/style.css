@@ -379,9 +379,38 @@ h1 {
    color: #84b5d3;
 }
 
-
 .infoCard {
    color: #004b77;
+}
+
+pre {
+   background-color: #1e1f20;
+   color: #efefef;
+   border-radius: 9px;
+}
+
+.colorFunction {
+   color: #2b76c7;
+}
+
+.colorFunctionCall {
+   color: #DCDCAA;
+}
+
+.colorIf {
+   color: #C586C0;
+}  
+
+.colorType {
+   color: #099274;
+}
+
+.colorComment {
+   color: #8a8a8a;
+}
+
+.colorConsole {
+   color: #7db5f0;
 }
 
 @keyframes collapse {

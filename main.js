@@ -1,5 +1,5 @@
 const accordionList = document.getElementsByClassName("accordion");
-const navListIds = ["motivation", "practice", "introduction", "teamwork", "files", "exam", "vsc", "github", "git", "practical", "evaluation", "subission"];
+const navListIds = ["motivation", "practice", "introduction", "teamwork", "files", "exam", "vsc", "github", "git", "practical", "evaluation", "subission", "collatzSolution", "collatzTipps"];
 const goTopBtn = document.getElementById("goTopBtn");
 const collapseBtn = document.getElementById("collapseBtn");
 const headerBtn = document.getElementById("title");
@@ -70,4 +70,17 @@ function toggleSingleArr(arrow) {
     else
         arrow.className = "arrow right";
 }
+// Collatz problem
+function collatz(n) {
+    console.log(n);
+    if (n == 1) {
+        console.log("End");
+        return;
+    }
+    if (n % 2 == 0)
+        collatz(n / 2);
+    else
+        collatz(3 * n + 1);
+}
+collatz(7);
 //# sourceMappingURL=main.js.map
