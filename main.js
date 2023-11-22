@@ -1,9 +1,10 @@
 const accordionList = document.getElementsByClassName("accordion");
-const navListIds = ["motivation", "practice", "introduction", "teamwork", "files", "exam", "vsc", "github", "git", "practical", "evaluation", "subission", "collatzSolution", "collatzTipps"];
+const navListIds = ["motivation", "practice", "introduction", "teamwork", "files", "exam", "vsc", "github", "git", "practical", "evaluation", "subission"];
 const goTopBtn = document.getElementById("goTopBtn");
 const collapseBtn = document.getElementById("collapseBtn");
 const headerBtn = document.getElementById("title");
 const sideNavBtn = document.getElementById("sideNavBtn");
+const codeBlock = document.querySelectorAll(".codeBlock");
 const navList = document.querySelector(".navList");
 goTopBtn.addEventListener("click", () => {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
@@ -83,4 +84,36 @@ function collatz(n) {
         collatz(3 * n + 1);
 }
 collatz(7);
+
+codeBlock.forEach(el => {
+    el.addEventListener('click', function () {
+        const textarea = document.createElement('textarea');
+        textarea.value = this.innerText;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        document.getElementById('copyConfirmation').style.display = 'block';
+        setTimeout(function () {
+            document.getElementById('copyConfirmation').style.display = 'none';
+        }, 2000);
+    });
+});
+
+// function copyToClipboard() {
+//     console.log(this);
+//     const textarea = document.createElement('textarea');
+//     textarea.value = '<script defer src="./script.js"></script>';
+//     document.body.appendChild(textarea);
+//     textarea.select();
+//     document.execCommand('copy');
+//     document.body.removeChild(textarea);
+
+//     document.getElementById('copyConfirmation').style.display = 'block';
+//     setTimeout(function () {
+//         document.getElementById('copyConfirmation').style.display = 'none';
+//     }, 2000);
+// }
+
 //# sourceMappingURL=main.js.map

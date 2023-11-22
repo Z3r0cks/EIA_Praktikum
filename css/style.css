@@ -9,8 +9,8 @@
 body {
    margin: 0;
    padding: 0;
-   background-color: #303030;
-   color: #efefef;
+   background-color: #272727;
+   color: #dedede;
    font-family: "Poppins";
 }
 
@@ -127,15 +127,21 @@ a {
 
 a {
    background: linear-gradient(to right, #0e4e92, #00a2ffbd), linear-gradient(to right, #1497be, #01d151);
-   background-size: 100% 2px, 0 3px;
-   background-position: 100% 100%, 0 100%;
+   background-size:
+      100% 2px,
+      0 3px;
+   background-position:
+      100% 100%,
+      0 100%;
    background-repeat: no-repeat;
    transition: background-size 400ms;
 }
 
 a:hover {
    text-decoration: none;
-   background-size: 0 2px, 100% 3px;
+   background-size:
+      0 2px,
+      100% 3px;
 }
 
 h1 {
@@ -221,8 +227,12 @@ h1 {
 .navlink {
    color: #afd3e7;
    background: linear-gradient(to right, #0e4e92, #00a2ffbd), linear-gradient(to right, #1497be, #01d151);
-   background-size: 100% 1px, 0 1px;
-   background-position: 100% 100%, 0 100%;
+   background-size:
+      100% 1px,
+      0 1px;
+   background-position:
+      100% 100%,
+      0 100%;
    background-repeat: no-repeat;
    transition: background-size 400ms;
 }
@@ -230,7 +240,9 @@ h1 {
 .navlink:hover {
    color: #afd3e7;
    text-decoration: none;
-   background-size: 0 1px, 100% 1px;
+   background-size:
+      0 1px,
+      100% 1px;
 }
 
 /* ARROW */
@@ -394,12 +406,12 @@ pre {
 }
 
 .colorFunctionCall {
-   color: #DCDCAA;
+   color: #dcdcaa;
 }
 
 .colorIf {
-   color: #C586C0;
-}  
+   color: #c586c0;
+}
 
 .colorType {
    color: #099274;
@@ -411,6 +423,37 @@ pre {
 
 .colorConsole {
    color: #7db5f0;
+}
+
+.codeBlock {
+   display: inline-block;
+   background-color: #1e1f20;
+   padding: 2px 12px;
+   border: 1px solid #ffffff;
+   cursor: pointer;
+   border-radius: 7px;
+   font-size: 18px;
+}
+
+.copyToClipboard {
+   position: absolute;
+   right: 0;
+   top: 0;
+}
+
+#copyConfirmation {
+   position: fixed;
+   width: 207px;
+   height: 100px;
+   top: 79px;
+   right: 0;
+   transform: translateX(-50%);
+   font-size: 30px;
+   text-align: center;
+   padding: 1.7rem;
+   border-radius: 9px;
+   background-color: #0e4e92;
+   color: #efefef;
 }
 
 @keyframes collapse {

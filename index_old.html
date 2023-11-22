@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="./css/utility.css">
+   <link rel="stylesheet" href="./css/normalizer.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./css/fonts.css">
+   <link rel="stylesheet" href="./css/media.css">
+   <script src="main.js" defer></script>
+   <title>EIA1 Praktikum</title>
+</head>
+
+<body>
+   <header>
+      <div class="header">
+         <a id="title">
+            <h1>EIA-Praktikum JavaScript</h1>
+         </a>
+         <div>
+            <a class="header_a mr-1" href="./info.html"><button class="btn btn-primary">Kontakt</button></a>
+            <a class="header_a"
+               href="https://felix.hs-furtwangen.de/url/RepositoryEntry/7733251"
+               target="_blank"><button class="btn btn-primary">Felix-Kurs</button></a>
+         </div>
+      </div>
+
+      <nav>
+         <ul class="navList">
+            <div id="sideNavBtn">
+               <span></span>
+            </div>
+            <li>
+               <a class="navlink" id="motivationNav">Motivation</a>
+            <li>
+               <a class="navlink" id="introductionNav">Einrichtung</a>
+               <ul class="subList">
+                  <li>
+                     <a class="navlink" id="vscNav">Visual Studio Code</a>
+                  </li>
+                  <li>
+                     <a class="navlink" id="githubNav">Github</a>
+                  </li>
+                  <li>
+                     <a class="navlink" id="gitNav"> Git</a>
+                  </li>
+               </ul>
+            </li>
+            <li>
+               <a class="navlink" id="practicalNav"> Praktikum</a>
+               <ul class="subList">
+                  <li>
+                     <a class="navlink" id="evaluationNav"> Bewertung</a>
+                  </li>
+                  <li>
+                     <a class="navlink" id="subissionNav"> Abgabe</a>
+                  </li>
+                  <li>
+                     <a class="navlink" id="teamworkNav"> Teamwork</a>
+                  </li>
+               </ul>
+            </li>
+            <li>
+               <a class="navlink" id="filesNav">Ordnerstruktur</a>
+            <li>
+            <li>
+               <a class="navlink" id="practiceNav">Übung(en)</a>
+            <li>
+            <li>
+               <a class="navlink" id="examNav">Letzte Endabgabe</a>
+            <li>
+         </ul>
+      </nav>
+   </header>
+
+   <main>
+      <div class="container">
+
+         <!------------------------------------------------------------- why --------------------------------------------------------------------->
+         <h2 id="motivation" class="contentHeader topic__header accordion">Motivation<span class="arrow right"></span>
+         </h2>
+         <div class="panel">
+            <div class="overflow-hidden">
+               <p class="mb-5">Die Frage warum Personen die Medienkonzeption studieren denn auch programmieren lernen,
+                  gehört zu den häufigsten Fragen. <br>
+                  Obwohl alleine die Inhalte völlig ausreichend sind dies zu begründen - da Sie sich dazu entschlossen
+                  haben in einem
+                  digitale Beruf die Postition anzustreben, die später grundsätzlich über die Umsetzung bestimmt und Sie
+                  somit auch die Inhalte zumindest kennen sollten - möchte ich hier vor allem einen anderen Aspekt
+                  ansprechen, und zwar die Begeisterung davon Geschichten zu erzählen.<br> <br>
+                  Das Geschichten erzählen liegt im Blut der meisten von uns, egal ob nun Studierender oder nicht. Die
+                  Art der Geschichte ist zumeist nur sehr unterschiedlich, und das ist auch sehr gut so. <br>
+                  Während der Begriff des Künstlers sehr offen ist, haben viele von uns das Verlangen Dinge zu
+                  erschaffen. Die Begeisterung wenn etwas so funktioniert wie es soll, das schreiben eines Buches
+                  welches andere Menschen begeistert, die Produktion von Musik die Emotionen und Gefühle zum Ausdruck
+                  bringt. Ein spannender Film der z.B.: Misstände aufzeigt, oder einfach nur unterhält, oder ein Spiel
+                  welches die Menschen fordert und dazu aufruft immer besser in dem zu werden, was sie tun. <br> Das
+                  alles
+                  sind Geschichten die erzählt werden wollen und hinter denen Menschen stehen um andere Menschen
+                  auf irgendeiner Art zu begeistern, zu berühren. <br> <br>
+                  Das Instrument der Programmierung ist hierbei eines der wichtigsten und besten Werkzeuge, da es
+                  ermöglicht alles nur erdenklich in die Realtität umzusetzten und dabei ist nicht nur ein logisches
+                  Denken sondern vor allem auch Kreativität und Pioniergeist gefragt. <br> Auch wenn es mit diesen
+                  Worten schwierig ist Sie davon zu überzeugen sich diesem Thema zu öffnen möchte ich zumindest einer
+                  anderen Person das Wort geben, die es mit ihre Poesie besser schafft davon zu Überzeugen und ich
+                  hoffe, dass Sie sowohl dem folgendem Video als auch der Programmierung einer Chance geben zu zeigen,
+                  was
+                  dahinter steckt. <br> <br>
+                  <a class="vid" target="_blank" href="https://www.youtube.com/embed/-jRREn6ifEQ"> <b> The poetry of
+                        programming | Linda
+                        Liukas </b> </a> <br> <br>
+                  Danke an Prof. Dell´Oro für diesen Video-Tipp.
+               </p>
+            </div>
+         </div>
+
+         <!------------------------------------------------------------- Introduction --------------------------------------------------------------------->
+         <h2 id="introduction" class="contentHeader topic__header accordion"> Einrichtung <span
+               class="arrow right"></span>
+         </h2>
+         <div class="panel">
+            <p> Um in diesem Kurs die praktischen Aufgaben zu lösen, ist es nötwendig die Arbeitsumgebung einzurichten.
+               Hierzu
+               benötigen Sie Programme auf dem System mit welchen Sie arbeiten werden. Da die Einrichtung während des
+               ersten
+               Praktikums durchgeführt wird, dient dies hier lediglich als Kurzanleitung. </p>
+            <div class="ml-2">
+               <!------------------------------------------------------------- VS-CODE --------------------------------------------------------------------->
+               <h3 id="vsc" class="topic__subheader accordion">Visual Studio Code (VSC, VS-Code) <span
+                     class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <p>
+                        <a href="https://code.visualstudio.com/" target="_blank"><img class="logo mx-1 float-l"
+                              src="./assets/img/vsc_logo.png" alt="VSC Logo">
+                        </a>
+                        VS-Code ist ein Texteditor mit welchem die enstsprechenden Codezeilen geschrieben werden können.
+                        VSC
+                        ist im Bereich der Webentwicklung der Industriestandard. Durch seine Schlankheit ist VSC nicht
+                        Performancelastig und kann gleichzeitig durch Erweiterungen so angepasst werden, dass es für
+                        alle Bereiche der Entwicklung passend ist, nicht nur für die Webentwicklung.
+                     </p>
+                  </div>
+                  <div class="overflow-hidden">
+                     <h4 class="install__header">Installation</h4>
+                     <p><img class="logo mx-1 float-l" src="./assets/img/vsc1.jpg" alt="VSC-Mac" width="220px">
+                        Sie finden VSC <a class="link" target="_blank" href="https://code.visualstudio.com/">hier</a>.
+                        Mit einem Klick auf den Pfeil (rot unterstrichen in Abbildung) können Sie die MacOs (Apple-Mac)
+                        Version
+                        herunterladen. Achten Sie darauf, immer den Stable-Build zu nehmen. <br>
+                        Anschließend führen Sie die Installation auf Ihrem System durch. Es wird geraten das Programm
+                        auf englisch zu belassen.</p>
+                  </div>
+                  <div class="overflow-hidden">
+                     <h4 class="install__header">Kurzeinweißung</h4>
+                     <p><img class="mb-3" src="./assets/img/vsc2.jpg" alt="VSC Bild mit Informationen" width="100%">
+                     <p class="warn"><svg class="mr-1" fill="none" xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 24 24">
+                           <path d="M3 3h16v2H5v14h14v2H3V3zm18 0h-2v18h2V3zM11 15h2v2h-2v-2zm2-8h-2v6h2V7z"
+                              fill="currentColor" />
+                        </svg>Ihr VSC wird nach der Installation nicht genauso aussehen, da auf
+                        dem Bild individuelle Extensions installiert wurden und das Programm und über die Zeit
+                        angepasst wurde.</p>
+                     </p>
+                  </div>
+                  <div class="overflow-hidden">
+                     <h4 class="install__header">Empfohlene Extensions</h4>
+                     <p>Bei einem Klick auf das Extensions-Icon auf der linken Seite <img
+                           src="./assets/img/ext_icon.jpg" alt="Extensions-Icon">, öffnet sich ein Menü mit dem
+                        Erweiterungen gesucht und installiert werden können, folgende Erweiterungen werden empfohlen,
+                        sind aber
+                        nicht notwendig für das abschließen der praktischen Arbeiten:</p> <br>
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th scope="col"></th>
+                              <th scope="col">Logo</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Beschreibung</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <th scope="row">1</th>
+                              <td><img src="./assets/img/material_theme.jpg" alt="material_theme-Icon" width="40px">
+                              </td>
+                              <td>Material Theme</td>
+                              <td>Hierdurch werden andere Icons im Explorer in VSC angezeigt.</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">2</th>
+                              <td><img src="./assets/img/live_server.jpg" alt="live_server-Icon" width="40px">
+                              </td>
+                              <td>Live Server</td>
+                              <td>Eine Erweiterung mit welcher besser programmiert werden kann, da bei einer Änderung
+                                 die Seite automatisch neu lädt. Hierdurch wird ein Lokaler Server simuliert.</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">3</th>
+                              <td><img src="./assets/img/highlight_tag.jpg" alt="highlight_tag-Icon" width="40px">
+                              </td>
+                              <td>Highlight Matching Tag</td>
+                              <td>Highlightet entsprechende (HTML) Tags für eine bessere Übersichtlichkeit</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">4</th>
+                              <td><img src="./assets/img/scss_formater.jpg" alt="scss_formater-Icon" width="40px">
+                              </td>
+                              <td>SCSS Formatter</td>
+                              <td>SCSS Formatter sorgt dafür, dass beim verwenden von CSS die Inhalte richtig
+                                 formatiert werden. Verwendet werden kann es mit Rechtsklick (MAC: Doppeltouch mit Pad
+                                 oder beide Maustasten) irgendwo im Codebereich und anschließend auf "Format
+                                 Document"</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+
+               <!------------------------------------------------------------- GITHUB --------------------------------------------------------------------->
+               <h3 id="github" class="topic__subheader accordion">Github<span class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <p class="mb-5"><a href="https://github.com/" target="_blank"><img class="logo mx-1 float-l"
+                              src="./assets/img/github_logo.png" alt="Github Logo"></a>
+                        Github ist eine Plattform für die Versionsverwaltung. Für die genauere Beschreibung von Github
+                        wenden Sie sich bitte an den Professor oder einem Betreuer. Die Verwendung von solchen Portalen
+                        wird im digitalen Bereich oft vorausgesetzt, weshalb es auch zum Standard gehört. Die Vorteile
+                        der Benutzung werden hier kurz erläutert, hiebei wird für die bessere Vertändlichkeit nicht
+                        zwischen Git und Github unterschieden.</p>
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th scope="col"></th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Beschreibung</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <th scope="row">1</th>
+                              <td>Sicherheit</td>
+                              <td>Durch Github haben Sie jederzeit den aktuellen Stand und alle vergangenen Versionen
+                                 Ihres
+                                 Projektes. Falls Sie durch einen technischen Ausfall nicht mehr auf die Inhalte
+                                 zugreifen können, können Sie über die Plattform immer den aktuellen Stand klonen.
+                                 Außerdem ist es möglich ältere Stände zu laden, falls bei der Entwicklung etwas schief
+                                 ging. Zusätzlich erlaubt es Ihnen von mehr als einem PC am Projekt zu arbeiten und beim
+                                 welchsel immer auf den aktuellen Stand zu springen.</td>
+                           </tr>
+                           <th scope="row">2</th>
+                           <td>Teamarbeit</td>
+                           <td>An Projekten wird überlicherweiße nicht alleine gearbeitet sondern im Team. Durch Git
+                              lassen sich ein Projekt in Branches teilen, mit welchen eine Gruppe an einem Bereich
+                              arbeiten kann
+                              während ein anderes Team an einem anderen Bereich arbeitet. Dies ist für das Praktikum
+                              nicht relevant.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="overflow-hidden">
+                     <h4 class="install__header">Registrieren</h4>
+                     <p>Die Registrierung finden Sie <a class="link" target="_blank"
+                           href="https://github.com/">hier</a>.
+                        <br>
+                        Es wird geraten private Daten für die Registrierung zu verwenden, da Github zum Standard gehört
+                        und Sie es auch nach dem Studium benötigen könnten. Falls Sie dies jedoch nicht möchten, können
+                        Sie auch die HFU-Mail verwenden. Bedenken Sie jedoch, dass nach Beendigung des Studiums diese
+                        E-Mail Adresse gelöscht wird.
+                     </p>
+                  </div>
+               </div>
+               <!------------------------------------------------------------- GIT --------------------------------------------------------------------->
+               <h3 id="git" class="topic__subheader accordion">Git<span class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <p class="mb-5"><a href="https://git-scm.com/" target="_blank"><img class="logo mx-1 float-l"
+                              src="./assets/img/git_logo.png" alt="Git Logo"></a>
+                        Git ist eine Software zur Versionsverwaltung. Git wird für die Verwendung von Github und VSC
+                        benötigt.
+                     </p>
+                  </div>
+                  <div class="install">
+                     <h4 class="contentHeader install__header">Installation</h4>
+                     <p class="mb-5">
+                        Sie finden Git hier: <a class="link" target="_blank" href="https://git-scm.com/">Windows</a>, <a
+                           class="link" target="_blank" href="https://git-scm.com/download/mac">MacOs</a>. <br>
+
+                        Für das Installieren auf MacOs, müssen Sie sich mit Homebrew oder MacPorts außeinandersetzten.
+                        Die Anleitung ist auf der entsprechnenden Seite beschrieben, falls dies nicht klappen sollte
+                        können Sie sich an eine*n Betreuer*in wenden.
+                     </p>
+                     <div class="overflow-hidden">
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+         <!------------------------------------------------------------- Practical --------------------------------------------------------------------->
+         <h2 id="practical" class="contentHeader topic__header accordion">Informationen zum Praktikum <span
+               class="arrow right"></span>
+         </h2>
+         <div class="panel">
+            <p> Hier finden Sie allgemeine Informationen zum Praktikum.</p>
+            <div class="ml-2">
+
+               <!------------------------------------------------------------- Evaluation --------------------------------------------------------------------->
+               <h3 id="evaluation" class="topic__subheader accordion">Bewertungssystem<span class="arrow right"></span>
+               </h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <p class="mb-3">Die Abgaben im praktischen Teil sind die Vorausgesetzung für die Durchführung der
+                        praktischen
+                        Endabgabe. Da die Endabgabe deutlich mehr von den Studierenden abverlangt als die Aufgaben
+                        selbst, wird an einem
+                        Bewertungssystem gemessen, in wie weit Sie sich für diese Endbbgabe qualifiziert haben.
+                        Beim Erfüllen der jeweiligen Arbeiten, werden Ziele festgelegt welche Sie durch den praktischen
+                        Teil erarbeiten sollen. Hierbei ist die Erfüllung dieser Ziele das Bewertungskriterium an dem
+                        Sie gemessen werden. <br> Für jede Aufgabe erhalten Sie von der oder die Betreuer*in das
+                        Feedback, ob die Ziele erreicht worden sind und Gegebenenfalls Tipps welche Ihnen helfen sollen,
+                        die Punkte noch einmal zu fokusieren, die Sie noch nicht genug verinnerlicht haben könnten.
+                        <br>
+                     </p>
+
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th scope="col"></th>
+                              <th scope="col">Ausgang</th>
+                              <th scope="col">Konsequenz</th>
+                              <th scope="col">Feedback</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <th scope="row">1</th>
+                              <td>
+                                 <p class="green"> Ziele Erfüllt </p>
+                              </td>
+                              <td>Aufgabe erfüllt</td>
+                              <td>Der oder die Betreuer*in werden Sie darüber in Kenntnis setzen, dass das Aufgabenziel
+                                 erfüllt wurde. Gegebenenfalls werden Ihnen noch Tipps gegeben wie die Aufgaben anderes
+                                 bzw. besser gelöst werden könnten.</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">2</th>
+                              <td>
+                                 <p class="yellow"> Ziele nicht erfüllt</p>
+                              </td>
+                              <td>Nachbearbeitung</td>
+                              <td>Im Falle, dass Sie nicht alle Ziele erfüllt haben sollten, wird Ihnen der oder die
+                                 Betreuer*in
+                                 mitteilen welche Aspekte der Abgabe nicht zufriedenstellend sind. Sie haben
+                                 anschließend drei Tage Zeit (Mittwoch 18 Uhr der Folgewoche) die Abgabe zu verbessern.
+                                 Ergibt sich nach den drei Tagen noch immer kein zufriedenstellendes Ergebnis, ist
+                                 anzuzweifeln, ob Sie für die Endabgabe die Inhalte außreichend verinnerlicht haben.
+                              </td>
+                           </tr>
+                           <tr>
+                              <th scope="row">3</th>
+                              <td>
+                                 <p class="red"> Keine Abgabe</p>
+                              </td>
+                              <td>unter vorberhalt <br> von der praktischen Prüfung ausgeschlossen</td>
+                              <td>Falls Sie eine Abgabe nicht abgeben, gibt es keine Nachbearbeitung. Hiebei ist
+                                 jedoch wichtig zu erwähnen, dass dies nur der Fall ist, falls folgende Kriterien
+                                 erfüllt sind:
+                                 <ul>
+                                    <li>Sie haben die Aufgabe unbegründet nicht abgegeben</li>
+                                    <li>Es ist kein technischer Fehler aufgetreten (z.B.: Probleme bei der Steuerung mit
+                                       Git)</li>
+                                    <li>Sie haben nicht versucht mit uns Kontakt aufzunehmen</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>Die engültige Entscheidung eines Ausschlusses der praktischen Prüfung obligt dem Lehrbeauftragen
+                        bzw. Professor. Die Aufgabe der Betreuer liegt darin, Ihnen bei den Aufgaben zu unterstützen und
+                        nicht Sie zu bewerten.<br>
+                        Bedenken Sie, dass bei dieser Liste der persönliche Aspekt nicht mit eingeflossen ist. Somit ist
+                        die
+                        Kommunikation das Wichstigste bei Schwierigkeiten und Probleme. Die betreuenden Person steht es
+                        frei auch weitere Nachbearbeitungen anzubieten und den Studierenden in allen anderen Aspekten
+                        entgegen zu kommen, solange es zum Erfolg führt.</p>
+                  </div>
+               </div>
+
+               <!------------------------------------------------------------- Submission --------------------------------------------------------------------->
+               <h3 id="subission" class="topic__subheader accordion">Abgabe<span class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <p class="mb-3">
+                        Grundsätzlich: Habt ihr Fragen, so stehen euch die lehrenden und betreuenden Personen gerne für
+                        Hilfe zur Verfügung. <br> (Der Text wurde in kurzer Zeit geschrieben, daher kann es sein, dass
+                        er
+                        Rechtschreibfehler beinhaltet. Feedback ist erwünscht.)
+                     <ul>
+                        <li>
+                           Achtet beim Bearbeiten darauf, dass ihr auch wirklich in eurem Repository arbeitet welches
+                           ihr
+                           letzte Woche im Kurs angelegt habt. Falls ihr noch kein Repository habt, könnt ihr unter
+                           https://github.com/ ein Neues anlegen, hierbei spielt es keine Rolle ob ihr in der
+                           Teilnehmerliste etwas anderes eingetragen habt.
+                        </li><br>
+                        <li>
+                           Das Repository gibt es einmal als eine Art "Cloud" auf Github.com und (nach dem Clonen, nicht
+                           Downloaden!) einmal lokal auf eurem Pc/Laptop. Gearbeitet wird ausschließlich lokal auf dem
+                           Pc/Laptop.
+                        </li><br>
+                        <img class="mb-4" width="100%" src="./assets/img/introGit.jpg" alt="Github">
+                        <li>
+                           Sobald ihr Arbeitsschritte fertiggestellt habt, oder einfach eine Pause macht, oder einfach
+                           am
+                           nächsten Tag weitermachen wollt, ist es ratsam den aktuellen Stand zu pushen. Also den Stand
+                           auf
+                           dem Pc/Laptop auf Github zu synchronisieren (damit auf Github der gleiche Stand ist wie auf
+                           eurem Pc).
+                        </li> <br>
+                        <li>
+                           Wenn ihr Probleme mit dem Clonen und Pushen mit Github habt, ladet euch das Programm
+                           <a class="link" href="https://desktop.github.com/">Github-Desktop</a> herunter, welches gut
+                           für Einsteiger ist. Dort könnt ihr euch mit eurem
+                           Github-Account anmelden und anschließend (falls nötig) euer Repository clonen (Hinweis: das
+                           Programm
+                           benötigt
+                           trotzdem weiterhin Git). Ihr könnt hier auch ein Repository - welches schon auf den Pc
+                           geclont wurde - öffnen (existing repository).
+                           Außerdem könnt ihr durch dieses Programm auch die Inhalte pushen. Es zeigt euch die
+                           Veränderungen
+                           an die seit dem letzten Push hinzugefügt wurden. Damit erkennt ihr auch, ob ihr im Repository
+                           seid.
+                        </li><br>
+                        <img class="mb-4" width="100%" src="./assets/img/git_desktop.jpg" alt="Github-Desktop">
+                        Abb.: Zum Pushen eine commit message eingeben (bei Summary (required)), dann auf "commit to
+                        main", anschließend auf "push origin" klicken, welches sich danach öffnet. Die message sollte
+                        eine sehr kurze Beschreibung der aktuellen Arbeit beschreiben (z.B. Add: index.html) <br> <br>
+                        <li>
+                           Die Dateien die ihr in eurem Projekt benutzt (z.B. Bilder), müssen sich ebenfalls in eurem
+                           Repository befinden. Hierbei ist es ratsam lediglich die verwendeten Bilder in das Repository
+                           zu
+                           kopieren und nicht alle Materials von Prof. Dr. Rausch. Ein eigenen Ordner in eurem
+                           Repository, in dem die Bilder
+                           gespeichert werden (z.B. img), ist ebenfalls ratsam.
+                        </li><br>
+                        <li>
+                           Wenn ihr der Meinung seid, dass ihr eure Aufgabe fertiggestellt habt, dann pusht euer Projekt
+                           auf Github, anschließend könnt ihr mit dem Link von GitHub-Pages euer Projekt begutachten.
+                           <br>
+                           Diese Website hier, ist ein "GitHub-Pages"-Projekt. Heißt, dass ich in meinem Repository
+                           GitHub-Pages aktiviert habe: <br> (Settings -> GitHub-Pages -> Branch: main / Root ->
+                           Save) <br> und
+                           anschließend die Website unter: <br>
+                           https://<i>euerUsername</i>.github.io/<i>euerRepository</i>/<i>dateiName.html</i> <br>
+                           aufrufen kann. Das eigentlichge Repository dieser Website auf GitHub befindet sich hier:
+                           https://github.com/Z3r0cks/EIA_Praktikum<br>
+                           Wenn Ihr die URL dieser Website betrachtet: <br>
+                           https://z3r0cks.github.io/EIA_Praktikum/index.html <br>Dann ist <i>z3r0cks</i> der
+                           GitHub-Username,
+                           <i>EIA_Praktikum</i> der Name des Repository auf GitHub und <i>index.html</i> die Datei die
+                           angezeigt
+                           werden soll.
+                           Wenn somit eure HTML-Datei - in der Ihr die Aufgabe gelöst habt - index.html heißt und sie
+                           sich im
+                           Ordner "Aufgabe1" befindet, dann müsst ihr eure Website nach dem Pushen unter: <br>
+                           https://<i>euerUsername</i>.github.io/<i>euerRepository</i>/Aufgabe1/index.html <br> aufrufen
+                           können. <br> Achtet darauf, dass ihr keine Leerzeichen benutzt, benutzt als
+                           beispiel den namen Aufgabe1 und nicht Aufgabe 1, da Leerzeichen in der URL nicht erlaubt
+                           sind (siehe Ordnerstruktur und Dateinamen). <br>
+                           Hinweiß: Ihr müsst eure Aufgabe nicht unbedingt in einem Ordner "Aufgabe1"
+                           speichern, es ist nur ein Beispiel, außerdem kann es ein paar Minuten dauern, bis nach dem
+                           Pushen die Website unter der URL aufrufbar ist und noch länger, wenn ihr GitHub-Pages erst
+                           frisch aktiviert habt.
+                        </li><br>
+                        <li>
+                           Nachdem ihr kontrolliert habt, ob eure Aufgabe auf der GitHub-Pages-Seite so funktioniert,
+                           müsst ihr die Abgabe über Felix durchführen. Dies wird im Video weiter unten
+                           erklärt.
+                        </li>
+                     </ul>
+                     </p>
+                     <p class="mb-3">Die Abgabe erfolgt über den Felix-Kurs. Hier geben Sie die entsprechenden Links zur
+                        Aufgabe an.</p>
+                     <ul>
+                        <li>Link zu Ihrem Github Profil</li>
+                        <li>Link zu Ihrer entsprechenden Aufgabe (Github-Pages, z.B:
+                           https://z3r0cks.github.io/EIA_Praktikum/index.html)</li>
+                        <li>Optional: Link zu Ihrem Repository</li>
+                        <li>Falls benötigt: Name der anderen Studierenden (siehe Zusammenarbeit)</li>
+                     </ul>
+                     <p>
+                        Wie die Abgabe auf Felix aus Sicht der Studierenden als auch aus der Sicht Betreuer aussieht,
+                        sehen Sie in
+                        folgendem Video:
+                     </p> <br>
+                     <a class="vid" target="_blank" href="https://www.youtube.com/embed/a86t_XYCbRw"> <b> Abgabe über
+                           Felix </b> </a> <br> <br>
+                  </div>
+               </div>
+
+               <!------------------------------------------------------------- teamwork --------------------------------------------------------------------->
+               <h3 id="teamwork" class="topic__subheader accordion">Zusammenarbeit<span class="arrow right"></span>
+               </h3>
+               <div class="panel">
+                  <p class="mb-3">Grundsätzlich wird die Zusammenarbeit für Abgaben nicht nur beführwortet sondern auch
+                     unterstützt, da der Informationsaustausch der Studierenden ein hervorragendes Werkzeug ist, um die
+                     Inhalte zu verinnerlichen. <br> Hierbei sollten Sie und Ihre Kommilitonen jedoch auf folgendes
+                     achten:</p>
+                  <ul>
+                     <li>Arbeiten Sie nicht nur vor sich hin und lassen andere Personen bei Ihnen mitschauen, vor allem
+                        dann nicht, wenn Sie einen höheren Wissensstand in dem Bereich haben als die Anderen.
+                        Gleichzeitig sollten Sie Inhalte die Sie nicht kannten nich einfach abschreiben sondern sich
+                        erklären
+                        lassen. Bestenfalls üben Sie Inhalte um sie zu verinnerlichen.</li> <br>
+                     <li>Bedenken Sie, dass Niemandem geholfen ist, wenn Sie Ihren Mitstudierenden die Inhalte
+                        vorarbeiten und diese jedoch nicht verstanden worden sind. Die betreuenden Personen sind dazu
+                        aufgerufen auf Inhalte einzugehen, die schlecht oder gar nicht verstanden wurden. Wenn es
+                        Probleme mit einer Abgabe gibt und die Zeit ausläuft, ist es ratsamer sich an die Betreuer zu
+                        melden und um
+                        mehr Zeit und Hilfe zu bitten als den Studierenden die Lösungen vorzugeben. Vergessen Sie nicht,
+                        dass die Endabgaben ein gutes Verständnis der Inhalte abverlangt und spätestens bei der Abgabe
+                        ein
+                        eigenständiges Arbeiten verlangt wird.</li><br>
+                     <li>Falls Inhalte mit anderen Personen zusammen erarbeitet worden sind, schreiben Sie die Namen der
+                        anderen Personen bitte bei der Abgabe mit rein (jeder für sich), damit der oder die Betreuer*in
+                        weiß, dass es zu ähnlichen
+                        Inhalten kommt. Zur Überprüfung ob alle die Inhalte verstanden haben, kann es dazu
+                        kommen, dass die Inhalte individuell abgefagt werden.</li><br>
+                     <li>Zusammenarbeit ohne die Erwähnung der anderen im Team zählt als nicht abgegeben. Bedenken Sie
+                        bitte, dass Programmiercode wie eine Schrift sehr individuell ist, bei den meisten Aufgaben ist
+                        ein "Abschreiben" deutlich zu erkennen und spätestens bei der Endabgabe ist dies offensichtlich.
+                        Auch dann, wenn Inhalte vor der Abgabe noch verändert wurden.
+                     </li> <br>
+                     <li>Unterrichten Sie sich gegenseitig, erklären Sie Ihrer oder Ihrem Mitstudent*in die Inhalte
+                        welche Sie erarbeitet haben, unabhängig ob diese Person die Inhalte schon kennt. Geben Sie Tipps
+                        falls
+                        Sie etwas besser oder anderes verstanden haben. Man verinnerlich Inhalte deutlich effektiver
+                        wenn sich Gedanken darüber gemacht wird wie diese Inhalte beschrieben und erklärt werden müssen.
+                     </li><br>
+                     <li>Achten Sie darauf, dass Sie im Team auch alles verstanden haben, hinterfragen Sie in der Gruppe
+                        die Arbeiten und suchen Sie nach Lösungen</li><br>
+                     <li>Die Abgabe muss von Ihnen selbstständig erstellt werden. Sie dürfen sich jedoch mit anderen
+                        Studierenden austauschen und sich gegenseitig helfen.</li>
+               </div>
+
+            </div>
+         </div>
+
+         <!------------------------------------------------------------- Files --------------------------------------------------------------------->
+         <h2 id="files" class="contentHeader topic__header accordion">Ordnerstruktur und Dateinamen<span
+               class="arrow right"></span>
+         </h2>
+         <div class="panel">
+            <div class="overflow-hidden">
+               <p class="mb-5">Bevor Sie mit irgendeiner Aufgabe beginnen, achten Sie bitte darauf, dass Sie eine gut
+                  strukturierte Ordnerstruktur in Ihrem System benutzen. <br>
+                  So eine Struktur könnte folgendermaßen aussehen:</p>
+               <img class="mb-4" src="./assets/img/directory.png" alt="Ordnerstruktur"> <br>
+               <p>Wichtig hierbei ist, dass sie <b>keine</b> Leerzeichen in Ordner-, und Dateinamen
+                  benutzen. Versuchen Sie also entweder Namen zu verwenden die aus nur einem Wort bestehen (Für
+                  Dateinamen in Aufgaben bestenfalls englische Namen) oder verwenden sie Alternativen zu Leerzeichen.
+               </p>
+               <br>
+
+               <ul>
+                  <li><b>Unterstrich:</b> Ich_bin_ein_dateiname</li>
+                  <li><b>Bindestrich:</b> Ich-bin-ein-dateiname</li>
+                  <li><b>PascalCase:</b> IchBinEinDateiname (jedes Wort groß geschrieben)</li>
+                  <li><b>camelCase:</b> ichBinEinDateiname (wird vor allem für Namen in TypeScript verwendet)
+                  </li>
+               </ul>
+
+            </div>
+         </div>
+         <!------------------------------------------------------------- Practice --------------------------------------------------------------------->
+         <h2 id="practice" class="contentHeader topic__header accordion">Übungen<span class="arrow right"></span>
+         </h2>
+         <div class="panel">
+            <div class="overflow-hidden">
+               <h3 class="mb-5">Collatz-Problem</h3>
+
+               <p>Schreiben Sie ein Programm, welches die Collatz-Folge für eine beliebige Zahl n (natürliche Zahl > 0)
+                  berechnet, und die jede
+                  Zahl der Zahlenfolge in der Konsole ausgibt.
+                  Die Collatz-Folge ist eine Folge von Zahlen, die durch folgende Regeln definiert ist:</p>
+               <ul>
+                  <li>Wenn die Zahl gerade ist, teilen Sie sie durch 2.</li>
+                  <li>Wenn die Zahl ungerade ist, multiplizieren Sie sie mit 3 und addieren 1 hinzu.</li>
+                  <li>Wenn die Zahl 1 ist, ist die Folge beendet.</li>
+               </ul>
+               <p>Wenn somit die Zahl 7 der Funktion übergeben wird, wirft diese mehrere Zahlen in der Konsole
+                  (console.log()) aus, bis die 1 erreicht wurde, dann hört die Funktion auf.</p>
+               <p>Beispiel: Die Collatz-Folge für die Zahl 7 ist:</p>
+               <p> 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1</p> <br>
+               <a target="_blank" href="https://de.wikipedia.org/wiki/Collatz-Problem">Collatz auf Wikipedia</a>
+               <br>
+               <h3 id="collatzTipps" class="topic__subheader accordion">Lösungsansätze<span class="arrow right"></span>
+               </h3>
+               <div class="panel">
+                  <ul>
+                     <li>
+                        <p>Die Funktion soll die Zahlenfolge berechnen, nachdem Sie die Startzahl (n) übergeben haben.
+                           Entsprechend ist ein Parameter wichtig</p>
+                     </li> <br>
+                     <li>
+                        <p>Zu Ausgabe jeder Zahlfolge ist eine console.log() nötig, natürlich lässt es sich auch als
+                           HTML
+                           erstellen. Je nachdem ist es wichtig, ob deine Funktion einen Rückgabewert hat oder nicht</p>
+                     </li><br>
+                     <li>
+                        <p>Die Funktion muss Bedingungen abfragen (if/else). Die Zahlenfolge endet immer mit: "4 2 1.
+                           Somit muss
+                           bei 1
+                           etwas anderes passieren als bei einer ungerade oder geraden Zahl</p>
+                     </li><br>
+                     <li>
+                        <p>Suche eine Möglichkeit, damit das Programm herausfinden kann, ob die eingebeben Zahl gerade
+                           oder
+                           ungerade ist. (Tipp: Modulo)</p>
+                     </li><br>
+                     <li>
+                        <p>Wenn die Zahlen 1 noch nicht erreicht wurde, ist die Zahlenfolge nicht zu Ende. Somit muss
+                           eine
+                           Möglichkeit gefunden werden, womit die Funktion erst aufhört zu arbeiten sobald die 1
+                           gefunden
+                           wurde, und die entsprechenden Prozesse so lange wiederholt, bis eine 1 ergibt. Hierbei gibt
+                           es
+                           mehrere Ansätze, der einfachste wäre die sogenannte Rekursion. Heißt, dass die Funktion sich
+                           selbst aufruft: <a target="_blank"
+                              href="https://de.wikipedia.org/wiki/Rekursive_Programmierung">Rekursion auf Wikipedia</a>
+                        </p> <br>
+                     </li>
+                     <li>
+                        <p>Bei der Verwerwendung der Rekursion muss immer darauf geachtet werde, dass das wiederaufrufen
+                           der eigenen Funktion irgendwann beendet wird.</p>
+                     </li>
+                  </ul>
+               </div>
+
+               <h3 id="collatzSolution" class="topic__subheader accordion">Hier klicken um die Lösung angezeigt
+                  zu
+                  bekommen<span class="arrow right"></span>
+               </h3>
+               <div class="panel">
+                  <p>Hinweis: Die Funktion ist rekursiv. Das heißt, dass diese Funktion sich selbst aufruft.
+                     Hierbei ist
+                     zu beachten, dass es auch einen Mechanismus geben muss, der den Prozess irgendwann
+                     beendet, so dass die
+                     Funktion sich nicht unendlich selbst aufruft. </p>
+                  <h4>Die Funktion im Ganzen:</h4>
+                  <pre>
+                     <code>
+   <span class="colorFunction">function</span> <span class="colorFunctionCall">collatz</span>(n: <span class="colorType">number</span>): <span class="colorType">void</span> {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(n);</span>
+      <span class="colorIf">if</span>(n == 1) {
+         <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>("End");</span>
+         <span class="colorIf">return</span>;
+      }
+      <span class="colorIf">if</span> (n % 2 == 0){
+         <span class="colorFunctionCall">collatz</span>(n / 2);
+      } <span class="colorIf">else</span> {
+         <span class="colorFunctionCall">collatz</span>(3 * n + 1);
+      }
+   }
+
+                     </code>
+                  </pre>
+                  <h4>Die Funktion mit Kommentaren:</h4>
+                  <pre>
+                     <code>
+   <span class="colorComment">// Die Funktion nimmt die Zahl (number) n entgegen und wirft nichts zurück (void)</span>
+   <span class="colorFunction">function</span> <span class="colorFunctionCall">collatz</span>(n: <span class="colorType">number</span>): <span class="colorType">void</span> {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(n);</span>
+
+      <span class="colorComment"></span>// Die If-Bedingung prüft ob die Zahl 1 ist, dann endet die Collatz-Folge</span>
+      <span class="colorIf">if</span>(n == 1) {
+         <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>("End");</span>
+
+         <span class="colorComment">// der return beendet die Funktion ohne etwas zurückzugeben. </span>
+         <span class="colorComment">// Hierdurch wird der Rest der Funktion unterhalb nicht ausgeführt</span>
+         <span class="colorIf">return</span>;
+      }
+
+      <span class="colorComment">// Die If-Abfrage prüft ob die Zahl gerade ist. Hier wird Modulo verwendet </span>
+      <span class="colorComment">// um den Rest zu erhalten. n Modulo 2 ergibt 0 wenn die Zahl gerade ist.</span>
+      <span class="colorIf">if</span> (n % 2 == 0) {
+         
+         <span class="colorComment">// Falls die Zahl gerade ist, wird die selbe Funktion noch einmal aufgerufen</span>
+         <span class="colorComment">// und als Parameter n / 2 übergeben.</span>
+         <span class="colorFunctionCall">collatz</span>(n / 2);
+      } <span class="colorIf">else</span> {
+         <span class="colorComment">// Falls die Zahl ungerade ist, wird die selbe Funktion ebenfalls noch einmal aufgerufen</span>
+         <span class="colorComment">// und als Parameter 3 * n + 1 übergeben.</span>
+         <span class="colorFunctionCall">collatz</span>(3 * n + 1);
+      }   
+   }
+
+                     </code>
+                  </pre>
+               </div>
+
+            </div>
+         </div>
+
+         <!------------------------------------------------------------- Letzte Prüfung --------------------------------------------------------------------->
+         <h2 id="exam" class="contentHeader topic__header accordion">Letzte praktische Endabgabe<span
+               class="arrow right"></span>
+         </h2>
+         <div class="panel">
+            <div class="overflow-hidden">
+               <p class="mb-3">Um zu erkennen, ob Sie die Inhalte verstanden haben können Sie hier die praktische
+                  Prüfung des
+                  letzten Semesters anschauen. Dies dient als Referenz für die Inhalte, die Sie in diesem Modul
+                  erlernen
+                  sollen.
+                  Außerdem können Sie hierdurch sehen wie eine solche praktische Prüfung aufgebaut ist.</p>
+               <h1>Praktikum Endaufgabe SoSe22</h1>
+               <p><b>Konzipieren und entwickeln Sie eine Sprachlern-App unter Berücksichtigung folgender
+                     Anforderungen:</b></p><br>
+               <ul>
+                  <li>Zielgruppe sind <b> deutschsprachige Nutzer</b>, die <b>Spanisch </b> in einem Anfängerkurs
+                     lernen wollen.</li>
+                  <li>Beim Start des Kurses in der Sprachlern-App wird zunächst ein Satz auf Deutsch angezeigt
+                     (bspw.:
+                     "Ich heiße Gabriel").</li>
+                  <li>Ebenso werden die einzelnen Wörter der Übersetzung auf der zu erlernenden Sprache angezeigt,
+                     aber
+                     in einer zufälligen Reihenfolge (die Übersetzungswörter für oben genannten Satz in zufälliger
+                     Reihenfolge wären bspw.: "Gabriel" "llamo" "Me").</li>
+                  <li>Der Nutzer muss nun die übersetzten Wörter in der richten Reihenfolge anklicken. Der erste
+                     Klick
+                     muss auf das Wort an erste Stelle des übersetzten Satzes gesetzt werden, der zweite Klick auf
+                     das
+                     Wort an zweiter Stelle usw...</li>
+                  <li>Klickt der Nutzer ein Wort richtig an, dann gibt es einen Punkt, das Wort wird in einem
+                     Übersetzungsbereich angezeigt (bspw.: "Me"). Der Nutzer kann danach ein anderes Wort
+                     anklicken.
+                  </li>
+                  <li>Klickt der Nutzer wieder ein Wort richtig an, dann gibt es einen weiteren Punkt, das Wort
+                     wird
+                     ergänzend im Übersetzungsbereich angezeigt ("Me llamo"). Der Nutzer kann danach ein anderes
+                     Wort
+                     anklicken.</li>
+                  <li>Klick der Nutzer ein falsches Wort an, gibt es einen Punkt Abzug, im Übersetzungsbereich
+                     werden
+                     nur die bisher richtigen Wörter angezeigt.</li>
+                  <li>Das Punktekonto des Nutzers darf nicht in den Minusbereich gehen. Der aktuelle Punktestand
+                     ist für
+                     den Nutzer immer sichtbar.</li>
+                  <li>Sobald die Übersetzung vollständig ist wechselt die Anwendung zum nächsten Übungssatz.</li>
+                  <li>Wenn alle Übungssätze abgeschlossen wurden wird dem Nutzer der finale Punktestand angezeigt
+                     und
+                     zum Abschließen des Kurses gratuliert.
+                     Beim Start bzw. Neustart der Anwendung werden die Übungssätze in einer zufälligen Reihenfolge
+                     durchgeführt. Ebenfalls zufällig werden immer die Worte in Ihrer Reihenfolge dargestellt.
+                  </li>
+                  <li>Sie können selbst die Übungssätze definieren. Ebenso können Sie selbst entscheiden, wie Sie
+                     Worte
+                     und Satzzeichen trennen (bspw. bei "¡La vida loca!" können die Ausrufezeichen separat oder
+                     als Teil
+                     der Worte verstanden werden).</li>
+                  <li>Die Anwendung benötigt keine speziellen Animationen zwischen den Darstellungen. Die Inhalte
+                     können
+                     einfach "sofort-artig" erscheinen.</li>
+                  <li>Die Sprachlern-App kann in drei Schwierigkeitsstufen gespielt werden:
+                     <ol>
+                        <li>Leicht: der Kurs besteht aus 5 Übungssätzen.</li>
+                        <li>Mittel: der Kurs besteht aus 10 Übungssätzen.</li>
+                        <li>Schwer: der Kurs besteht aus 15 Übungssätzen.</li>
+                     </ol>
+                  </li>
+                  <li>Die Anwendung ist optimiert für eine Smartphone Darstellung im Portrait-Format (ca. 375 x
+                     667
+                     Pixel).</li>
+               </ul>
+               <h3>Beurteilung</h3>
+               <p>Note der End-Abgabe basiert auf den dafür ausgefüllten Anforderungs-Punkten (siehe unten). Bis
+                  zu ein
+                  Punkt darf dabei nicht erfüllt sein um die 1 zu erhalten. <br>
+                  Jeder weitere fehlende Punkt verringert die Note um 1. (4.0 >= Bestanden)<br>
+                  Jedes erfüllte optionale Ziel erhöht die Note um 1. (Maximale Bestnote: 1).<br>
+                  Der Kurs wird im Studi-Portal mit "bestanden" / "nicht bestanden" bewertet.</p>
+               <h3>Tipps</h3>
+               <p> Machen Sie sich ein Konzept! <br>
+
+                  Versuchen Sie den Anlauf der Sprachlern-App in einem Flowchart/Anwendungsfalldiagramm
+                  darzustellen. An
+                  welchen Punkten werden Entscheidungen gefällt? Muss der Computer gewisse Sachen abfragen? Wann
+                  muss
+                  der
+                  Nutzer interagieren, wie interagiert er, was sind seine Optionen? Welchen Ablauf hat der
+                  Computer, wie
+                  wählt er einen Satz aus? Wie werden die Inhalte dargestellt? Welche Elemente sind interaktiv und
+                  können
+                  vom Nutzer ausgewählt werden? Machen Sie sich darüber Gedanken, wann sich die Darstellung für
+                  den
+                  Nutzer
+                  ändert.</p>
+               <h3>Anforderungspunkte</h3>
+               <p>
+                  Gesamt: 21. (21 = 1.0, 20 = 1.0, 19 = 2.0, 18 = 3.0, 17 = 4.0, <= 16=NB) <br>
+                     Nach folgenden Kriterien wird Ihre Abgabe bewertet: <br> <br>
+                     <b>Konzeptentwurf</b> <br>
+                     <ul>
+                        <li>In einem Flussdiagramm haben Sie den grundsätzlichen Interaktionspfad der Anwendung
+                           dargestellt (Interaktion des Nutzers und Verhalten des Systems). Den Papier-Entwurf
+                           bitte als
+                           Scan / Foto digitalisieren und beilegen.</li>
+                        <li>Bilden Sie ebenso in einer Skizze die Darstellung des GUIs ab und legen Sie die
+                           Darstellung
+                           Ihrer Abgabe bei. Sie können ein Wireframing-Tool nutzen oder mit Papier und Bleistift
+                           arbeiten (Papier-Entwurf bitte wieder scannen).</li>
+                     </ul>
+                     <b>HTML</b> <br>
+                     <ul>
+                        <li>Ein schlichter Footer mit Ihrem Namen und Matrikelnummer.</li>
+                        <li>Semantische HTML-Tags wurden genutzt, Tags werden sinnvoll eingesetzt.</li>
+                     </ul>
+                     <b>CSS</b> <br>
+                     <ul>
+                        <li>Die Fläche, auf der die Übungssätze dargestellt werden, besitzt eine passende
+                           Hintergrundfarbe (oder Hintergrundtextur).</li>
+                        <li>Die Inhalte (Übungssatz, Übersetzungswörter, Übersetzungsbereich usw.) sind sinnvoll
+                           auf dem
+                           Bildschirm verteilt, voneinander unterscheidbar und überlagern sich nicht.
+                        </li>
+                        <li>Die einzelnen Übersetzungswörter sind als auswählbare Elemente erkennbar.</li>
+                        <li>Die Darstellung ist für oben genanntes Endgeräte-Format optimiert.</li>
+                     </ul>
+                     <b>Programmierung</b> <br>
+                     <ul>
+                        <li>Das Skript erzeugt keine Fehler in der Konsole.</li>
+                        <li>Ein Übungssatz mit seiner Übersetzung ist auf programmatischer Ebene sinnvoll als
+                           Objekt
+                           strukturiert.
+                        </li>
+                        <li>Das Skript bildet, je nach ausgewählter Schwierigkeitsstufe, eine bestimmte Anzahl von
+                           Übungssätzen, die nacheinander ausgegeben werden.</li>
+                        <li>Die Reihenfolge der Übungssätze wird zufällig generiert und variiert daher bei jedem
+                           Start.
+                           Jeder Übungssatz kommt nur einmal pro Kursdurchlauf vor.</li>
+                        <li>Die Reihenfolge der Übersetzungswörter wird ebenfalls zufällig generiert.</li>
+                        <li>Das Skript erzeugt für jeden Übungssatz und den Übersetzungswörtern eine Darstellung
+                           mit
+                           HTML-Elementen.</li>
+                        <li>Die einzelnen Übersetzungswörter können vom Nutzer ausgewählt werden. Ein mehrfaches
+                           Auswählen eines Wortes ist möglich.</li>
+                        <li>Das Skript überprüft bei Auswahl eines Übersetzungswortes, ob dieses Wort in der
+                           richtigen
+                           Reihenfolge ausgewählt wurde. Dafür muss das Skript für ein ausgewähltes Wort die
+                           entsprechende Stelle im übersetzten Satz kennen.</li>
+                        <li>Das Skript übernimmt das Übersetzungswort in den Übersetzungsbereich, wenn das Wort an
+                           der
+                           richtigen Reihenfolge geklickt wurde und zählt den Punktestand des Nutzers um einen
+                           Punkt
+                           hoch.</li>
+                        <li>Das Skript reduziert den Punktestand des Nutzers um einen Punkt, wenn das ausgewählte
+                           Wort
+                           nicht korrekt ausgewählt wurde und gibt eine einfache Fehlermeldung (per Alert) aus.
+                        </li>
+                        <li>Das Skript zeigt den nächsten Übungssatz an, sobald für den aktuellen Übungssatz die
+                           Übersetzung vollständig ist.</li>
+                        <li>Das Skript zeigt am Ende, wenn alle Übungssätze abgeschlossen wurden, eine
+                           Zusammenfassung
+                           mit dem finalen Punktestand an.</li>
+                     </ul>
+                     <b>Annotationen</b> <br>
+                     <ul>
+                        <li>Erklären Sie Ihren Code. Die Skript-Datei sollte mit Kommentarblöcken ergänzt sein, um
+                           relevante Anwendungsblöcke und Anweisungen beschreiben zu können.</li>
+                     </ul>
+                     <b>Optional</b> Diese Punkte müssen NICHT erfüllt werden! Sie fließen jedoch positiv in die
+                     Bewertung mit ein (siehe oben).<br>
+                     <ul>
+                        <li>Visuell ansprechende Darstellung der Übungssätze und Übersetzungswörter.</li>
+                        <li>Das Auswählen von Wörtern und das positive Feedback an den Nutzer (richtiges /
+                           falsches
+                           Wort), sowie das Wechseln von einem Übungssatz zum nächsten ist animiert.</li>
+                        <li>Relevante Aktionen in der Anwendung werden mit Sounds unterstützt (die Auswahl von
+                           einem
+                           Wort; das Feedback zur Auswahl falsch / richtig; nächster Übungssatz; Ende des Kurses).
+                        </li>
+                        <li>Um es für den Nutzer etwas schwerer zu machen werden zu den Worten, die im
+                           tatsächlichen
+                           Übersetzungssatz auch vorkommen, zusätzlich auch andere Worte angezeigt, die nicht
+                           vorkommen.
+                        </li>
+                        <li>Zum Anwendungsstart kann der Nutzer, neben Spanisch, auch eine andere Sprache wählen,
+                           die
+                           geübt werden soll. Besonders schön wäre eine Erweiterung, um Ukrainisch zu lernen.</li>
+                        <li>Neben der Punktezahl wird ebenfalls der aktuelle Fortschritt als Text-Element (bspw.:
+                           "Übungssatz 3 von 15") und in Form eines Balkens (Progressbar) angezeigt.</li>
+                     </ul>
+               </p>
+            </div>
+         </div>
+      </div>
+      </div>
+
+      <div class="navBtnWrapper">
+         <button id="collapseBtn" class="navBtn navBtn-left"><span class="arrow down collapseBtn"></span></button>
+         <button id="goTopBtn" class="navBtn navBtn-right"><span class="arrow top arrowBtn"></span></button>
+      </div>
+      </div>
+   </main>
+</body>
+
+</html>
