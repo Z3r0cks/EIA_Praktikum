@@ -405,6 +405,10 @@ pre {
    color: #2b76c7;
 }
 
+.colorVariable {
+   color: #9cdcfe;
+}
+
 .colorFunctionCall {
    color: #dcdcaa;
 }

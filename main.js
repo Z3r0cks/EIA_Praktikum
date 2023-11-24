@@ -16,6 +16,7 @@ headerBtn.addEventListener("click", () => {
     goTopBtn.click();
     closeAll();
 });
+
 sideNavBtn.addEventListener("click", () => {
     if (sideNavBtn.firstElementChild.className != "navListRight") {
         navList.style.left = "0rem";

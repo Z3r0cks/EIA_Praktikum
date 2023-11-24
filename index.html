@@ -160,27 +160,27 @@
             <div class="codeBlock my-1">
                const name = "Max Mustermann"; <img src="./assets/img/copyToClipboard.png" width="30px">
             </div> <br>
-            <p> In diesem Beispiel wird der Wert "Max Mustermann" in der Variable "name" gespeichert. <br> <br>
+            <p> Der String "Max Mustermann" wird in der Variable "name" gespeichert. <br> <br>
             <div class="codeBlock my-1">
                let alter = 20; <img src="./assets/img/copyToClipboard.png" width="30px">
             </div> <br>
-            <p> In diesem Beispiel wird der Wert 20 in der Variable "alter" gespeichert. <br> <br>
+            <p> Die Number 20 wird in der Variable "alter" gespeichert. <br> <br>
             <div class="codeBlock my-1">
                let istStudent = true; <img src="./assets/img/copyToClipboard.png" width="30px">
             </div> <br>
-            <p> In diesem Beispiel wird der Wert true in der Variable "istStudent" gespeichert. <br> <br>
+            <p> Der Boolean true wird in der Variable "istStudent" gespeichert. <br> <br>
             <div class="codeBlock my-1">
                let alter = 20; <br>
                alter = 21; <img src="./assets/img/copyToClipboard.png" width="30px">
             </div> <br>
-            <p> In diesem Beispiel wird der Wert 20 in der Variable "alter" gespeichert. <br>
+            <p> Die Number 20 wird in der Variable "alter" gespeichert. <br>
                Anschließend wird der Wert der Variable "alter" auf 21 geändert. <br> <br>
             </p>
             Variabeln können benutzt werden um einfacher mit Werten zu arbeiten, sie zu ändern oder zu übergeben, z.B.
             in Funktionen mit denen dann weiter gearbeitet werden kann. <br>
          </div>
 
-         <!------------------------------------------------------------- Files --------------------------------------------------------------------->
+         <!------------------------------------------------------------- If/else --------------------------------------------------------------------->
          <h2 id="files" class="contentHeader topic__header accordion">if-Bedingung<span class="arrow right"></span>
          </h2>
          <div class="panel">
@@ -204,7 +204,157 @@
                ausgegeben. <br>
                Wenn der Wert nicht kleiner als 20 ist, wird überprüft, ob der Wert gleich 20 ist, wenn ja wird der Text
                "You are 20 y.o" ausgegeben. <br>
-               Wenn der Wert weder kleiner noch gleich 20 ist, wird mit "else" automatisch angenommen, dass age größer als 20 ist <br> <br>
+               Wenn der Wert weder kleiner noch gleich 20 ist, wird mit "else" automatisch angenommen, dass age größer
+               als 20 ist <br> <br>
+            </p>
+         </div>
+         <h2 id="files" class="contentHeader topic__header accordion">Funktionen<span class="arrow right"></span>
+         </h2>
+         <!------------------------------------------------------------- Functions --------------------------------------------------------------------->
+         <div class="panel">
+            <p>Funktionen sind vordefinierte Programmierbereiche, die immer genau dann ausgeführt werden, wenn ihr es
+               wollt. Dabei können Funktionen auch Parameter annehmen (quasi Variabeln) und nach dem durchlauf einen
+               Wert zurückgeben.<br> Stellt euch eine Funktion wie eine Maschine vor. In diese Maschine gebt ihr nun
+               Zutaten oder Ressourcen. Was genau diese Maschine macht, definiert ihr selbst, und am Ende kommt ein
+               veredeltes Produkt heraus.<br>
+               <img class="my-1" src="./assets/img/function_machine.png" width="250px"><br>
+               <b>Aufbau:</b> <br>
+            <div class="codeBlock my-1">
+               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">name</span>(<span class="colorVariable">parameter</span>) {
+   <span class="colorComment">// Programmcode</span>
+}</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
+            </div>
+            <p> In diesem Beispiel wird eine Funktion mit dem Namen "name" definiert. <br>
+               Diese Funktion nimmt einen Parameter entgegen, der in der Funktion mit "parameter" angesprochen
+               werden kann. <br>
+               In der Funktion wird nun der Programmcode ausgeführt. <br>
+               Wichtig hierbei ist, dass eine Funktion immer aufgerufen werden muss, da sie sonst nicht ausgeführt wird.
+               <br>
+               <b> Beispiel:</b>
+            <div class="codeBlock my-1">
+               <pre
+                  class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">sayHello</span>() {
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"Hello World"</span>);
+}
+
+<span class="colorFunctionCall">sayHello</span>();</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
+            </div>
+            <p> In diesem Beispiel wird eine Funktion mit dem Namen "sayHello" definiert. <br>
+               Diese Funktion nimmt keinen Parameter entgegen. <br>
+               In der Funktion wird nun der Text "Hello World" in der Konsole ausgegeben. <br>
+               <br>
+               Anschließend wird die Funktion aufgerufen. Erst durch diesen Aufruf wird die Funktion und der
+               Programmcode innerhalb der Funktion ausgeführt<br>
+               <br>
+            <h3>Parameter und Ausgabe</h3>
+            <b>Beispiel:</b> <br>
+            <div class="codeBlock my-1">
+               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">add</span>(<span class="colorVariable">a</span>, <span class="colorVariable">b</span>) {
+   <span class="colorIf">return</span> <span class="colorVariable">a</span> + <span class="colorVariable">b</span>;
+}
+
+<span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span class="colorType">2</span>)</code>);</span>  
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
+            </div>
+            <p> In diesem Beispiel wird eine Funktion mit dem Namen "add" definiert. <br>
+               Diese Funktion nimmt zwei Parameter entgegen, die in der Funktion mit "a" und "b" angesprochen werden
+               können. <br>
+               In der Funktion wird nun der Wert von "a" und "b" addiert und mit "return" zurückgegeben. <br>
+               Anschließend wird die Funktion mit den Parametern 1 und 2 aufgerufen. <br>
+               Das Ergebnis (3) der Funktion wird nun in der Konsole ausgegeben. <br>
+               Die Bezeichnungen der Parameter (in diesem Beispiel a und b) ist euch überlassen und sollte wie
+               gewöhnlich das repräsentieren was der Parameter darstellt. In diesem Beispiel wäre anstatt a und b somit
+               numberA und numberB repräsentativer<br>
+               <br>
+            <div class="codeBlock my-1">
+               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">add</span>(<span class="colorVariable">numberA</span>, <span class="colorVariable">numberB</span>) {    
+      <span class="colorIf">return</span> <span class="colorVariable">numberA</span> + <span class="colorVariable">numberB</span>;
+}
+   
+<span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span class="colorType">2</span>)</code>);</span>  
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
+            </div>
+            <p>Wichtig ist jedoch, dass beim Aufruf einer Funktion - die Parameter enthält - diese Parameter auch
+               übergebe werden müssen. die Aufruf kann also nicht add(1); oder add(1,3,5); sein.<br> <br>
+               Eine Funktion muss keinen Parameter entgegennehmen und auch keinen Wert zurückgeben. <br>
+            </p>
+            <b>Beispiel:</b> <br>
+            <div class="codeBlock my-1">
+               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">sayHello</span>() {
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"Hello World"</span>);
+}
+
+<span class="colorFunctionCall">sayHello</span>();</code>
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
+            </div>
+            <p> In diesem Beispiel wird eine Funktion mit dem Namen "sayHello" definiert. <br>
+               Diese Funktion nimmt keine Parameter entgegen. <br>
+               In der Funktion wird nun der Text "Hello World" in der Konsole ausgegeben. <br>
+               <br>
+               Der Aufruf einer Funktion kann auch in einer Variable gespeichert werden. <br>
+               <b>Beispiel:</b> <br>
+            <div class="codeBlock my-1">
+               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">add</span>(<span class="colorVariable">a</span>, <span class="colorVariable">b</span>) {    
+   <span class="colorIf">return</span> <span class="colorFunctionCall">a</span> + <span class="colorFunctionCall">b</span>;
+}
+
+<span class="colorFunction">let</span> <span class="colorVariable">result</span> = <span class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span class="colorType">2</span>);
+<span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">result</span>);</code>
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
+            </div>
+            <p> In diesem Beispiel wird eine Funktion mit dem Namen "add" definiert. <br>
+               Diese Funktion nimmt zwei Parameter entgegen, die in der Funktion mit "a" und "b" angesprochen werden
+               können. <br>
+               In der Funktion wird nun der Wert von "a" und "b" addiert und mit "return" zurückgegeben. <br>
+               <br>
+               Anschließend wird die Funktion mit den Parametern 1 und 2 aufgerufen und das Ergebnis in der Variable
+               result gespeichert, und mit einem console.log() ausgegeben. Die Aussgabe kann auch in andere Bereiche
+               gespeichert werden, so könnte man auch eine if-Bedingung aufrufen und als Bedingung eine Funktion
+               aufrufen, die entweder "true" oder "false" ausgibt<br>
+               <br>
+               <b>Beispiel:</b> <br>
+            <div class="codeBlock my-1">
+               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">isAdult</span>(<span class="colorFunctionCall">age</span>) {
+   <span class="colorIf">if</span> (<span class="colorFunctionCall">age</span> &gt;= <span class="colorType">18</span>) {
+      <span class="colorIf">return</span> <span class="colorType">true</span>;
+   } <span class="colorIf">else</span> {
+      <span class="colorIf">return</span> <span class="colorType">false</span>;
+   }
+}
+
+<span class="colorFunction">let</span> <span class="colorVariable">result</span> = <span class="colorFunctionCall">isAdult</span>(<span class="colorType">20</span>);
+<span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">result</span>);</code>
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
+            </div>
+            <p> In diesem Beispiel wird eine Funktion mit dem Namen "isAdult" definiert. <br>
+               Diese Funktion nimmt einen Parameter entgegen, der in der Funktion mit "age" angesprochen werden kann.
+               <br>
+               In der Funktion wird nun überprüft, ob der Wert von "age" größer oder gleich 18 ist. <br>
+               Wenn der Wert größer oder gleich 18 ist, wird mit "return" der Wert "true" zurückgegeben. <br>
+               Wenn der Wert kleiner als 18 ist, wird mit "return" der Wert "false" zurückgegeben. <br>
+               <br>
+               Anschließend wird die Funktion mit dem Parameter 20 aufgerufen und das Ergebnis in der Variable result
+               gespeichert, und mit einem console.log() ausgegeben. <br>
+               <br>
+               <b>Beispiel:</b> <br>
+            <div class="codeBlock my-1">
+               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">isAdult</span>(<span class="colorFunctionCall">age</span>) {
+   <span class="colorIf">if</span> (<span class="colorFunctionCall">age</span> &gt;= <span class="colorType">18</span>) {
+      <span class="colorIf">return</span> <span class="colorType">true</span>;
+   } <span class="colorIf">else</span> {
+      <span class="colorIf">return</span> <span class="colorType">false</span>;
+   }
+}
+
+<span class="colorIf">if</span> (<span class="colorFunctionCall">isAdult</span>(<span class="colorType">20</span>)) {
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are an adult"</span>);
+} <span class="colorIf">else</span> {
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are not an adult"</span>);
+}</code>
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
+            </div>
+            <p>In diesem Beispiel wird in der If-Bedingung direkt eine Funktion aufgerufen, die entsprechend dem Alter
+               ein "true" oder "false" ausgibt.</p>
             </p>
          </div>
          <!------------------------------------------------------------- Practice --------------------------------------------------------------------->
@@ -214,7 +364,8 @@
             <div class="overflow-hidden">
                <h3 class="mb-5">Collatz-Problem</h3>
 
-               <p>Schreiben Sie ein Programm, welches die Collatz-Folge für eine beliebige Zahl n (natürliche Zahl > 0)
+               <p>Schreiben Sie ein Programm, welches die Collatz-Folge für eine beliebige Zahl n (natürliche Zahl >
+                  0)
                   berechnet, und die jede
                   Zahl der Zahlenfolge in der Konsole ausgibt.
                   Die Collatz-Folge ist eine Folge von Zahlen, die durch folgende Regeln definiert ist:</p>
@@ -234,13 +385,15 @@
                <div class="panel">
                   <ul>
                      <li>
-                        <p>Die Funktion soll die Zahlenfolge berechnen, nachdem Sie die Startzahl (n) übergeben haben.
+                        <p>Die Funktion soll die Zahlenfolge berechnen, nachdem Sie die Startzahl (n) übergeben
+                           haben.
                            Entsprechend ist ein Parameter wichtig</p>
                      </li> <br>
                      <li>
                         <p>Zu Ausgabe jeder Zahlfolge ist eine console.log() nötig, natürlich lässt es sich auch als
                            HTML
-                           erstellen. Je nachdem ist es wichtig, ob deine Funktion einen Rückgabewert hat oder nicht</p>
+                           erstellen. Je nachdem ist es wichtig, ob deine Funktion einen Rückgabewert hat oder nicht
+                        </p>
                      </li><br>
                      <li>
                         <p>Die Funktion muss Bedingungen abfragen (if/else). Die Zahlenfolge endet immer mit: "4 2 1.
@@ -249,7 +402,8 @@
                            etwas anderes passieren als bei einer ungerade oder geraden Zahl</p>
                      </li><br>
                      <li>
-                        <p>Suche eine Möglichkeit, damit das Programm herausfinden kann, ob die eingebeben Zahl gerade
+                        <p>Suche eine Möglichkeit, damit das Programm herausfinden kann, ob die eingebeben Zahl
+                           gerade
                            oder
                            ungerade ist. (Tipp: Modulo)</p>
                      </li><br>
@@ -258,15 +412,19 @@
                            eine
                            Möglichkeit gefunden werden, womit die Funktion erst aufhört zu arbeiten sobald die 1
                            gefunden
-                           wurde, und die entsprechenden Prozesse so lange wiederholt, bis eine 1 ergibt. Hierbei gibt
+                           wurde, und die entsprechenden Prozesse so lange wiederholt, bis eine 1 ergibt. Hierbei
+                           gibt
                            es
-                           mehrere Ansätze, der einfachste wäre die sogenannte Rekursion. Heißt, dass die Funktion sich
+                           mehrere Ansätze, der einfachste wäre die sogenannte Rekursion. Heißt, dass die Funktion
+                           sich
                            selbst aufruft: <a target="_blank"
-                              href="https://de.wikipedia.org/wiki/Rekursive_Programmierung">Rekursion auf Wikipedia</a>
+                              href="https://de.wikipedia.org/wiki/Rekursive_Programmierung">Rekursion auf
+                              Wikipedia</a>
                         </p> <br>
                      </li>
                      <li>
-                        <p>Bei der Verwerwendung der Rekursion muss immer darauf geachtet werde, dass das wiederaufrufen
+                        <p>Bei der Verwerwendung der Rekursion muss immer darauf geachtet werde, dass das
+                           wiederaufrufen
                            der eigenen Funktion irgendwann beendet wird.</p>
                      </li>
                   </ul>
