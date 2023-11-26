@@ -3,18 +3,18 @@
       font-size: 1rem;
    }
    h2 {
-      font-size: 0.8rem;
+      font-size: 1rem;
    }
-   h3,
-   .vid {
-      font-size: 0.6rem;
+   h3 {
+      font-size: 0.8rem;
    }
    h4,
    p,
-   .btn,
+   .vid .btn,
+   .codeBlock,
    li,
    table {
-      font-size: 0.5rem;
+      font-size: 0.8rem;
    }
    .logo {
       width: 75px;
@@ -28,12 +28,12 @@
    h2 {
       font-size: 1.3rem;
    }
-   h3,
-   .vid {
+   h3 {
       font-size: 1.1rem;
    }
    h4,
    p,
+   .vid,
    .btn,
    li,
    table {
@@ -67,13 +67,13 @@
    h2 {
       font-size: 1.8rem;
    }
-   h3,
-   .vid {
+   h3 {
       font-size: 1.6rem;
    }
    h4,
    p,
-   .btn,
+   .vid,
+   .codeBlock, .btn,
    li,
    table {
       font-size: 1.1rem;
@@ -108,8 +108,7 @@
    h2 {
       font-size: 2.1rem;
    }
-   h3,
-   .vid {
+   h3 {
       font-size: 1.9rem;
    }
    .topic__header,

@@ -22,7 +22,7 @@
          <a id="title">
             <h1>EIA-Praktikum JavaScript</h1>
          </a>
-         <div>
+         <div class="header_nav">
             <a class="header_a mr-1" href="./info.html"><button class="btn btn-primary">Kontakt</button></a>
             <a class="header_a" href="https://felix.hs-furtwangen.de/url/RepositoryEntry/7733251"
                target="_blank"><button class="btn btn-primary">Felix-Kurs</button></a>
@@ -34,51 +34,23 @@
             <div id="sideNavBtn">
                <span></span>
             </div>
-            <li>
-               <a class="navlink" id="motivationNav">Motivation</a>
-            <li>
-               <a class="navlink" id="introductionNav">Einrichtung</a>
-               <ul class="subList">
-                  <li>
-                     <a class="navlink" id="vscNav">Visual Studio Code</a>
-                  </li>
-                  <li>
-                     <a class="navlink" id="githubNav">Github</a>
-                  </li>
-                  <li>
-                     <a class="navlink" id="gitNav"> Git</a>
-                  </li>
-               </ul>
-            </li>
-            <li>
-               <a class="navlink" id="practicalNav"> Praktikum</a>
-               <ul class="subList">
-                  <li>
-                     <a class="navlink" id="evaluationNav"> Bewertung</a>
-                  </li>
-                  <li>
-                     <a class="navlink" id="subissionNav"> Abgabe</a>
-                  </li>
-                  <li>
-                     <a class="navlink" id="teamworkNav"> Teamwork</a>
-                  </li>
-               </ul>
-            </li>
-            <li>
-               <a class="navlink" id="filesNav">Ordnerstruktur</a>
-            <li>
-            <li>
-               <a class="navlink" id="practiceNav">Übung(en)</a>
-            <li>
-            <li>
-               <a class="navlink" id="examNav">Letzte Endabgabe</a>
-            <li>
+            <li> <a class="navlink" id="motivationNav">Motivation</a> </li>
+            <li><a class="navlink" id="introductionNav">Einrichtung</a></li>
+            <li><a class="navlink" id="variablesNav">Variabeln</a></li>
+            <li><a class="navlink" id="arraysNav">Arrays</a></li>
+            <li><a class="navlink" id="ifElseNav">if-Bedingungen</a></li>
+            <li><a class="navlink" id="functionNav">Funktionen</a></li>
+            <li><a class="navlink" id="loopNav">For-Schleife</a></li>
+            <li><a class="navlink" id="domManNav">DOM-Manipulation</a></li>
+            <li><a class="navlink" id="practiceNav">Übung</a></li>
          </ul>
       </nav>
    </header>
 
    <main>
       <div class="container">
+         <p>Diese Github-Pages Seite bietet einen kleinen Einblick in die relevanten Themen der Programmierung mit
+            JavaScript. Bitte bedenkt, dass die Themen deutlich ausführlicher sind, als hier angesprochen.</p>
 
          <!------------------------------------------------------------- why --------------------------------------------------------------------->
          <h2 id="motivation" class="contentHeader topic__header accordion">Motivation<span class="arrow right"></span>
@@ -121,224 +93,405 @@
                class="arrow right"></span>
          </h2>
          <div class="panel">
-            <p class="mb-2">Für den Start in die Welt der Programmierung mit JavaScript müsst ihr als erstes eine
-               Script-Datei
-               erstellen. Ähnlich wie ihr das bei CSS gemacht habt, erstellt ihr hierfür eine neue JS-Datei in eurem
-               Ordner (z.B. script.js). Anschließend müsst ihr diese Datei in eurem HTML einbinden, was ihr mit einem
-               Script-Tag bewerkstelligt:<br>
-            <div class="codeBlock">
-               &lt;script defer src=&quot;./script.js&quot;&gt;&lt;/script&gt; <img
-                  src="./assets/img/copyToClipboard.png" width="30px">
+            <div class="overflow-hidden">
+               <p class="mb-2">Um mit der Programmierung in JavaScript zu beginnen, müsst ihr zuerst eine Script-Datei
+                  erstellen. Ähnlich wie bei CSS, erstellt ihr dazu eine neue JS-Datei in eurem Projektordner (z.B.
+                  script.js). Anschließend müsst ihr diese Datei in euer HTML-Dokument einbinden. Dies geschieht mit
+                  einem &lt;script&gt; Tag. </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction"> &lt;script</span> <span class="colorAttribute">defer src</span>=<span
+                     class="colorString">&quot;./script.js&quot;</span><span
+                     class="colorFunction">&gt;&lt;/script&gt;</span> <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"
+                  ></code></pre>
+               </div>
+               <p id="copyConfirmation" style="display:none;">Kopiert!</p>
+               <img class="my-1" src="./assets/img/script_import_head.jpg" width="100%">
+               In dieser Script-Datei könnt ihr nun folgenden Code einfügen. <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"Hello World"</span>);</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p> Wenn ihr nun die HTML-Datei im Browser öffnet, könnt ihr im Entwickler-Tool (Rechtsklick -> Inspect)
+                  die
+                  Konsole öffnen und dort die Ausgabe "Hello World!" sehen. </p>
+               <br>
+               <img class="my-1" src="./assets/img/js_hello_world.jpg" width="100%">
+
             </div>
-            <p id="copyConfirmation" style="display:none;">Kopiert!</p>
-
-            <img class="my-1" src="./assets/img/script_import_head.jpg">
-            In dieser Script-Datei könnt ihr nun folgenden Code hereinschreiben <br>
-            <div class="codeBlock my-1">
-               console.log("Hello World") <img src="./assets/img/copyToClipboard.png" width="30px">
-            </div> <br>
-            Wenn ihr nun die HTML-Datei im Browser öffnet, könnt ihr im Entwickler-Tool (Rechtsklick -> Inspect) die
-            Konsole öffnen und dort die Ausgabe sehen. <br> <br>
-            <img class="my-1" src="./assets/img/js_hello_world.jpg">
-
          </div>
          <!------------------------------------------------------------- variables --------------------------------------------------------------------->
-         <h2 id="practical" class="contentHeader topic__header accordion">Variabeln<span class="arrow right"></span>
+         <h2 id="variables" class="contentHeader topic__header accordion">Variabeln<span class="arrow right"></span>
          </h2>
          <div class="panel">
-            <p> Eine Variable ist ein Speicherplatz für einen definierten Wert. <br> In einer Variable können Werte
-               gespeichert werden, die sich im Laufe des Programms ändern können. <br> <br>
-               Um eine Variable zu schreiben benötigt ihr als erstes das Schlüsselwort "let" oder "const" gefolgt von
-               einem Wert. Dieser Wert kann alles sein. Eine Zahl, ein String, ein Boolean, ein Array, ein Objekt, eine
-               Funktion, ein HTML-Element etc. Ihr werdet alle Begriffe im Laufe des Kurses kennenlernen<br> <br>
+            <div class="overflow-hidden">
+               <p>
+                  Eine Variable ist ein Speicherplatz für einen definierten Wert.<br>
+                  In einer Variable können Werte gespeichert werden, die sich im Laufe des Programms ändern
+                  können.<br><br>
+                  Um eine Variable zu deklarieren, benötigt ihr zunächst das Schlüsselwort "<span
+                     class="colorFunction">let</span>" oder "<span class="colorFunction">const</span>", gefolgt
+                  von einem Namen und optional einem Anfangswert. Dieser Wert kann vielfältig sein: eine Zahl, ein
+                  String, ein Boolean, ein Array, ein Objekt, eine Funktion, ein HTML-Element usw. Ihr werdet alle diese
+                  Begriffe im Laufe des Kurses kennenlernen.<br><br>
 
-               Das Schlüsselwort "let" wird verwendet, wenn sich der Wert der Variable ändern kann während es sich bei
-               einer Variable mit dem Schlüssel "const" um eine unveränderliche Variable handelt. Üblicherweise auch bei
-               Werten, die sich nicht ändern sollen oder können. Euer Geburtstag ist als Beispiel immer gleich und nie
-               veränderlich während euer Alter sich verändern kann. <br> <br>
-               <b>Beispiele:</b> <br>
-            <div class="codeBlock my-1">
-               const name = "Max Mustermann"; <img src="./assets/img/copyToClipboard.png" width="30px">
-            </div> <br>
-            <p> Der String "Max Mustermann" wird in der Variable "name" gespeichert. <br> <br>
-            <div class="codeBlock my-1">
-               let alter = 20; <img src="./assets/img/copyToClipboard.png" width="30px">
-            </div> <br>
-            <p> Die Number 20 wird in der Variable "alter" gespeichert. <br> <br>
-            <div class="codeBlock my-1">
-               let istStudent = true; <img src="./assets/img/copyToClipboard.png" width="30px">
-            </div> <br>
-            <p> Der Boolean true wird in der Variable "istStudent" gespeichert. <br> <br>
-            <div class="codeBlock my-1">
-               let alter = 20; <br>
-               alter = 21; <img src="./assets/img/copyToClipboard.png" width="30px">
-            </div> <br>
-            <p> Die Number 20 wird in der Variable "alter" gespeichert. <br>
-               Anschließend wird der Wert der Variable "alter" auf 21 geändert. <br> <br>
-            </p>
-            Variabeln können benutzt werden um einfacher mit Werten zu arbeiten, sie zu ändern oder zu übergeben, z.B.
-            in Funktionen mit denen dann weiter gearbeitet werden kann. <br>
+                  Das Schlüsselwort "<span class="colorFunction">let</span>" wird verwendet, wenn der Wert der Variable
+                  sich im Laufe der Zeit ändern kann.
+                  Im Gegensatz dazu steht das Schlüsselwort "<span class="colorFunction">const</span>" für Konstanten,
+                  also Werte, die nach der
+                  Initialisierung nicht mehr verändert werden können. Ein typisches Beispiel für eine Konstante ist euer
+                  Geburtstag, der immer gleich bleibt, während sich euer Alter jedes Jahr ändert. Ihr werder auch auf
+                  das Schlüsselwort "var" treffen, dieses Schlüssenwort wird hier nicht verwendet. Anstatt "var"
+                  benutzen wir "<span class="colorFunction">let</span>".<br><br>
+
+                  <b>Beispiele:</b>
+               </p> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">name</span> = <span class="colorString">"Max Mustermann"</span>; <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"> </code></pre>
+               </div> <br>
+               <p> Der String <span class="colorString">"Max Mustermann"</span> wird in der Variable "<span
+                     class="colorVariable">name</span>" gespeichert. <br> <br></p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">alter</span> = <span class="colorType">20</span>; <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"> </code></pre>
+               </div> <br>
+               <p> Die Number <span class="colorType">20</span> wird in der Variable "<span
+                     class="colorVariable">alter</span>" gespeichert. <br> <br></p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">istStudent</span> = <span class="colorBoolean">true</span>; <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"> </code></pre>
+               </div> <br>
+               <p> Der Boolean <span class="colorBoolean">true</span> wird in der Variable "<span
+                     class="colorVariable">istStudent</span>" gespeichert.</p>
+               <br> <br>
+               <p>
+                  Variablen können verwendet werden, um einfacher mit Werten zu arbeiten. Sie ermöglichen es, Daten zu
+                  speichern, zu ändern und zu übergeben. Zum Beispiel können Variablen dazu benutzt werden, um Werte
+                  innerhalb von Funktionen zu übergeben und dort weiterzuverarbeiten. Dies macht den Code flexibler und
+                  wiederverwendbar. <br><br>
+
+                  Darüber hinaus ermöglichen Variablen eine bessere Lesbarkeit und Strukturierung des Codes. Statt
+                  wiederholt dieselben Werte zu verwenden, kann man sie in einer Variable speichern und über ihren Namen
+                  darauf zugreifen. Dies erleichtert auch die Fehlersuche, da Änderungen an einem Wert nur an einer
+                  Stelle im Code vorgenommen werden müssen. Variablen sind somit ein grundlegendes Werkzeug, um
+                  Programme übersichtlich, wartbar und effizient zu gestalten.
+               </p> <br>
+               <a target="_blank" href="https://www.w3schools.com/js/js_variables.asp">Weitere Informationen zum
+                  Thema Variabeln</a>
+
+               <h3 id="vsc" class="topic__subheader accordion">Übungen<span class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <a target="_blank"
+                        href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1">Übungen zum
+                        Thema Variabel auf w3schools</a> <br> <br>
+                  </div>
+               </div>
+            </div>
          </div>
-
-         <!------------------------------------------------------------- If/else --------------------------------------------------------------------->
-         <h2 id="files" class="contentHeader topic__header accordion">if-Bedingung<span class="arrow right"></span>
+         <!------------------------------------------------------------- arrays --------------------------------------------------------------------->
+         <h2 id="arrays" class="contentHeader topic__header accordion">Arrays<span class="arrow right"></span>
          </h2>
          <div class="panel">
-            <p>if-Bedingungen sind eine Möglichkeit, um zu überprüfen, ob eine Bedingung erfüllt ist. <br> <br>
-               <b>Beispiel:</b> <br>
-            <div class="codeBlock my-1">
+            <div class="overflow-hidden">
+               <p>
+                  Ein Array kann man sich als Container oder Liste vorstellen, der bzw. die mehrere Inhalte aufnimmt.
+                  Diese Inhalte können von der gleichen Art sein, wie bei einer einzelnen Variable, beispielsweise
+                  Zahlen, Strings, Booleans, andere Arrays, Objekte oder sogar Funktionen. <br><br>
+                  Arrays in JavaScript sind dynamisch, was bedeutet, dass ihre Größe veränderlich ist und neue Elemente
+                  hinzugefügt oder bestehende entfernt werden können. <br><br>
+                  Durch die Verwendung von Arrays können komplexe Datenstrukturen effizient gehandhabt und Operationen
+                  wie das Durchlaufen, Sortieren und Filtern von Daten vereinfacht werden.
+               </p>
 
-               <pre class="position-relative"><code><span class="colorFunction">let</span> <span class="colorFunctionCall">age</span> = <span class="colorType">20</span>;
+               <b>Aufbau:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">array</span> = [<span class="colorType">1</span>, <span class="colorString">"string"</span>, <span class="colorBoolean">true</span>];   <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></code></pre>
+               </div>
+               <p><b>Index:</b> <br>
+                  Jedes Element in einem Array wird durch einen Index identifiziert, der bei 0 beginnt. Dies ermöglicht
+                  den einfachen Zugriff und die Manipulation von spezifischen Elementen innerhalb des Arrays. Das Erste
+                  Element hat somit den index 0, das zweite den Index 1 usw.<br>
+                  <img class="my-1" src="./assets/img/array_index.jpg" width="50%"><br>
+
+                  <b>Beispiel:</b> <br>
+               </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">array</span> = [<span class="colorType">1</span>, <span class="colorString">"string"</span>, <span class="colorBoolean">true</span>];    
+<span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">array</span>[<span class="colorType">0</span>]);</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>In diesem Beispiel wird der Inhalt des Arrays mit dem Index 0 in der Konsole ausgegeben. <br> Wie zu
+                  sehen, wird die Variable mit eckigen Klammern und dem Index benutzt, um auf das entsprechende Element
+                  im Array zuzugreifen (<span class="colorVariable">array</span>[<span class="colorType">0</span>]).<br>
+                  <br>
+                  <b>Beispiel:</b> <br>
+               </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">array</span> = [<span class="colorType">1</span>, <span class="colorString">"string"</span>, <span class="colorBoolean">true</span>];    
+<span class="colorVariable">array</span>[<span class="colorType">0</span>] = <span class="colorString">"geänderterInhalt"</span>;
+<span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">array</span>[<span class="colorType">0</span>]);</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>Hier wird der Inhalt des Arrays mit dem Index 0 auf <span
+                     class="colorString">"geänderterInhalt"</span> geändert und in der Konsole ausgegeben.
+                  <br>
+                  <br>
+                  <b>Beispiel:</b> <br>
+               </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">array</span> = [<span class="colorType">1</span>, <span class="colorString">"string"</span>, <span class="colorBoolean">true</span>];    
+<span class="colorVariable">array</span>.<span class="colorFunctionCall">push</span>(<span class="colorString">"neuerInhalt"</span>);
+<span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">array</span>[<span class="colorType">3</span>]);</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p> Hier wird der Inhalt <span class="colorString">"neuerInhalt"</span> mit der Funktion <span
+                     class="colorFunctionCall">push</span>() an das Array angehängt (es steht somit auf
+                  Position 3). Was wird wohl in der Konsole ausgegeben?<br>
+                  <br>
+                  <b>Beispiel:</b> <br>
+               </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">array</span> = [<span class="colorType">1</span>, <span class="colorString">"string"</span>, <span class="colorBoolean">true</span>];    
+<span class="colorVariable">array</span>.<span class="colorFunctionCall">pop</span>();
+<span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">array</span>[<span class="colorType">2</span>]);</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p> In diesem Beispiel wird der letzte Inhalt des Arrays mit der Funktion <span
+                     class="colorFunctionCall">pop</span>() entfernt und in der
+                  Konsole
+                  ausgegeben. Dadurch, dass <span class="colorVariable">array</span>[<span class="colorType">2</span>]
+                  nicht mehr existiert, wird in der Konsole "undefined" ausgeworfen.<br>
+                  <br>
+                  <b>Beispiel:</b> <br>
+               </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">array</span> = [<span class="colorType">1</span>, <span class="colorString">"string"</span>, <span class="colorBoolean">true</span>];    
+<span class="colorVariable">array</span>.<span class="colorFunctionCall">splice</span>(<span class="colorType">1</span>, <span class="colorType">1</span>);
+<span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">array</span>[<span class="colorType">1</span>]);</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>In diesem Beispiel wird der Inhalt mit dem Index 1 mit der Funktion <span
+                     class="colorFunctionCall">splice</span>() entfernt und in
+                  der Konsole ausgegeben. Da der Inhalt nun nicht mehr "string" sondern "<span
+                     class="colorBoolean">true</span>"
+                  ist, wird entsprechend <span class="colorBoolean">true</span>
+                  ausgegeben.
+                  Siehe <a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_array.asp">splice</a>. <br>
+               </p> <br>
+               <a target="_blank" href="https://www.w3schools.com/js/js_arrays.asp">Weitere Informationen zum
+                  Thema Arrays</a>
+               <h3 id="vsc" class="topic__subheader accordion">Übungen<span class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <a target="_blank"
+                        href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_arrays1">Übungen zum
+                        Thema Arrays auf w3schools</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!------------------------------------------------------------- If/else --------------------------------------------------------------------->
+         <h2 id="ifElse" class="contentHeader topic__header accordion">if-Bedingung<span class="arrow right"></span>
+         </h2>
+         <div class="panel">
+            <div class="overflow-hidden">
+               <p>In der Programmierung werden If-Bedingungen verwendet, um Entscheidungen zu treffen. Mit
+                  If-Bedingungen kann Ihr Code verschiedene Aktionen ausführen, abhängig davon, ob eine bestimmte
+                  Bedingung wahr (<span class="colorBoolean">true</span>) oder falsch (<span
+                     class="colorBoolean">false</span>) ist.<br> <br>
+                  <b>Beispiel:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">age</span> = <span class="colorType">20</span>;
       
-<span class="colorIf">if</span> (<span class="colorFunctionCall">age</span> &lt; <span class="colorType">20</span>) {
+<span class="colorIf">if</span> (<span class="colorVariable">age</span> &lt; <span class="colorType">20</span>) {
    <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are younger than 20"</span>);
-} <span class="colorIf">else if</span> (<span class="colorFunctionCall">age</span> == <span class="colorType">20</span>) {
+} <span class="colorIf">else if</span> (<span class="colorVariable">age</span> == <span class="colorType">20</span>) {
    <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are 20 y.o"</span>);
 } <span class="colorIf">else</span> {
    <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are older than 20"</span>);
-} </code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"> </pre>
+} </code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"> </pre>
+               </div>
+               <p> In diesem Beispiel wird der Wert <span class="colorType">20</span> in die Variable "<span
+                     class="colorVariable">age</span>"
+                  zugewiesen. <br>
+                  Diese Variable wird nun in mehrern Schritten überprüft. <br>
+                  Zuerst wird überprüft, ob der Wert kleiner als <span class="colorType">20</span> ist, wenn ja wird
+                  der Text <span class="colorString">"You are younger than 20"</span> ausgegeben. <br>
+                  Wenn der Wert nicht kleiner als <span class="colorType>">20</span> ist, wird überprüft, ob der Wert
+                  gleich <span class="colorType">20</span> ist, wenn ja wird
+                  der Text <span class="colorString">"You are 20 y.o" </span> ausgegeben. <br>
+                  Wenn der Wert weder kleiner noch gleich <span class="colorType">20</span> ist, wird mit "<span
+                     class="colorIf">else</span>" automatisch angenommen, dass age größer als <span
+                     class="colorType">20</span> ist.<br> <br>
+               </p>
+               <a target="_blank" href="https://www.w3schools.com/js/js_if_else.asp">Weitere Informationen zum
+                  Thema If/else</a> <br>
+               <h3 id="vsc" class="topic__subheader accordion">Übungen<span class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <a target="_blank"
+                        href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_conditions1">Übungen zum
+                        Thema If/else auf w3schools</a> <br>
+                  </div>
+               </div>
             </div>
-            <p> In diesem Beispiel wird der Wert 20 in der Variable "age" gespeichert. <br>
-               Diese Variable wird nun in mehrern Schritten überprüft. <br>
-               Zuerst wird überprüft, ob der Wert kleiner als 20 ist, wenn ja wird der Text "You are younger than 20"
-               ausgegeben. <br>
-               Wenn der Wert nicht kleiner als 20 ist, wird überprüft, ob der Wert gleich 20 ist, wenn ja wird der Text
-               "You are 20 y.o" ausgegeben. <br>
-               Wenn der Wert weder kleiner noch gleich 20 ist, wird mit "else" automatisch angenommen, dass age größer
-               als 20 ist <br> <br>
-            </p>
          </div>
-         <h2 id="files" class="contentHeader topic__header accordion">Funktionen<span class="arrow right"></span>
+         <!------------------------------------------------------------- functions --------------------------------------------------------------------->
+         <h2 id="function" class="contentHeader topic__header accordion">Funktionen<span class="arrow right"></span>
          </h2>
-         <!------------------------------------------------------------- Functions --------------------------------------------------------------------->
          <div class="panel">
-            <p>Funktionen sind vordefinierte Programmierbereiche, die immer genau dann ausgeführt werden, wenn ihr es
-               wollt. Dabei können Funktionen auch Parameter annehmen (quasi Variabeln) und nach dem durchlauf einen
-               Wert zurückgeben.<br> Stellt euch eine Funktion wie eine Maschine vor. In diese Maschine gebt ihr nun
-               Zutaten oder Ressourcen. Was genau diese Maschine macht, definiert ihr selbst, und am Ende kommt ein
-               veredeltes Produkt heraus.<br>
-               <img class="my-1" src="./assets/img/function_machine.png" width="250px"><br>
+            <div class="overflow-hidden">
+               <p>
+                  Funktionen sind vordefinierte Programmierbereiche, die ausgeführt werden, wann immer ihr es benötigt.
+                  Sie können Parameter entgegennehmen, die wie Variablen fungieren, und nach ihrer Ausführung einen Wert
+                  zurückgeben. <br>
+                  Stellt euch eine Funktion als eine Art Maschine vor: Ihr gebt dieser Maschine bestimmte Zutaten oder
+                  Ressourcen (die Parameter) ein. Die Aufgabe oder den Prozess, den diese Maschine durchführt, definiert
+                  ihr selbst durch den Code innerhalb der Funktion. Am Ende liefert die Funktion ein Ergebnis (das
+                  veredelte Produkt), basierend auf den eingegebenen Daten und ihrer Programmierung. <br><br>
+
+                  Dies macht Funktionen zu einem mächtigen Werkzeug in der Programmierung. Sie ermöglichen es, Code zu
+                  modularisieren und wiederzuverwenden, was den Code sauberer, wartbarer und effizienter macht. Mit
+                  Funktionen könnt ihr komplexe Aufgaben in kleinere, handhabbare Teile zerlegen und diese bei Bedarf
+                  immer wieder aufrufen.
+               </p> <br>
+
+               <!-- <img class="my-1" src="./assets/img/function_machine.png" width="250px"><br> -->
                <b>Aufbau:</b> <br>
-            <div class="codeBlock my-1">
-               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">name</span>(<span class="colorVariable">parameter</span>) {
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">function</span> <span class="colorFunctionCall">name</span>(<span class="colorVariable">parameter</span>) {    
    <span class="colorComment">// Programmcode</span>
-}</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
-            </div>
-            <p> In diesem Beispiel wird eine Funktion mit dem Namen "name" definiert. <br>
-               Diese Funktion nimmt einen Parameter entgegen, der in der Funktion mit "parameter" angesprochen
-               werden kann. <br>
-               In der Funktion wird nun der Programmcode ausgeführt. <br>
-               Wichtig hierbei ist, dass eine Funktion immer aufgerufen werden muss, da sie sonst nicht ausgeführt wird.
-               <br>
-               <b> Beispiel:</b>
-            <div class="codeBlock my-1">
-               <pre
-                  class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">sayHello</span>() {
+}</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p> Definiert wird eine Funktion <span class="colorFunctionCall">name</span>(). <br>
+                  Diese Funktion nimmt einen Parameter entgegen, der in der Funktion mit "<span
+                     class="colorVariable">parameter</span>" angesprochen werden kann. <br>
+                  In der Funktion wird nun der Programmcode ausgeführt. <br>
+                  Wichtig hierbei ist, dass eine Funktion immer aufgerufen werden muss, da sie sonst nicht
+                  ausgeführt
+                  wird.
+                  <br> <br>
+                  <b> Beispiel:</b>
+               </p>
+
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">function</span> <span class="colorFunctionCall">sayHello</span>() {
    <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"Hello World"</span>);
 }
 
-<span class="colorFunctionCall">sayHello</span>();</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
-            </div>
-            <p> In diesem Beispiel wird eine Funktion mit dem Namen "sayHello" definiert. <br>
-               Diese Funktion nimmt keinen Parameter entgegen. <br>
-               In der Funktion wird nun der Text "Hello World" in der Konsole ausgegeben. <br>
-               <br>
-               Anschließend wird die Funktion aufgerufen. Erst durch diesen Aufruf wird die Funktion und der
-               Programmcode innerhalb der Funktion ausgeführt<br>
-               <br>
-            <h3>Parameter und Ausgabe</h3>
-            <b>Beispiel:</b> <br>
-            <div class="codeBlock my-1">
-               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">add</span>(<span class="colorVariable">a</span>, <span class="colorVariable">b</span>) {
+<span class="colorFunctionCall">sayHello</span>();</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>Hier wird die Funktion <span class="colorFunctionCall">sayHello</span>() definiert. <br>
+                  Diese Funktion nimmt keinen Parameter entgegen. <br>
+                  In der Funktion wird nun der Text <span class="colorString">"Hello World"</span> in der Konsole
+                  ausgegeben. <br>
+                  <br>
+                  Anschließend wird die Funktion mit <span class="colorFunctionCall">sayHello</span>() aufgerufen. Erst
+                  durch diesen Aufruf wird die Funktion und der Programmcode innerhalb der Funktion ausgeführt<br>
+                  <br>
+               <h3>Parameter und Ausgabe</h3>
+               <b>Beispiel:</b> <br> </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">function</span> <span class="colorFunctionCall">add</span>(<span class="colorVariable">a</span>, <span class="colorVariable">b</span>) {
    <span class="colorIf">return</span> <span class="colorVariable">a</span> + <span class="colorVariable">b</span>;
 }
 
 <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span class="colorType">2</span>)</code>);</span>  
-<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
-            </div>
-            <p> In diesem Beispiel wird eine Funktion mit dem Namen "add" definiert. <br>
-               Diese Funktion nimmt zwei Parameter entgegen, die in der Funktion mit "a" und "b" angesprochen werden
-               können. <br>
-               In der Funktion wird nun der Wert von "a" und "b" addiert und mit "return" zurückgegeben. <br>
-               Anschließend wird die Funktion mit den Parametern 1 und 2 aufgerufen. <br>
-               Das Ergebnis (3) der Funktion wird nun in der Konsole ausgegeben. <br>
-               Die Bezeichnungen der Parameter (in diesem Beispiel a und b) ist euch überlassen und sollte wie
-               gewöhnlich das repräsentieren was der Parameter darstellt. In diesem Beispiel wäre anstatt a und b somit
-               numberA und numberB repräsentativer<br>
-               <br>
-            <div class="codeBlock my-1">
-               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">add</span>(<span class="colorVariable">numberA</span>, <span class="colorVariable">numberB</span>) {    
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p> In diesem Beispiel wird eine Funktion <span class="colorFunctionCall">add</span>() definiert. <br>
+                  Diese Funktion nimmt zwei Parameter entgegen, die in der Funktion mit <span
+                     class="colorVariable">a</span> und <span class="colorVariable">b</span> angesprochen
+                  werden können. <br> <br>
+
+                  Die Zeile:</p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span class="colorType">2</span>)</code>);    </span><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+
+               <p>ist ein verschachtelter Aufruf. <br> Es wird ein <span class="colorVariable">console</span>.<span
+                     class="colorFunctionCall">log</span>()
+                  aufgerufen, und innerhalb dieses Logs wird die Funktion <span class="colorFunctionCall">add</span>()
+                  mit den Parametern <span class="colorType">1</span> und <span class="colorType">2</span> aufgerufen.
+                  Dadurch wird die Funktion aufgerufen und das Ergebnis der Funktion (1 + 2 = 3) wird an den <span
+                     class="colorVariable">console</span>.<span class="colorFunctionCall">log</span>()
+                  übergeben und in der Konsole ausgegeben.<br>
+                  Die Bezeichnungen der Parameter (in diesem Beispiel <span class="colorVariable">a</span> und <span
+                     class="colorVariable">b</span>) ist euch überlassen und sollte wie
+                  gewöhnlich das repräsentieren was der Parameter darstellt. In diesem Beispiel wäre anstatt <span
+                     class="colorVariable">a</span> und
+                  <span class="colorVariable">b</span> somit <span class="colorVariable">numberA</span> und <span
+                     class="colorVariable">numberB</span> repräsentativer:
+                  <br>
+               </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">function</span> <span class="colorFunctionCall">add</span>(<span class="colorVariable">numberA</span>, <span class="colorVariable">numberB</span>) {    
       <span class="colorIf">return</span> <span class="colorVariable">numberA</span> + <span class="colorVariable">numberB</span>;
 }
    
 <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span class="colorType">2</span>)</code>);</span>  
-<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
-            </div>
-            <p>Wichtig ist jedoch, dass beim Aufruf einer Funktion - die Parameter enthält - diese Parameter auch
-               übergebe werden müssen. die Aufruf kann also nicht add(1); oder add(1,3,5); sein.<br> <br>
-               Eine Funktion muss keinen Parameter entgegennehmen und auch keinen Wert zurückgeben. <br>
-            </p>
-            <b>Beispiel:</b> <br>
-            <div class="codeBlock my-1">
-               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">sayHello</span>() {
-   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"Hello World"</span>);
-}
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>Wichtig ist jedoch, dass beim Aufruf einer Funktion - die Parameter enthält - diese Parameter
+                  auch übergeben werden müssen. Der Aufruf darf also nicht <span
+                     class="colorFunctionCall">add</span>(<span class="colorType">1</span>); oder <span
+                     class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span
+                     class="colorType">3</span>, <span class="colorType">5</span>); sein.<br> <br>
+                  Eine Funktion muss keinen Parameter entgegennehmen und auch keinen Wert zurückgeben. <br>
 
-<span class="colorFunctionCall">sayHello</span>();</code>
-<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
-            </div>
-            <p> In diesem Beispiel wird eine Funktion mit dem Namen "sayHello" definiert. <br>
-               Diese Funktion nimmt keine Parameter entgegen. <br>
-               In der Funktion wird nun der Text "Hello World" in der Konsole ausgegeben. <br>
-               <br>
-               Der Aufruf einer Funktion kann auch in einer Variable gespeichert werden. <br>
-               <b>Beispiel:</b> <br>
-            <div class="codeBlock my-1">
-               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">add</span>(<span class="colorVariable">a</span>, <span class="colorVariable">b</span>) {    
-   <span class="colorIf">return</span> <span class="colorFunctionCall">a</span> + <span class="colorFunctionCall">b</span>;
+                  Der Aufruf einer Funktion kann auch in einer Variable gespeichert werden. <br><br>
+                  <b>Beispiel:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">function</span> <span class="colorFunctionCall">add</span>(<span class="colorVariable">numberA</span>, <span class="colorVariable">numberB</span>) {    
+   <span class="colorIf">return</span> <span class="colorVariable">numberA</span> + <span class="colorVariable">numberB</span>;
 }
 
 <span class="colorFunction">let</span> <span class="colorVariable">result</span> = <span class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span class="colorType">2</span>);
 <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">result</span>);</code>
-<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
-            </div>
-            <p> In diesem Beispiel wird eine Funktion mit dem Namen "add" definiert. <br>
-               Diese Funktion nimmt zwei Parameter entgegen, die in der Funktion mit "a" und "b" angesprochen werden
-               können. <br>
-               In der Funktion wird nun der Wert von "a" und "b" addiert und mit "return" zurückgegeben. <br>
-               <br>
-               Anschließend wird die Funktion mit den Parametern 1 und 2 aufgerufen und das Ergebnis in der Variable
-               result gespeichert, und mit einem console.log() ausgegeben. Die Aussgabe kann auch in andere Bereiche
-               gespeichert werden, so könnte man auch eine if-Bedingung aufrufen und als Bedingung eine Funktion
-               aufrufen, die entweder "true" oder "false" ausgibt<br>
-               <br>
-               <b>Beispiel:</b> <br>
-            <div class="codeBlock my-1">
-               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">isAdult</span>(<span class="colorFunctionCall">age</span>) {
-   <span class="colorIf">if</span> (<span class="colorFunctionCall">age</span> &gt;= <span class="colorType">18</span>) {
-      <span class="colorIf">return</span> <span class="colorType">true</span>;
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p> Der Aufbau dieser Funktion ist gleich wie die davor. Der Unterschied hier ist jedoch, dass der
+                  Rückgabewert (3) nicht direkt in einer Konsole ausgegeben wird, sondern erst in die Variable
+                  <span class="colorVariable">result</span> gespeichert wird, und anschließend <span
+                     class="colorVariable">result</span> in der Konsole ausgeben wird.<br>
+                  <br> <br>
+                  Die Aussgabe kann auch in anderen Bereiche
+                  gespeichert werden, so kann sie auch eine if-Bedingung aufrufen werden, und als Bedingung eine
+                  Funktion
+                  aufrufen, die entweder "<span class="colorBoolean">true</span>" oder "<span
+                     class="colorBoolean">false</span>" ausgibt<br>
+                  <br>
+                  <b>Beispiel:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">function</span> <span class="colorFunctionCall">isAdult</span>(<span class="colorFunctionCall">age</span>) {     
+   <span class="colorIf">if</span> (<span class="colorVariable">age</span> &gt;= <span class="colorType">18</span>) {
+      <span class="colorIf">return</span> <span class="colorBoolean">true</span>;
    } <span class="colorIf">else</span> {
-      <span class="colorIf">return</span> <span class="colorType">false</span>;
+      <span class="colorIf">return</span> <span class="colorBoolean">false</span>;
    }
 }
 
 <span class="colorFunction">let</span> <span class="colorVariable">result</span> = <span class="colorFunctionCall">isAdult</span>(<span class="colorType">20</span>);
 <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">result</span>);</code>
-<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
-            </div>
-            <p> In diesem Beispiel wird eine Funktion mit dem Namen "isAdult" definiert. <br>
-               Diese Funktion nimmt einen Parameter entgegen, der in der Funktion mit "age" angesprochen werden kann.
-               <br>
-               In der Funktion wird nun überprüft, ob der Wert von "age" größer oder gleich 18 ist. <br>
-               Wenn der Wert größer oder gleich 18 ist, wird mit "return" der Wert "true" zurückgegeben. <br>
-               Wenn der Wert kleiner als 18 ist, wird mit "return" der Wert "false" zurückgegeben. <br>
-               <br>
-               Anschließend wird die Funktion mit dem Parameter 20 aufgerufen und das Ergebnis in der Variable result
-               gespeichert, und mit einem console.log() ausgegeben. <br>
-               <br>
-               <b>Beispiel:</b> <br>
-            <div class="codeBlock my-1">
-               <pre class="position-relative"><code><span class="colorFunction">function</span> <span class="colorFunctionCall">isAdult</span>(<span class="colorFunctionCall">age</span>) {
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p> In diesem Beispiel wird eine Funktion mit dem Namen "<span
+                     class="colorFunctionCall">isAdult</span>()" definiert. <br>
+                  Diese Funktion nimmt einen Parameter entgegen, der in der Funktion mit "<span
+                     class="colorVariable">age</span>" angesprochen werden
+                  kann.
+                  <br>
+                  In der Funktion wird nun überprüft, ob der Wert von "<span class="colorVariable">age</span>" größer
+                  oder gleich <span class="colorType">18</span> ist. <br>
+                  Wenn der Wert größer oder gleich <span class="colorType">18</span> ist, wird mit "<span
+                     class="colorIf">return</span>" der Wert "<span class="colorBoolean">true</span>" zurückgegeben.
+                  <br>
+                  Wenn der Wert kleiner als <span class="colorType">18</span> ist, wird mit "<span
+                     class="colorIf">return</span>" der Wert "<span class="colorBoolean">false</span>" zurückgegeben.
+                  <br>
+                  <br>
+                  Anschließend wird die Funktion mit dem Parameter <span class="colorType>">20</span> aufgerufen und das
+                  Ergebnis in der Variable
+                  <span class="colorVariable>">result</span>
+                  gespeichert, und mit einem <span class="colorVariable">console</span>.<span
+                     class="colorFunctionCall">log</span>() ausgegeben. <br>
+                  <br>
+                  <b>Beispiel:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">function</span> <span class="colorFunctionCall">isAdult</span>(<span class="colorFunctionCall">age</span>) {
    <span class="colorIf">if</span> (<span class="colorFunctionCall">age</span> &gt;= <span class="colorType">18</span>) {
       <span class="colorIf">return</span> <span class="colorType">true</span>;
    } <span class="colorIf">else</span> {
@@ -351,12 +504,322 @@
 } <span class="colorIf">else</span> {
    <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are not an adult"</span>);
 }</code>
-<img class="copyToClipboard" src="./assets/img/copyToClipboard.png" width="30px"></pre>
+<img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>In diesem Beispiel wird in der If-Bedingung direkt eine Funktion aufgerufen, die entsprechend
+                  dem
+                  Alter
+                  ein "<span class="colorBoolean">true</span>" oder "<span class="colorBoolean">false</span>" ausgibt.
+               </p> <br>
+               <a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">Weitere Informationen zum
+                  Thema Funktionen</a>
+               <h3 id="vsc" class="topic__subheader accordion">Übungen<span class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <a target="_blank"
+                        href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions1">Übungen zum
+                        Thema Funktionen auf w3schools</a> <br> <br>
+                  </div>
+               </div>
             </div>
-            <p>In diesem Beispiel wird in der If-Bedingung direkt eine Funktion aufgerufen, die entsprechend dem Alter
-               ein "true" oder "false" ausgibt.</p>
-            </p>
          </div>
+         <!------------------------------------------------------------- for-loop --------------------------------------------------------------------->
+         <h2 id="loop" class="contentHeader topic__header accordion">For-Schleife<span class="arrow right"></span>
+         </h2>
+         <div class="panel">
+            <div class="overflow-hidden">
+               <p>
+                  Eine For-Schleife ist eine Möglichkeit, eine bestimmte Anzahl an Durchläufen, auch Iterationen
+                  genannt, zu definieren. Dies bedeutet, dass ein bestimmter Programmcode eine festgelegte Anzahl
+                  durchlaufen kann und somit mehrmals ausgeführt wird. Beispiele hierfür sind das Ausgeben aller
+                  Elemente einer Liste mit Elementen, das Durchlaufen eines Arrays (siehe Array) oder das Durchlaufen
+                  einer Funktion mit unterschiedlichen Parametern.<br><br>
+
+                  <b>Aufbau einer For-Schleife:</b><br><br>
+                  Eine For-Schleife besteht aus drei Hauptteilen:<br> <br>
+                  <b>1. Initialisierung:</b><br>
+                  Hier wird eine Variable definiert, die in der Schleife als Zähler verwendet wird. Diese Variable gibt
+                  an, wie oft die Schleife durchlaufen werden soll. Üblicherweise verwendet man hierfür die Variable
+                  "<span class="colorFunction">let</span> <span class="colorVariable">i</span>", wobei "<span
+                     class="colorVariable">i</span>" für "Index"
+                  steht und oft bei <span class="colorType">0</span> beginnt.<br>
+               </p>
+
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFor">for</span> (<span class="colorFunction">let</span> <span class="colorVariable">i</span> = <span class="colorType">0</span>; ...; ...) {    
+   <span class="colorComment">// Programmcode</span>
+}</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>
+               <p>
+                  <b>2. Bedingung:</b><br>
+                  An diesem Punkt der For-Schleife wird eine Bedingung definiert, die vor jedem Durchlauf überprüft
+                  wird. Ist die Bedingung erfüllt (ergibt sie „<span class="colorBoolean">true</span>“), wird der Code
+                  innerhalb der Schleife ausgeführt. Nach jedem Durchlauf wird die Bedingung erneut geprüft. Sobald die
+                  Bedingung nicht mehr erfüllt ist (ergibt „<span class="colorBoolean">false</span>“), wird die
+                  Ausführung der Schleife beendet. <br>
+                  Die Bedingung selbst wird ähnlich wie bei einer If-Bedingung definiert und muss ein klares Ergebnis
+                  von „<span class="colorBoolean">true</span>“ oder „<span class="colorBoolean">false</span>“ liefern.
+                  Ein häufiges Beispiel für eine solche Bedingung ist „<span class="colorVariable">i</span>
+                  < <span class="colorType">10</span>“, was bedeutet, dass die Schleife so lange ausgeführt wird, wie
+                     die Variable <span class="colorVariable">i</span> kleiner als <span class="colorType">10</span>
+                     ist.<br><br>
+               </p>
+
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFor">for</span> (<span class="colorFunction">let</span> <span class="colorVariable">i</span> = <span class="colorType">0</span>; <span class="colorVariable">i</span> &lt; <span class="colorType">10</span>; ...) {    
+   <span class="colorComment">// Programmcode</span>
+}</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>
+                  <b>3. Inkrementierung:</b><br>
+                  In diesem Schritt wird die Zählvariable, üblicherweise „<span class="colorVariable">i</span>“, nach
+                  jedem Schleifendurchlauf verändert. Meistens wird sie um 1 erhöht. Diese Erhöhung ist entscheidend, um
+                  eine endlose Ausführung der Schleife zu vermeiden. <br>
+                  Wenn zum Beispiel die Bedingung „<span class="colorVariable">i</span>
+                  < <span class="colorType">10</span>“ lautet, bedeutet dies, dass die Schleife so lange ausgeführt
+                     wird, bis „<span class="colorVariable">i</span>“ den Wert 10 erreicht. Da „i“ nach jedem Durchlauf
+                     um 1 erhöht wird, endet die
+                     Schleife nach 10 Durchläufen, weil die Bedingung dann nicht mehr erfüllt ist. <br>
+                     Der Ausdruck „<span class="colorVariable">i</span>++“ ist eine gängige Kurzform für „<span
+                        class="colorVariable">i</span> = <span class="colorVariable">i</span> + <span
+                        class="colorType">1</span>“, was eine einfache und effiziente Art ist, den Zähler zu erhöhen.
+               </p>
+               <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFor">for</span> (<span class="colorFunction">let</span> <span class="colorVariable">i</span> = <span class="colorType">0</span>; <span class="colorVariable">i</span> &lt; <span class="colorType">10</span>; <span class="colorVariable">i</span>++) {    
+   <span class="colorComment">// Programmcode</span>
+}</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>
+                  Sobald die Bedingung erfüllt ist, wird der Programmcode im Schleifenblock (oder Schleifenkörper) der
+                  For-Schleife ausgeführt. Auch hier kann der Inhalt vielfältig sein. Zum Beispiel kann innerhalb der
+                  For-Schleife eine weitere For-Schleife aufgerufen werden, um durch ein mehrdimensionales Array zu
+                  iterieren:<br><br>
+               </p>
+
+               <b> Beispiel: </b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">array</span> = [
+   [<span class="colorType">1</span>, <span class="colorType">2</span>, <span class="colorType">3</span>],
+   [<span class="colorType">4</span>, <span class="colorType">5</span>, <span class="colorType">6</span>],
+   [<span class="colorType">7</span>, <span class="colorType">8</span>, <span class="colorType">9</span>]
+];
+
+<span class="colorFor">for</span> (<span class="colorFunction">let</span> <span class="colorVariable">i</span> = <span class="colorType">0</span>; <span class="colorVariable">i</span> &lt; <span class="colorVariable">array</span>.<span class="colorVariable">length</span>; <span class="colorVariable">i</span>++) {
+   <span class="colorFor">for</span> (<span class="colorFunction">let</span> <span class="colorVariable">j</span> = <span class="colorType">0</span>; <span class="colorVariable">j</span> &lt; <span class="colorVariable">array</span>[<span class="colorVariable">i</span>].<span class="colorVariable">length</span>; <span class="colorVariable">j</span>++) {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">array</span>[<span class="colorVariable">i</span>][<span class="colorVariable">j</span>]);
+   }
+}</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>
+                  In diesem Beispiel wird ein mehrdimensionales Array (ein Array, das weitere Arrays enthält) definiert.
+                  <br>
+                  Das äußere Array in unserem Beispiel hat drei innere Arrays: [<span class="colorType">1</span>, <span
+                     class="colorType">2</span>, <span class="colorType">3</span>], [<span class="colorType">4</span>,
+                  <span class="colorType">5</span>, <span class="colorType">6</span>] und [<span
+                     class="colorType">7</span>, <span class="colorType">8</span>, <span
+                     class="colorType">9</span>].<br>
+                  Der Ausdruck <span class="colorVariable">array</span>.<span class="colorVariable">length</span>
+                  liefert die Länge des Arrays, in diesem Fall 3, da es drei innere Arrays gibt (die Indizes dieser
+                  Arrays sind 0, 1 und 2).<br>
+                  Das äußere Array wird nun in einer For-Schleife durchlaufen. In jeder Iteration der äußeren Schleife
+                  wird mit einer weiteren For-Schleife durch die Elemente des jeweiligen inneren Arrays iteriert.
+                  Anschließend wird jeder Wert in der Konsole ausgegeben.
+                  <br>
+               </p>
+
+               </p> <br>
+               <b>Beispiel:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFor">for</span> (<span class="colorFunction">let</span> <span class="colorVariable">i</span> = <span class="colorType">0</span>; <span class="colorVariable">i</span> &lt; <span class="colorType">10</span>; <span class="colorVariable">i</span>++) {    
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">i</span>);
+
+   <span class="colorIf">if</span> (<span class="colorVariable">i</span> == <span class="colorType">5</span>) {
+      <span class="colorIf">break</span>;
+   }
+}</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>Wenn <span class="colorVariable">i</span> gleich <span class="colorType">5</span> ist, wird mit "<span
+                     class="colorIf">break</span>" die Schleife abgebrochen. </p>
+               <br>
+               <br>
+               <b>Beispiel:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFor">for</span> (<span class="colorFunction">let</span> <span class="colorVariable">i</span> = <span class="colorType">0</span>; <span class="colorVariable">i</span> &lt; <span class="colorType">10</span>; <span class="colorVariable">i</span>++) {    
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">i</span>);
+
+   <span class="colorIf">if</span> (<span class="colorVariable">i</span> == <span class="colorType">5</span>) {
+      <span class="colorIf">continue</span>;
+   }
+}</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>Wenn <span class="colorVariable">i</span> gleich <span class="colorType">5</span> ist, wird mit "<span
+                     class="colorIf">continue</span>" der aktuelle Schleifendurchlauf abgebrochen und die nächste
+                  Iteration gestartet.</p><br>
+
+               </p>
+               <a target="_blank" href="https://www.w3schools.com/js/js_loop_for.asp">Weitere
+                  Informationen
+                  zum Thema For-Schleifen</a>
+               <h3 id="vsc" class="topic__subheader accordion">Übungen<span class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <a target="_blank"
+                        href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_loops1">Übungen
+                        zum Thema For-Schleifen auf w3schools</a> <br> <br>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!------------------------------------------------------------- dom-manipulation --------------------------------------------------------------------->
+         <h2 id="domMan" class="contentHeader topic__header accordion">DOM-Manipulation<span class="arrow right"></span>
+         </h2>
+         <div class="panel">
+            <div class="overflow-hidden">
+               <p>
+                  DOM steht für "Document Object Model" und repräsentiert die Struktur und den Inhalt eurer Webseite in
+                  Form eines Objektmodells. Durch DOM-Manipulation könnt ihr die aktuellen Inhalte auf der Webseite
+                  ändern oder anpassen. Ein Beispiel hierfür ist die Änderung des Inhalts eines HTML-Elements durch
+                  einen Mausklick, das Ändern der Farbe oder das Umsetzen komplexerer Interaktionen. <br>
+                  Für die Manipulation der DOM-Elemente benötigt ihr grundsätzlich drei Dinge: <br><br>
+                  <b>1. Das HTML-Element:</b><br>
+                  Dies ist das Element, das ihr manipulieren möchtet. Es muss in eurem HTML-Dokument vorhanden sein.
+                  Zudem ist es wichtig, sicherzustellen, dass das HTML vollständig geladen ist, bevor auf das JavaScript
+                  zugegriffen wird. Hierfür kann das Attribut "defer" im Script-Tag verwendet werden (siehe <a
+                     target="_blank" href="https://www.w3schools.com/tags/att_script_defer.asp">defer</a>). Um auf das
+                  gewünschte HTML-Element zugreifen zu können, müsst ihr es zunächst identifizieren. Der einfachste Weg
+                  ist, dem Element eine eindeutige ID zuzuweisen. Anschließend könnt ihr mit Methoden wie "<span
+                     class="colorVariable">document</span>.<span class="colorFunctionCall">getElementById</span>()" oder
+                  "<span class="colorVariable">document</span>.<span class="colorFunctionCall">querySelector</span>()"
+                  auf das Element zugreifen.<br><br>
+                  <b>Beispiel:</b>
+               </p>
+
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">const</span> <span class="colorVariable">button</span> = <span class="colorConsole">document</span>.<span class="colorFunctionCall">querySelector</span>(<span class="colorString">"#button"</span>);   <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></code></pre>
+               </div>
+               <p> Zu sehen ist eine neue Variable mit dem Namen "<span class="colorVariable">button</span>" der ein
+                  HTML-Element zugewiesen wird. Dieses HTML-Element wird durch den <span
+                     class="colorFunctionCall">querySelector</span>() erkannt. In diesem Selector steht "<span
+                     class="colorString">"#button"</span>", was die einzigartige ID des HTML-Elements ist:<br></p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorTag">&lt;button</span> <span class="colorAttribute">id</span>=<span class="colorString">"button"</span><span class="colorTag">&gt;</span>Click me!<span class="colorTag">&lt;/button&gt;</span>   <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></code></pre>
+               </div>
+               <br>
+               <p>
+                  Wichtig ist, dass beim Einsatz von <span class="colorFunctionCall">querySelector</span>() die Raute
+                  (#) eine ID kennzeichnet. Wenn ihr eine <span class="colorVariable">class</span> verwendet, müsst ihr
+                  anstelle der Raute einen Punkt verwenden, ähnlich wie in CSS. Zum Beispiel: <span
+                     class="colorVariable">document</span>.<span class="colorFunctionCall">querySelector</span>(<span
+                     class="colorString">".button"</span>) für eine Klasse, und <span
+                     class="colorVariable">document</span>.<span class="colorFunctionCall">querySelector</span>(<span
+                     class="colorString">"#button"</span>) für eine ID. Bei <span
+                     class="colorFunctionCall">getElementById</span> ist die Raute nicht erforderlich, da sich diese
+                  Methode immer auf eine ID bezieht. <br>
+                  Aber Vorsicht: Da es von <span class="colorVariable">classes</span> oft mehrere Objekte gibt, im
+                  Gegensatz zur ID, wird bei <span class="colorVariable">document</span>.<span
+                     class="colorFunctionCall">querySelector</span>() immer das <b>erste</b> Element im HTML
+                  angesprochen. Wenn ihr alle Elemente mit derselben Klasse ansprechen wollt, müsst ihr <span
+                     class="colorVariable">document</span>.<span class="colorFunctionCall">querySelectorAll</span>()
+                  verwenden. Diese Methode liefert eine Liste aller Elemente, die ihr dann beispielsweise mit einer
+                  For-Schleife durchlaufen könnt.
+               </p>
+               <br>
+               <p>
+                  <b>2. Das Event:</b><br>
+                  Das Event ist der Auslöser für die Manipulation. Es kann ein Mausklick, ein Tastendruck, ein
+                  Hover-Effekt oder eine Vielzahl anderer Benutzeraktionen sein. Dieses Event wird einem spezifischen
+                  HTML-Element im JavaScript-Code zugeordnet. Der Browser überwacht dann dieses Event auf dem
+                  entsprechenden HTML-Element. Zum Beispiel, wenn ein Event für einen Mausklick definiert ist, wird eine
+                  bestimmte Aktion oder Funktion ausgelöst, sobald ein Klick auf diesem Element erfolgt. So könnt ihr
+                  interaktive Funktionalitäten auf eurer Webseite implementieren.
+               </p>
+
+               <br>
+               <b>Beispiel:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">button</span> = <span class="colorConsole">document</span>.<span class="colorFunctionCall">querySelector</span>(<span class="colorString">"#button"</span>);    
+<span class="colorVariable">button</span>.<span class="colorFunctionCall">addEventListener</span>(<span class="colorString">"click"</span>, ...);
+</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>
+                  Im folgenden Beispiel nutzen wir die gleiche Variable wie im vorherigen Code. Dem Button wird nun ein
+                  Event-Listener hinzugefügt, indem auf die Variable zugegriffen und mit der Methode <span
+                     class="colorFunctionCall">addEventListener</span>() erweitert wird. Der String <span
+                     class="colorString">"click"</span> spezifiziert, auf welches Event geachtet werden soll. Hier könnt
+                  ihr verschiedene Event-Typen angeben, allerdings immer nur einen pro Event-Listener.<br><br>
+
+                  <b>3. Die Funktion:</b><br>
+                  Die Funktion definiert den Programmcode, der ausgeführt wird, sobald das Event auf dem HTML-Element
+                  ausgelöst wird. Ihr könnt die Funktion nach euren Bedürfnissen gestalten; sie kann alles von sehr
+                  einfachen Anweisungen bis hin zu komplexen Operationen enthalten. Diese Flexibilität ermöglicht es
+                  euch, auf Benutzeraktionen in vielfältiger Weise zu reagieren.
+               </p>
+
+               <br>
+               <b>Beispiel:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">button</span> = <span class="colorConsole">document</span>.<span class="colorFunctionCall">querySelector</span>(<span class="colorString">"#button"</span>);    
+<span class="colorVariable">button</span>.<span class="colorFunctionCall">addEventListener</span>(<span class="colorString">"click"</span>, <span class="colorFunction">function</span>() {
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"Button wurde geklickt"</span>);
+});</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>Im Event-Listener ist die Funktion: <span class="colorFunction">function</span>() {<span
+                     class="colorComment">...</span>} zu sehen. Diese Schreibweise bezeichnet man als "anonyme
+                  Funktion", da die Funktion selbst keinen Namen hat. Wenn auf den Button auf der Webseite geklickt
+                  wird, wird die in der anonymen Funktion definierte Aktion ausgeführt, in diesem Fall wird der Text
+                  "Button wurde geklickt" in der Konsole ausgegeben.<br><br>
+                  Es besteht ebenfalls die Möglichkeit, eine zuvor definierte benannte Funktion zu verwenden. In solchen
+                  Fällen verweist ihr im Event-Listener einfach auf den Namen der Funktion, anstatt eine neue anonyme
+                  Funktion zu schreiben.<br><br>
+                  <b>Beispiel:</b><br>
+               </p>
+
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">function</span> <span class="colorFunctionCall">buttonClicked</span>() {
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"Button wurde geklickt"</span>);
+}
+
+<span class="colorFunction">let</span> <span class="colorVariable">button</span> = <span class="colorConsole">document</span>.<span class="colorFunctionCall">querySelector</span>(<span class="colorString">"#button"</span>);
+<span class="colorVariable">button</span>.<span class="colorFunctionCall">addEventListener</span>(<span class="colorString">"click"</span>, <span class="colorFunctionCall">buttonClicked</span>);</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>
+                  Hier wird die Funktion <span class="colorFunctionCall">buttonClicked</span> im Event-Listener
+                  referenziert. Die Funktion selbst wird erst aufgerufen und der Programmcode innerhalb der Funktion
+                  ausgeführt, wenn das entsprechende Event – in diesem Fall ein Klick – auftritt. Es ist wichtig zu
+                  beachten, dass bei der Verwendung einer benannten Funktion im Event-Listener die Funktionsklammern ()
+                  weggelassen werden müssen. Andernfalls würde die Funktion sofort beim Erstellen des Event-Listeners
+                  ausgeführt, anstatt erst beim Eintreten des Ereignisses.
+               </p>
+               <br>
+               <b>Beispiel:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">button</span> = <span class="colorConsole">document</span>.<span class="colorFunctionCall">querySelector</span>(<span class="colorString">"#button"</span>);    
+<span class="colorVariable">button</span>.<span class="colorFunctionCall">addEventListener</span>(<span class="colorString">"click"</span>, <span class="colorFunction">function</span>() {
+   <span class="colorVariable">button</span>.<span class="colorVariable">style</span>.<span class="colorVariable">backgroundColor</span> = <span class="colorString">"red"</span>;
+   <span class="colorVariable">button</span>.<span class="colorVariable">style</span>.<span class="colorVariable">color</span> = <span class="colorString">"white"</span>;
+   <span class="colorVariable">button</span>.<span class="colorVariable">style</span>.<span class="colorVariable">borderRadius</span> = <span class="colorString">"10px"</span>;
+});</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div>
+               <p>In der Funktion wird die Hintergrundfarbe des HTML-Elements auf "red" gesetzt. Außerdem wird die
+                  Schriftfarbe auf "white" gesetzt und die Ecken des Buttons werden abgerundet.<br><br>
+               </p>
+               <a target="_blank" href="https://www.w3schools.com/js/js_htmldom_html.asp">Weitere Informationen
+                  zum
+                  Thema DOM-Manipulation</a>
+               <h3 id="vsc" class="topic__subheader accordion">Übungen<span class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <a target="_blank"
+                        href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html1">Übungen
+                        zum
+                        Thema Arrays auf w3schools</a> <br> <br>
+                  </div>
+               </div>
+            </div>
+         </div>
+
          <!------------------------------------------------------------- Practice --------------------------------------------------------------------->
          <h2 id="practice" class="contentHeader topic__header accordion">Übungen<span class="arrow right"></span>
          </h2>
@@ -364,7 +827,8 @@
             <div class="overflow-hidden">
                <h3 class="mb-5">Collatz-Problem</h3>
 
-               <p>Schreiben Sie ein Programm, welches die Collatz-Folge für eine beliebige Zahl n (natürliche Zahl >
+               <p>Schreiben Sie ein Programm, welches die Collatz-Folge für eine beliebige Zahl n (natürliche Zahl
+                  >
                   0)
                   berechnet, und die jede
                   Zahl der Zahlenfolge in der Konsole ausgibt.
@@ -375,7 +839,8 @@
                   <li>Wenn die Zahl 1 ist, ist die Folge beendet.</li>
                </ul>
                <p>Wenn somit die Zahl 7 der Funktion übergeben wird, wirft diese mehrere Zahlen in der Konsole
-                  (console.log()) aus, bis die 1 erreicht wurde, dann hört die Funktion auf.</p>
+                  (<span class="colorVariable">console</span>.<span class="colorFunctionCall">log</span>()) aus, bis
+                  die 1 erreicht wurde, dann hört die Funktion auf.</p>
                <p>Beispiel: Die Collatz-Folge für die Zahl 7 ist:</p>
                <p> 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1</p> <br>
                <a target="_blank" href="https://de.wikipedia.org/wiki/Collatz-Problem">Collatz auf Wikipedia</a>
@@ -390,13 +855,17 @@
                            Entsprechend ist ein Parameter wichtig</p>
                      </li> <br>
                      <li>
-                        <p>Zu Ausgabe jeder Zahlfolge ist eine console.log() nötig, natürlich lässt es sich auch als
+                        <p>Zu Ausgabe jeder Zahlfolge ist eine <span class="colorVariable">console</span>.<span
+                              class="colorFunctionCall">log</span>() nötig, natürlich lässt es sich auch
+                           als
                            HTML
-                           erstellen. Je nachdem ist es wichtig, ob deine Funktion einen Rückgabewert hat oder nicht
+                           erstellen. Je nachdem ist es wichtig, ob deine Funktion einen Rückgabewert hat oder
+                           nicht
                         </p>
                      </li><br>
                      <li>
-                        <p>Die Funktion muss Bedingungen abfragen (if/else). Die Zahlenfolge endet immer mit: "4 2 1.
+                        <p>Die Funktion muss Bedingungen abfragen (if/else). Die Zahlenfolge endet immer mit: "4 2
+                           1.
                            Somit muss
                            bei 1
                            etwas anderes passieren als bei einer ungerade oder geraden Zahl</p>
@@ -408,7 +877,8 @@
                            ungerade ist. (Tipp: Modulo)</p>
                      </li><br>
                      <li>
-                        <p>Wenn die Zahlen 1 noch nicht erreicht wurde, ist die Zahlenfolge nicht zu Ende. Somit muss
+                        <p>Wenn die Zahlen 1 noch nicht erreicht wurde, ist die Zahlenfolge nicht zu Ende. Somit
+                           muss
                            eine
                            Möglichkeit gefunden werden, womit die Funktion erst aufhört zu arbeiten sobald die 1
                            gefunden
@@ -494,200 +964,6 @@
 
             </div>
          </div>
-
-         <!------------------------------------------------------------- Letzte Prüfung --------------------------------------------------------------------->
-         <h2 id="exam" class="contentHeader topic__header accordion">Letzte praktische Endabgabe<span
-               class="arrow right"></span>
-         </h2>
-         <div class="panel">
-            <div class="overflow-hidden">
-               <p class="mb-3">Um zu erkennen, ob Sie die Inhalte verstanden haben können Sie hier die praktische
-                  Prüfung des
-                  letzten Semesters anschauen. Dies dient als Referenz für die Inhalte, die Sie in diesem Modul
-                  erlernen
-                  sollen.
-                  Außerdem können Sie hierdurch sehen wie eine solche praktische Prüfung aufgebaut ist.</p>
-               <h1>Praktikum Endaufgabe SoSe22</h1>
-               <p><b>Konzipieren und entwickeln Sie eine Sprachlern-App unter Berücksichtigung folgender
-                     Anforderungen:</b></p><br>
-               <ul>
-                  <li>Zielgruppe sind <b> deutschsprachige Nutzer</b>, die <b>Spanisch </b> in einem Anfängerkurs
-                     lernen wollen.</li>
-                  <li>Beim Start des Kurses in der Sprachlern-App wird zunächst ein Satz auf Deutsch angezeigt
-                     (bspw.:
-                     "Ich heiße Gabriel").</li>
-                  <li>Ebenso werden die einzelnen Wörter der Übersetzung auf der zu erlernenden Sprache angezeigt,
-                     aber
-                     in einer zufälligen Reihenfolge (die Übersetzungswörter für oben genannten Satz in zufälliger
-                     Reihenfolge wären bspw.: "Gabriel" "llamo" "Me").</li>
-                  <li>Der Nutzer muss nun die übersetzten Wörter in der richten Reihenfolge anklicken. Der erste
-                     Klick
-                     muss auf das Wort an erste Stelle des übersetzten Satzes gesetzt werden, der zweite Klick auf
-                     das
-                     Wort an zweiter Stelle usw...</li>
-                  <li>Klickt der Nutzer ein Wort richtig an, dann gibt es einen Punkt, das Wort wird in einem
-                     Übersetzungsbereich angezeigt (bspw.: "Me"). Der Nutzer kann danach ein anderes Wort
-                     anklicken.
-                  </li>
-                  <li>Klickt der Nutzer wieder ein Wort richtig an, dann gibt es einen weiteren Punkt, das Wort
-                     wird
-                     ergänzend im Übersetzungsbereich angezeigt ("Me llamo"). Der Nutzer kann danach ein anderes
-                     Wort
-                     anklicken.</li>
-                  <li>Klick der Nutzer ein falsches Wort an, gibt es einen Punkt Abzug, im Übersetzungsbereich
-                     werden
-                     nur die bisher richtigen Wörter angezeigt.</li>
-                  <li>Das Punktekonto des Nutzers darf nicht in den Minusbereich gehen. Der aktuelle Punktestand
-                     ist für
-                     den Nutzer immer sichtbar.</li>
-                  <li>Sobald die Übersetzung vollständig ist wechselt die Anwendung zum nächsten Übungssatz.</li>
-                  <li>Wenn alle Übungssätze abgeschlossen wurden wird dem Nutzer der finale Punktestand angezeigt
-                     und
-                     zum Abschließen des Kurses gratuliert.
-                     Beim Start bzw. Neustart der Anwendung werden die Übungssätze in einer zufälligen Reihenfolge
-                     durchgeführt. Ebenfalls zufällig werden immer die Worte in Ihrer Reihenfolge dargestellt.
-                  </li>
-                  <li>Sie können selbst die Übungssätze definieren. Ebenso können Sie selbst entscheiden, wie Sie
-                     Worte
-                     und Satzzeichen trennen (bspw. bei "¡La vida loca!" können die Ausrufezeichen separat oder
-                     als Teil
-                     der Worte verstanden werden).</li>
-                  <li>Die Anwendung benötigt keine speziellen Animationen zwischen den Darstellungen. Die Inhalte
-                     können
-                     einfach "sofort-artig" erscheinen.</li>
-                  <li>Die Sprachlern-App kann in drei Schwierigkeitsstufen gespielt werden:
-                     <ol>
-                        <li>Leicht: der Kurs besteht aus 5 Übungssätzen.</li>
-                        <li>Mittel: der Kurs besteht aus 10 Übungssätzen.</li>
-                        <li>Schwer: der Kurs besteht aus 15 Übungssätzen.</li>
-                     </ol>
-                  </li>
-                  <li>Die Anwendung ist optimiert für eine Smartphone Darstellung im Portrait-Format (ca. 375 x
-                     667
-                     Pixel).</li>
-               </ul>
-               <h3>Beurteilung</h3>
-               <p>Note der End-Abgabe basiert auf den dafür ausgefüllten Anforderungs-Punkten (siehe unten). Bis
-                  zu ein
-                  Punkt darf dabei nicht erfüllt sein um die 1 zu erhalten. <br>
-                  Jeder weitere fehlende Punkt verringert die Note um 1. (4.0 >= Bestanden)<br>
-                  Jedes erfüllte optionale Ziel erhöht die Note um 1. (Maximale Bestnote: 1).<br>
-                  Der Kurs wird im Studi-Portal mit "bestanden" / "nicht bestanden" bewertet.</p>
-               <h3>Tipps</h3>
-               <p> Machen Sie sich ein Konzept! <br>
-
-                  Versuchen Sie den Anlauf der Sprachlern-App in einem Flowchart/Anwendungsfalldiagramm
-                  darzustellen. An
-                  welchen Punkten werden Entscheidungen gefällt? Muss der Computer gewisse Sachen abfragen? Wann
-                  muss
-                  der
-                  Nutzer interagieren, wie interagiert er, was sind seine Optionen? Welchen Ablauf hat der
-                  Computer, wie
-                  wählt er einen Satz aus? Wie werden die Inhalte dargestellt? Welche Elemente sind interaktiv und
-                  können
-                  vom Nutzer ausgewählt werden? Machen Sie sich darüber Gedanken, wann sich die Darstellung für
-                  den
-                  Nutzer
-                  ändert.</p>
-               <h3>Anforderungspunkte</h3>
-               <p>
-                  Gesamt: 21. (21 = 1.0, 20 = 1.0, 19 = 2.0, 18 = 3.0, 17 = 4.0, <= 16=NB) <br>
-                     Nach folgenden Kriterien wird Ihre Abgabe bewertet: <br> <br>
-                     <b>Konzeptentwurf</b> <br>
-                     <ul>
-                        <li>In einem Flussdiagramm haben Sie den grundsätzlichen Interaktionspfad der Anwendung
-                           dargestellt (Interaktion des Nutzers und Verhalten des Systems). Den Papier-Entwurf
-                           bitte als
-                           Scan / Foto digitalisieren und beilegen.</li>
-                        <li>Bilden Sie ebenso in einer Skizze die Darstellung des GUIs ab und legen Sie die
-                           Darstellung
-                           Ihrer Abgabe bei. Sie können ein Wireframing-Tool nutzen oder mit Papier und Bleistift
-                           arbeiten (Papier-Entwurf bitte wieder scannen).</li>
-                     </ul>
-                     <b>HTML</b> <br>
-                     <ul>
-                        <li>Ein schlichter Footer mit Ihrem Namen und Matrikelnummer.</li>
-                        <li>Semantische HTML-Tags wurden genutzt, Tags werden sinnvoll eingesetzt.</li>
-                     </ul>
-                     <b>CSS</b> <br>
-                     <ul>
-                        <li>Die Fläche, auf der die Übungssätze dargestellt werden, besitzt eine passende
-                           Hintergrundfarbe (oder Hintergrundtextur).</li>
-                        <li>Die Inhalte (Übungssatz, Übersetzungswörter, Übersetzungsbereich usw.) sind sinnvoll
-                           auf dem
-                           Bildschirm verteilt, voneinander unterscheidbar und überlagern sich nicht.
-                        </li>
-                        <li>Die einzelnen Übersetzungswörter sind als auswählbare Elemente erkennbar.</li>
-                        <li>Die Darstellung ist für oben genanntes Endgeräte-Format optimiert.</li>
-                     </ul>
-                     <b>Programmierung</b> <br>
-                     <ul>
-                        <li>Das Skript erzeugt keine Fehler in der Konsole.</li>
-                        <li>Ein Übungssatz mit seiner Übersetzung ist auf programmatischer Ebene sinnvoll als
-                           Objekt
-                           strukturiert.
-                        </li>
-                        <li>Das Skript bildet, je nach ausgewählter Schwierigkeitsstufe, eine bestimmte Anzahl von
-                           Übungssätzen, die nacheinander ausgegeben werden.</li>
-                        <li>Die Reihenfolge der Übungssätze wird zufällig generiert und variiert daher bei jedem
-                           Start.
-                           Jeder Übungssatz kommt nur einmal pro Kursdurchlauf vor.</li>
-                        <li>Die Reihenfolge der Übersetzungswörter wird ebenfalls zufällig generiert.</li>
-                        <li>Das Skript erzeugt für jeden Übungssatz und den Übersetzungswörtern eine Darstellung
-                           mit
-                           HTML-Elementen.</li>
-                        <li>Die einzelnen Übersetzungswörter können vom Nutzer ausgewählt werden. Ein mehrfaches
-                           Auswählen eines Wortes ist möglich.</li>
-                        <li>Das Skript überprüft bei Auswahl eines Übersetzungswortes, ob dieses Wort in der
-                           richtigen
-                           Reihenfolge ausgewählt wurde. Dafür muss das Skript für ein ausgewähltes Wort die
-                           entsprechende Stelle im übersetzten Satz kennen.</li>
-                        <li>Das Skript übernimmt das Übersetzungswort in den Übersetzungsbereich, wenn das Wort an
-                           der
-                           richtigen Reihenfolge geklickt wurde und zählt den Punktestand des Nutzers um einen
-                           Punkt
-                           hoch.</li>
-                        <li>Das Skript reduziert den Punktestand des Nutzers um einen Punkt, wenn das ausgewählte
-                           Wort
-                           nicht korrekt ausgewählt wurde und gibt eine einfache Fehlermeldung (per Alert) aus.
-                        </li>
-                        <li>Das Skript zeigt den nächsten Übungssatz an, sobald für den aktuellen Übungssatz die
-                           Übersetzung vollständig ist.</li>
-                        <li>Das Skript zeigt am Ende, wenn alle Übungssätze abgeschlossen wurden, eine
-                           Zusammenfassung
-                           mit dem finalen Punktestand an.</li>
-                     </ul>
-                     <b>Annotationen</b> <br>
-                     <ul>
-                        <li>Erklären Sie Ihren Code. Die Skript-Datei sollte mit Kommentarblöcken ergänzt sein, um
-                           relevante Anwendungsblöcke und Anweisungen beschreiben zu können.</li>
-                     </ul>
-                     <b>Optional</b> Diese Punkte müssen NICHT erfüllt werden! Sie fließen jedoch positiv in die
-                     Bewertung mit ein (siehe oben).<br>
-                     <ul>
-                        <li>Visuell ansprechende Darstellung der Übungssätze und Übersetzungswörter.</li>
-                        <li>Das Auswählen von Wörtern und das positive Feedback an den Nutzer (richtiges /
-                           falsches
-                           Wort), sowie das Wechseln von einem Übungssatz zum nächsten ist animiert.</li>
-                        <li>Relevante Aktionen in der Anwendung werden mit Sounds unterstützt (die Auswahl von
-                           einem
-                           Wort; das Feedback zur Auswahl falsch / richtig; nächster Übungssatz; Ende des Kurses).
-                        </li>
-                        <li>Um es für den Nutzer etwas schwerer zu machen werden zu den Worten, die im
-                           tatsächlichen
-                           Übersetzungssatz auch vorkommen, zusätzlich auch andere Worte angezeigt, die nicht
-                           vorkommen.
-                        </li>
-                        <li>Zum Anwendungsstart kann der Nutzer, neben Spanisch, auch eine andere Sprache wählen,
-                           die
-                           geübt werden soll. Besonders schön wäre eine Erweiterung, um Ukrainisch zu lernen.</li>
-                        <li>Neben der Punktezahl wird ebenfalls der aktuelle Fortschritt als Text-Element (bspw.:
-                           "Übungssatz 3 von 15") und in Form eines Balkens (Progressbar) angezeigt.</li>
-                     </ul>
-               </p>
-            </div>
-         </div>
-      </div>
       </div>
 
       <div class="navBtnWrapper">
