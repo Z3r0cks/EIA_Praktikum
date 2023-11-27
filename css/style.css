@@ -388,12 +388,13 @@ li {
 }
 
 .warn {
+   border-radius: 8px !important;
    overflow: hidden;
    border-radius: 2px;
    border: solid 2px rgb(82, 82, 82);
-   margin: 0 2rem;
-   padding: 0.5rem 1rem;
-   background-color: #ec8713;
+   margin: 0px 0.5rem;
+   padding: 0 0.4rem;
+   background-color: #673f12;
 }
 
 .warn > svg {
