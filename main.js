@@ -1,11 +1,12 @@
 const accordionList = document.getElementsByClassName("accordion");
-const navListIds = ["motivation", "introduction", "variables", "arrays", "ifElse", "function", "loop", "domMan", "practice"];
+const navListIds = ["motivation", "introduction", "variables", "arrays", "objects", "ifElse", "function", "loop", "domMan", "practice"];
 const goTopBtn = document.getElementById("goTopBtn");
 const collapseBtn = document.getElementById("collapseBtn");
 const headerBtn = document.getElementById("title");
 const sideNavBtn = document.getElementById("sideNavBtn");
 const codeBlock = document.querySelectorAll(".codeBlock");
 const navList = document.querySelector(".navList");
+
 goTopBtn.addEventListener("click", () => {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 });
@@ -17,24 +18,15 @@ headerBtn.addEventListener("click", () => {
     closeAll();
 });
 
-sideNavBtn.addEventListener("click", () => {
-    if (sideNavBtn.firstElementChild.className != "navListRight") {
-        navList.style.left = "0rem";
-        sideNavBtn.firstElementChild.classList.add("navListRight");
-    }
-    else {
-        if (window.matchMedia("(max-width: 992px)").matches)
-            navList.style.left = "-10.3rem";
-        else
-            navList.style.left = "-13.1rem";
-        sideNavBtn.firstElementChild.classList.remove("navListRight");
-    }
-});
+sideNavBtn.addEventListener("click", toogleNavList);
+
 for (let i = 0; i < accordionList.length; i++) {
     accordionList[i].addEventListener("click", function () {
         toggleArr(this.firstElementChild, this);
+        closeNavList();
     });
 }
+
 navListIds.forEach(el => {
     const content = document.getElementById(`${el}`);
     const nav = document.getElementById(`${el}Nav`);
@@ -47,12 +39,14 @@ navListIds.forEach(el => {
         }, 350);
     });
 });
+
 function closeAll() {
     for (let i = 0; i < accordionList.length; i++) {
         accordionList[i].firstElementChild.className = "arrow right";
         accordionList[i].nextElementSibling.style.maxHeight = null;
     }
 }
+
 function toggleArr(arrow, content) {
     const parent = content.parentElement.parentElement;
     // content.classList.toggle("active");
@@ -66,6 +60,32 @@ function toggleArr(arrow, content) {
         parent.style.maxHeight = parent.scrollHeight + panel.scrollHeight + "px";
     }
 }
+
+function toogleNavList() {
+    if (sideNavBtn.firstElementChild.className != "navListRight") {
+        openNavList()
+    }
+    else {
+        closeNavList()
+    }
+}
+
+function closeNavList() {
+    if (sideNavBtn.firstElementChild.className != "navListLeft") {
+        if (window.matchMedia("(max-width: 992px)").matches)
+            navList.style.left = "-10.3rem";
+        else
+            navList.style.left = "-13.1rem";
+        sideNavBtn.firstElementChild.classList.remove("navListRight");
+    }
+}
+
+function openNavList() {
+    navList.style.left = "0rem";
+    sideNavBtn.firstElementChild.classList.add("navListRight");
+}
+
+
 function toggleSingleArr(arrow) {
     if (arrow.className.includes('right', 1))
         arrow.className = "arrow down";

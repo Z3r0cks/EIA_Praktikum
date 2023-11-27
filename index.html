@@ -38,6 +38,7 @@
             <li><a class="navlink" id="introductionNav">Einrichtung</a></li>
             <li><a class="navlink" id="variablesNav">Variabeln</a></li>
             <li><a class="navlink" id="arraysNav">Arrays</a></li>
+            <li><a class="navlink" id="objectsNav">Objekte</a></li>
             <li><a class="navlink" id="ifElseNav">if-Bedingungen</a></li>
             <li><a class="navlink" id="functionNav">Funktionen</a></li>
             <li><a class="navlink" id="loopNav">For-Schleife</a></li>
@@ -52,7 +53,7 @@
          <p>Diese Github-Pages Seite bietet einen kleinen Einblick in die relevanten Themen der Programmierung mit
             JavaScript. Bitte bedenkt, dass die Themen deutlich ausführlicher sind, als hier angesprochen.</p>
 
-         <!------------------------------------------------------------- why --------------------------------------------------------------------->
+         <!------------------------------------------------------------- motivation --------------------------------------------------------------------->
          <h2 id="motivation" class="contentHeader topic__header accordion">Motivation<span class="arrow right"></span>
          </h2>
          <div class="panel">
@@ -181,7 +182,10 @@
                      <a target="_blank"
                         href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1">Übungen zum
                         Thema Variabel auf w3schools</a> <br> <br>
+                        <p>Weitere Übungen</p>
+
                   </div>
+
                </div>
             </div>
          </div>
@@ -282,6 +286,72 @@
                </div>
             </div>
          </div>
+         <!------------------------------------------------------------- objects --------------------------------------------------------------------->
+         <h2 id="objects" class="contentHeader topic__header accordion">Objekte<span class="arrow right"></span>
+         </h2>
+         <div class="panel">
+            <div class="overflow-hidden">
+               <p> JavaScript-Objekte kann man sich am besten wie eine Schachtel mit beschrifteten Fächern vorstellen.
+                  Jedes Fach in dieser Schachtel kann etwas enthalten – das kann eine Zahl sein, ein Text, eine Liste
+                  oder sogar eine andere Schachtel.
+
+                  Stellen wir uns vor, wir haben eine Schachtel, die Informationen über ein Buch speichert. Diese
+                  Schachtel könnte verschiedene Fächer haben, die beschriftet sind, zum Beispiel „Titel“, „Autor“,
+                  „Seitenzahl“ und „Genre“. In jedem dieser Fächer liegt die entsprechende Information über das Buch.
+               </p>
+               <b>Aufbau:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">book</span> = {
+   <span class="colorVariable">title</span>: <span class="colorString">"Harry Potter"</span>,
+   <span class="colorVariable">author</span>: <span class="colorString">"J.K. Rowling"</span>,
+   <span class="colorVariable">pages</span>: <span class="colorType">500</span>,
+   <span class="colorVariable">genre</span>: <span class="colorString">"Fantasy"</span>,
+   <span class="colorVariable">read</span>: <span class="colorBoolean">false</span>
+}; <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></code></pre>
+               </div>
+               <p> In diesem Beispiel wird ein Objekt <span class="colorVariable">book</span> definiert. <br>
+                  Dieses Objekt hat vier Fächer, die mit <span class="colorVariable">title</span>, <span
+                     class="colorVariable">author</span>, <span class="colorVariable">pages</span> und <span
+                     class="colorVariable">genre</span> beschriftet sind. <br>
+                  In diesen Fächern liegen die entsprechenden Informationen. <br>
+                  <br>
+                  <b>Zugriff auf ein Objekt:</b> <br>
+                  Es gibt zwei Möglichkeiten um auf die Inhalte des Objekts zuzugreifen. <br>
+               </p><br>
+               <b>Variante 1:</b> <br>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">book</span>.<span class="colorVariable">title</span>);</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div> <br>
+               <p>Hierbei verwenden Sie den Namen des Objekts (buch), gefolgt von einem Punkt und dem Namen der
+                  Eigenschaft (titel). Diese Methode ist sehr übersichtlich und wird häufig verwendet, wenn der Name der
+                  Eigenschaft bekannt und ein gültiger Bezeichner ist.<br>
+                  <br>
+                  <b>Variante 2:</b> <br>
+               </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorVariable">book</span>[<span class="colorString">"title"</span>]);</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
+               </div> <br>
+               <p>Hierbei verwenden Sie den Namen des Objekts, gefolgt von eckigen Klammern. In den Klammern geben Sie
+                  den Namen der Eigenschaft als Zeichenkette (String) an. Diese Methode ist besonders nützlich, wenn der
+                  Name der Eigenschaft in einer Variablen gespeichert ist oder wenn es sich um einen Namen handelt, der
+                  keine gültigen Bezeichnerregeln befolgt (zum Beispiel Leerzeichen oder Bindestriche enthält). <br><br>
+                  Bitte beachtet, dass der <span class="colorConsole">console</span>.<span
+                     class="colorFunctionCall">log</span>(); nur als Beispiel dient, die Inhalte können auch anders
+                  verwendet werden. Z.B. direkt in eine Variable speichern oder z.B. einer If-Bedingung übegeben.
+               </p>
+               <a target="_blank" href="https://www.w3schools.com/js/js_objects.asp">Weitere Informationen zum
+                  Thema Objekte</a>
+               <h3 id="vsc" class="topic__subheader accordion">Übungen<span class="arrow right"></span></h3>
+               <div class="panel">
+                  <div class="overflow-hidden">
+                     <a target="_blank"
+                        href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_objects1">Übungen zum
+                        Thema Objekte</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
          <!------------------------------------------------------------- If/else --------------------------------------------------------------------->
          <h2 id="ifElse" class="contentHeader topic__header accordion">if-Bedingung<span class="arrow right"></span>
          </h2>
@@ -308,9 +378,11 @@
                      class="colorVariable">age</span>"
                   zugewiesen. <br>
                   Diese Variable wird nun in mehrern Schritten überprüft. <br>
-                  Zuerst wird überprüft, ob der Wert kleiner als <span class="colorType">20</span> ist, wenn ja wird
+                  Zuerst wird überprüft, ob der Wert kleiner als <span class="colorType">20</span> ist, wenn ja
+                  wird
                   der Text <span class="colorString">"You are younger than 20"</span> ausgegeben. <br>
-                  Wenn der Wert nicht kleiner als <span class="colorType>">20</span> ist, wird überprüft, ob der Wert
+                  Wenn der Wert nicht kleiner als <span class="colorType>">20</span> ist, wird überprüft, ob der
+                  Wert
                   gleich <span class="colorType">20</span> ist, wenn ja wird
                   der Text <span class="colorString">"You are 20 y.o" </span> ausgegeben. <br>
                   Wenn der Wert weder kleiner noch gleich <span class="colorType">20</span> ist, wird mit "<span
@@ -335,17 +407,24 @@
          <div class="panel">
             <div class="overflow-hidden">
                <p>
-                  Funktionen sind vordefinierte Programmierbereiche, die ausgeführt werden, wann immer ihr es benötigt.
-                  Sie können Parameter entgegennehmen, die wie Variablen fungieren, und nach ihrer Ausführung einen Wert
+                  Funktionen sind vordefinierte Programmierbereiche, die ausgeführt werden, wann immer ihr es
+                  benötigt.
+                  Sie können Parameter entgegennehmen, die wie Variablen fungieren, und nach ihrer Ausführung
+                  einen Wert
                   zurückgeben. <br>
-                  Stellt euch eine Funktion als eine Art Maschine vor: Ihr gebt dieser Maschine bestimmte Zutaten oder
-                  Ressourcen (die Parameter) ein. Die Aufgabe oder den Prozess, den diese Maschine durchführt, definiert
+                  Stellt euch eine Funktion als eine Art Maschine vor: Ihr gebt dieser Maschine bestimmte Zutaten
+                  oder
+                  Ressourcen (die Parameter) ein. Die Aufgabe oder den Prozess, den diese Maschine durchführt,
+                  definiert
                   ihr selbst durch den Code innerhalb der Funktion. Am Ende liefert die Funktion ein Ergebnis (das
                   veredelte Produkt), basierend auf den eingegebenen Daten und ihrer Programmierung. <br><br>
 
-                  Dies macht Funktionen zu einem mächtigen Werkzeug in der Programmierung. Sie ermöglichen es, Code zu
-                  modularisieren und wiederzuverwenden, was den Code sauberer, wartbarer und effizienter macht. Mit
-                  Funktionen könnt ihr komplexe Aufgaben in kleinere, handhabbare Teile zerlegen und diese bei Bedarf
+                  Dies macht Funktionen zu einem mächtigen Werkzeug in der Programmierung. Sie ermöglichen es,
+                  Code zu
+                  modularisieren und wiederzuverwenden, was den Code sauberer, wartbarer und effizienter macht.
+                  Mit
+                  Funktionen könnt ihr komplexe Aufgaben in kleinere, handhabbare Teile zerlegen und diese bei
+                  Bedarf
                   immer wieder aufrufen.
                </p> <br>
 
@@ -379,7 +458,8 @@
                   In der Funktion wird nun der Text <span class="colorString">"Hello World"</span> in der Konsole
                   ausgegeben. <br>
                   <br>
-                  Anschließend wird die Funktion mit <span class="colorFunctionCall">sayHello</span>() aufgerufen. Erst
+                  Anschließend wird die Funktion mit <span class="colorFunctionCall">sayHello</span>() aufgerufen.
+                  Erst
                   durch diesen Aufruf wird die Funktion und der Programmcode innerhalb der Funktion ausgeführt<br>
                   <br>
                <h3>Parameter und Ausgabe</h3>
@@ -392,12 +472,14 @@
 <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span class="colorType">2</span>)</code>);</span>  
 <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
                </div>
-               <p> In diesem Beispiel wird eine Funktion <span class="colorFunctionCall">add</span>() definiert. <br>
+               <p> In diesem Beispiel wird eine Funktion <span class="colorFunctionCall">add</span>() definiert.
+                  <br>
                   Diese Funktion nimmt zwei Parameter entgegen, die in der Funktion mit <span
                      class="colorVariable">a</span> und <span class="colorVariable">b</span> angesprochen
                   werden können. <br> <br>
 
-                  Die Zeile:</p>
+                  Die Zeile:
+               </p>
                <div class="codeBlock my-1 position-relative">
                   <pre><code><span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span class="colorType">2</span>)</code>);    </span><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
                </div>
@@ -405,12 +487,13 @@
                <p>ist ein verschachtelter Aufruf. <br> Es wird ein <span class="colorVariable">console</span>.<span
                      class="colorFunctionCall">log</span>()
                   aufgerufen, und innerhalb dieses Logs wird die Funktion <span class="colorFunctionCall">add</span>()
-                  mit den Parametern <span class="colorType">1</span> und <span class="colorType">2</span> aufgerufen.
+                  mit den Parametern <span class="colorType">1</span> und <span class="colorType">2</span>
+                  aufgerufen.
                   Dadurch wird die Funktion aufgerufen und das Ergebnis der Funktion (1 + 2 = 3) wird an den <span
                      class="colorVariable">console</span>.<span class="colorFunctionCall">log</span>()
                   übergeben und in der Konsole ausgegeben.<br>
-                  Die Bezeichnungen der Parameter (in diesem Beispiel <span class="colorVariable">a</span> und <span
-                     class="colorVariable">b</span>) ist euch überlassen und sollte wie
+                  Die Bezeichnungen der Parameter (in diesem Beispiel <span class="colorVariable">a</span> und
+                  <span class="colorVariable">b</span>) ist euch überlassen und sollte wie
                   gewöhnlich das repräsentieren was der Parameter darstellt. In diesem Beispiel wäre anstatt <span
                      class="colorVariable">a</span> und
                   <span class="colorVariable">b</span> somit <span class="colorVariable">numberA</span> und <span
@@ -429,7 +512,8 @@
                   auch übergeben werden müssen. Der Aufruf darf also nicht <span
                      class="colorFunctionCall">add</span>(<span class="colorType">1</span>); oder <span
                      class="colorFunctionCall">add</span>(<span class="colorType">1</span>, <span
-                     class="colorType">3</span>, <span class="colorType">5</span>); sein.<br> <br>
+                     class="colorType">3</span>, <span class="colorType">5</span>);
+                  sein.<br> <br>
                   Eine Funktion muss keinen Parameter entgegennehmen und auch keinen Wert zurückgeben. <br>
 
                   Der Aufruf einer Funktion kann auch in einer Variable gespeichert werden. <br><br>
@@ -469,21 +553,26 @@
 <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
                </div>
                <p> In diesem Beispiel wird eine Funktion mit dem Namen "<span
-                     class="colorFunctionCall">isAdult</span>()" definiert. <br>
+                     class="colorFunctionCall">isAdult</span>()"
+                  definiert. <br>
                   Diese Funktion nimmt einen Parameter entgegen, der in der Funktion mit "<span
                      class="colorVariable">age</span>" angesprochen werden
                   kann.
                   <br>
-                  In der Funktion wird nun überprüft, ob der Wert von "<span class="colorVariable">age</span>" größer
+                  In der Funktion wird nun überprüft, ob der Wert von "<span class="colorVariable">age</span>"
+                  größer
                   oder gleich <span class="colorType">18</span> ist. <br>
                   Wenn der Wert größer oder gleich <span class="colorType">18</span> ist, wird mit "<span
-                     class="colorIf">return</span>" der Wert "<span class="colorBoolean">true</span>" zurückgegeben.
+                     class="colorIf">return</span>" der Wert "<span class="colorBoolean">true</span>"
+                  zurückgegeben.
                   <br>
                   Wenn der Wert kleiner als <span class="colorType">18</span> ist, wird mit "<span
-                     class="colorIf">return</span>" der Wert "<span class="colorBoolean">false</span>" zurückgegeben.
+                     class="colorIf">return</span>" der Wert "<span class="colorBoolean">false</span>"
+                  zurückgegeben.
                   <br>
                   <br>
-                  Anschließend wird die Funktion mit dem Parameter <span class="colorType>">20</span> aufgerufen und das
+                  Anschließend wird die Funktion mit dem Parameter <span class="colorType>">20</span> aufgerufen
+                  und das
                   Ergebnis in der Variable
                   <span class="colorVariable>">result</span>
                   gespeichert, und mit einem <span class="colorVariable">console</span>.<span
@@ -509,7 +598,8 @@
                <p>In diesem Beispiel wird in der If-Bedingung direkt eine Funktion aufgerufen, die entsprechend
                   dem
                   Alter
-                  ein "<span class="colorBoolean">true</span>" oder "<span class="colorBoolean">false</span>" ausgibt.
+                  ein "<span class="colorBoolean">true</span>" oder "<span class="colorBoolean">false</span>"
+                  ausgibt.
                </p> <br>
                <a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">Weitere Informationen zum
                   Thema Funktionen</a>
@@ -517,7 +607,8 @@
                <div class="panel">
                   <div class="overflow-hidden">
                      <a target="_blank"
-                        href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions1">Übungen zum
+                        href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions1">Übungen
+                        zum
                         Thema Funktionen auf w3schools</a> <br> <br>
                   </div>
                </div>
@@ -532,14 +623,17 @@
                   Eine For-Schleife ist eine Möglichkeit, eine bestimmte Anzahl an Durchläufen, auch Iterationen
                   genannt, zu definieren. Dies bedeutet, dass ein bestimmter Programmcode eine festgelegte Anzahl
                   durchlaufen kann und somit mehrmals ausgeführt wird. Beispiele hierfür sind das Ausgeben aller
-                  Elemente einer Liste mit Elementen, das Durchlaufen eines Arrays (siehe Array) oder das Durchlaufen
+                  Elemente einer Liste mit Elementen, das Durchlaufen eines Arrays (siehe Array) oder das
+                  Durchlaufen
                   einer Funktion mit unterschiedlichen Parametern.<br><br>
 
                   <b>Aufbau einer For-Schleife:</b><br><br>
                   Eine For-Schleife besteht aus drei Hauptteilen:<br> <br>
                   <b>1. Initialisierung:</b><br>
-                  Hier wird eine Variable definiert, die in der Schleife als Zähler verwendet wird. Diese Variable gibt
-                  an, wie oft die Schleife durchlaufen werden soll. Üblicherweise verwendet man hierfür die Variable
+                  Hier wird eine Variable definiert, die in der Schleife als Zähler verwendet wird. Diese Variable
+                  gibt
+                  an, wie oft die Schleife durchlaufen werden soll. Üblicherweise verwendet man hierfür die
+                  Variable
                   "<span class="colorFunction">let</span> <span class="colorVariable">i</span>", wobei "<span
                      class="colorVariable">i</span>" für "Index"
                   steht und oft bei <span class="colorType">0</span> beginnt.<br>
@@ -553,15 +647,21 @@
                <p>
                <p>
                   <b>2. Bedingung:</b><br>
-                  An diesem Punkt der For-Schleife wird eine Bedingung definiert, die vor jedem Durchlauf überprüft
-                  wird. Ist die Bedingung erfüllt (ergibt sie „<span class="colorBoolean">true</span>“), wird der Code
-                  innerhalb der Schleife ausgeführt. Nach jedem Durchlauf wird die Bedingung erneut geprüft. Sobald die
+                  An diesem Punkt der For-Schleife wird eine Bedingung definiert, die vor jedem Durchlauf
+                  überprüft
+                  wird. Ist die Bedingung erfüllt (ergibt sie „<span class="colorBoolean">true</span>“), wird der
+                  Code
+                  innerhalb der Schleife ausgeführt. Nach jedem Durchlauf wird die Bedingung erneut geprüft.
+                  Sobald die
                   Bedingung nicht mehr erfüllt ist (ergibt „<span class="colorBoolean">false</span>“), wird die
                   Ausführung der Schleife beendet. <br>
-                  Die Bedingung selbst wird ähnlich wie bei einer If-Bedingung definiert und muss ein klares Ergebnis
-                  von „<span class="colorBoolean">true</span>“ oder „<span class="colorBoolean">false</span>“ liefern.
+                  Die Bedingung selbst wird ähnlich wie bei einer If-Bedingung definiert und muss ein klares
+                  Ergebnis
+                  von „<span class="colorBoolean">true</span>“ oder „<span class="colorBoolean">false</span>“
+                  liefern.
                   Ein häufiges Beispiel für eine solche Bedingung ist „<span class="colorVariable">i</span>
-                  < <span class="colorType">10</span>“, was bedeutet, dass die Schleife so lange ausgeführt wird, wie
+                  < <span class="colorType">10</span>“, was bedeutet, dass die Schleife so lange ausgeführt wird,
+                     wie
                      die Variable <span class="colorVariable">i</span> kleiner als <span class="colorType">10</span>
                      ist.<br><br>
                </p>
@@ -573,17 +673,22 @@
                </div>
                <p>
                   <b>3. Inkrementierung:</b><br>
-                  In diesem Schritt wird die Zählvariable, üblicherweise „<span class="colorVariable">i</span>“, nach
-                  jedem Schleifendurchlauf verändert. Meistens wird sie um 1 erhöht. Diese Erhöhung ist entscheidend, um
+                  In diesem Schritt wird die Zählvariable, üblicherweise „<span class="colorVariable">i</span>“,
+                  nach
+                  jedem Schleifendurchlauf verändert. Meistens wird sie um 1 erhöht. Diese Erhöhung ist
+                  entscheidend, um
                   eine endlose Ausführung der Schleife zu vermeiden. <br>
                   Wenn zum Beispiel die Bedingung „<span class="colorVariable">i</span>
-                  < <span class="colorType">10</span>“ lautet, bedeutet dies, dass die Schleife so lange ausgeführt
-                     wird, bis „<span class="colorVariable">i</span>“ den Wert 10 erreicht. Da „i“ nach jedem Durchlauf
+                  < <span class="colorType">10</span>“ lautet, bedeutet dies, dass die Schleife so lange
+                     ausgeführt
+                     wird, bis „<span class="colorVariable">i</span>“ den Wert 10 erreicht. Da „i“ nach jedem
+                     Durchlauf
                      um 1 erhöht wird, endet die
                      Schleife nach 10 Durchläufen, weil die Bedingung dann nicht mehr erfüllt ist. <br>
                      Der Ausdruck „<span class="colorVariable">i</span>++“ ist eine gängige Kurzform für „<span
                         class="colorVariable">i</span> = <span class="colorVariable">i</span> + <span
-                        class="colorType">1</span>“, was eine einfache und effiziente Art ist, den Zähler zu erhöhen.
+                        class="colorType">1</span>“, was eine einfache und effiziente Art ist, den Zähler zu
+                     erhöhen.
                </p>
                <br>
                <div class="codeBlock my-1 position-relative">
@@ -592,9 +697,12 @@
 }</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
                </div>
                <p>
-                  Sobald die Bedingung erfüllt ist, wird der Programmcode im Schleifenblock (oder Schleifenkörper) der
-                  For-Schleife ausgeführt. Auch hier kann der Inhalt vielfältig sein. Zum Beispiel kann innerhalb der
-                  For-Schleife eine weitere For-Schleife aufgerufen werden, um durch ein mehrdimensionales Array zu
+                  Sobald die Bedingung erfüllt ist, wird der Programmcode im Schleifenblock (oder Schleifenkörper)
+                  der
+                  For-Schleife ausgeführt. Auch hier kann der Inhalt vielfältig sein. Zum Beispiel kann innerhalb
+                  der
+                  For-Schleife eine weitere For-Schleife aufgerufen werden, um durch ein mehrdimensionales Array
+                  zu
                   iterieren:<br><br>
                </p>
 
@@ -613,17 +721,21 @@
 }</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
                </div>
                <p>
-                  In diesem Beispiel wird ein mehrdimensionales Array (ein Array, das weitere Arrays enthält) definiert.
+                  In diesem Beispiel wird ein mehrdimensionales Array (ein Array, das weitere Arrays enthält)
+                  definiert.
                   <br>
-                  Das äußere Array in unserem Beispiel hat drei innere Arrays: [<span class="colorType">1</span>, <span
-                     class="colorType">2</span>, <span class="colorType">3</span>], [<span class="colorType">4</span>,
+                  Das äußere Array in unserem Beispiel hat drei innere Arrays: [<span class="colorType">1</span>,
+                  <span class="colorType">2</span>, <span class="colorType">3</span>], [<span
+                     class="colorType">4</span>,
                   <span class="colorType">5</span>, <span class="colorType">6</span>] und [<span
                      class="colorType">7</span>, <span class="colorType">8</span>, <span
                      class="colorType">9</span>].<br>
                   Der Ausdruck <span class="colorVariable">array</span>.<span class="colorVariable">length</span>
-                  liefert die Länge des Arrays, in diesem Fall 3, da es drei innere Arrays gibt (die Indizes dieser
+                  liefert die Länge des Arrays, in diesem Fall 3, da es drei innere Arrays gibt (die Indizes
+                  dieser
                   Arrays sind 0, 1 und 2).<br>
-                  Das äußere Array wird nun in einer For-Schleife durchlaufen. In jeder Iteration der äußeren Schleife
+                  Das äußere Array wird nun in einer For-Schleife durchlaufen. In jeder Iteration der äußeren
+                  Schleife
                   wird mit einer weiteren For-Schleife durch die Elemente des jeweiligen inneren Arrays iteriert.
                   Anschließend wird jeder Wert in der Konsole ausgegeben.
                   <br>
@@ -640,8 +752,8 @@
    }
 }</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
                </div>
-               <p>Wenn <span class="colorVariable">i</span> gleich <span class="colorType">5</span> ist, wird mit "<span
-                     class="colorIf">break</span>" die Schleife abgebrochen. </p>
+               <p>Wenn <span class="colorVariable">i</span> gleich <span class="colorType">5</span> ist, wird mit
+                  "<span class="colorIf">break</span>" die Schleife abgebrochen. </p>
                <br>
                <br>
                <b>Beispiel:</b> <br>
@@ -654,8 +766,9 @@
    }
 }</code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
                </div>
-               <p>Wenn <span class="colorVariable">i</span> gleich <span class="colorType">5</span> ist, wird mit "<span
-                     class="colorIf">continue</span>" der aktuelle Schleifendurchlauf abgebrochen und die nächste
+               <p>Wenn <span class="colorVariable">i</span> gleich <span class="colorType">5</span> ist, wird mit
+                  "<span class="colorIf">continue</span>" der aktuelle Schleifendurchlauf abgebrochen und die
+                  nächste
                   Iteration gestartet.</p><br>
 
                </p>
@@ -678,19 +791,27 @@
          <div class="panel">
             <div class="overflow-hidden">
                <p>
-                  DOM steht für "Document Object Model" und repräsentiert die Struktur und den Inhalt eurer Webseite in
-                  Form eines Objektmodells. Durch DOM-Manipulation könnt ihr die aktuellen Inhalte auf der Webseite
-                  ändern oder anpassen. Ein Beispiel hierfür ist die Änderung des Inhalts eines HTML-Elements durch
+                  DOM steht für "Document Object Model" und repräsentiert die Struktur und den Inhalt eurer
+                  Webseite in
+                  Form eines Objektmodells. Durch DOM-Manipulation könnt ihr die aktuellen Inhalte auf der
+                  Webseite
+                  ändern oder anpassen. Ein Beispiel hierfür ist die Änderung des Inhalts eines HTML-Elements
+                  durch
                   einen Mausklick, das Ändern der Farbe oder das Umsetzen komplexerer Interaktionen. <br>
                   Für die Manipulation der DOM-Elemente benötigt ihr grundsätzlich drei Dinge: <br><br>
                   <b>1. Das HTML-Element:</b><br>
-                  Dies ist das Element, das ihr manipulieren möchtet. Es muss in eurem HTML-Dokument vorhanden sein.
-                  Zudem ist es wichtig, sicherzustellen, dass das HTML vollständig geladen ist, bevor auf das JavaScript
+                  Dies ist das Element, das ihr manipulieren möchtet. Es muss in eurem HTML-Dokument vorhanden
+                  sein.
+                  Zudem ist es wichtig, sicherzustellen, dass das HTML vollständig geladen ist, bevor auf das
+                  JavaScript
                   zugegriffen wird. Hierfür kann das Attribut "defer" im Script-Tag verwendet werden (siehe <a
-                     target="_blank" href="https://www.w3schools.com/tags/att_script_defer.asp">defer</a>). Um auf das
-                  gewünschte HTML-Element zugreifen zu können, müsst ihr es zunächst identifizieren. Der einfachste Weg
+                     target="_blank" href="https://www.w3schools.com/tags/att_script_defer.asp">defer</a>). Um auf
+                  das
+                  gewünschte HTML-Element zugreifen zu können, müsst ihr es zunächst identifizieren. Der
+                  einfachste Weg
                   ist, dem Element eine eindeutige ID zuzuweisen. Anschließend könnt ihr mit Methoden wie "<span
-                     class="colorVariable">document</span>.<span class="colorFunctionCall">getElementById</span>()" oder
+                     class="colorVariable">document</span>.<span class="colorFunctionCall">getElementById</span>()"
+                  oder
                   "<span class="colorVariable">document</span>.<span class="colorFunctionCall">querySelector</span>()"
                   auf das Element zugreifen.<br><br>
                   <b>Beispiel:</b>
@@ -699,7 +820,8 @@
                <div class="codeBlock my-1 position-relative">
                   <pre><code><span class="colorFunction">const</span> <span class="colorVariable">button</span> = <span class="colorConsole">document</span>.<span class="colorFunctionCall">querySelector</span>(<span class="colorString">"#button"</span>);   <img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></code></pre>
                </div>
-               <p> Zu sehen ist eine neue Variable mit dem Namen "<span class="colorVariable">button</span>" der ein
+               <p> Zu sehen ist eine neue Variable mit dem Namen "<span class="colorVariable">button</span>" der
+                  ein
                   HTML-Element zugewiesen wird. Dieses HTML-Element wird durch den <span
                      class="colorFunctionCall">querySelector</span>() erkannt. In diesem Selector steht "<span
                      class="colorString">"#button"</span>", was die einzigartige ID des HTML-Elements ist:<br></p>
@@ -708,31 +830,38 @@
                </div>
                <br>
                <p>
-                  Wichtig ist, dass beim Einsatz von <span class="colorFunctionCall">querySelector</span>() die Raute
-                  (#) eine ID kennzeichnet. Wenn ihr eine <span class="colorVariable">class</span> verwendet, müsst ihr
+                  Wichtig ist, dass beim Einsatz von <span class="colorFunctionCall">querySelector</span>() die
+                  Raute
+                  (#) eine ID kennzeichnet. Wenn ihr eine <span class="colorVariable">class</span> verwendet,
+                  müsst ihr
                   anstelle der Raute einen Punkt verwenden, ähnlich wie in CSS. Zum Beispiel: <span
                      class="colorVariable">document</span>.<span class="colorFunctionCall">querySelector</span>(<span
-                     class="colorString">".button"</span>) für eine Klasse, und <span
-                     class="colorVariable">document</span>.<span class="colorFunctionCall">querySelector</span>(<span
-                     class="colorString">"#button"</span>) für eine ID. Bei <span
-                     class="colorFunctionCall">getElementById</span> ist die Raute nicht erforderlich, da sich diese
+                     class="colorString">".button"</span>)
+                  für eine Klasse, und <span class="colorVariable">document</span>.<span
+                     class="colorFunctionCall">querySelector</span>(<span class="colorString">"#button"</span>)
+                  für eine ID. Bei <span class="colorFunctionCall">getElementById</span> ist die Raute nicht
+                  erforderlich, da sich diese
                   Methode immer auf eine ID bezieht. <br>
                   Aber Vorsicht: Da es von <span class="colorVariable">classes</span> oft mehrere Objekte gibt, im
                   Gegensatz zur ID, wird bei <span class="colorVariable">document</span>.<span
                      class="colorFunctionCall">querySelector</span>() immer das <b>erste</b> Element im HTML
                   angesprochen. Wenn ihr alle Elemente mit derselben Klasse ansprechen wollt, müsst ihr <span
                      class="colorVariable">document</span>.<span class="colorFunctionCall">querySelectorAll</span>()
-                  verwenden. Diese Methode liefert eine Liste aller Elemente, die ihr dann beispielsweise mit einer
+                  verwenden. Diese Methode liefert eine Liste aller Elemente, die ihr dann beispielsweise mit
+                  einer
                   For-Schleife durchlaufen könnt.
                </p>
                <br>
                <p>
                   <b>2. Das Event:</b><br>
                   Das Event ist der Auslöser für die Manipulation. Es kann ein Mausklick, ein Tastendruck, ein
-                  Hover-Effekt oder eine Vielzahl anderer Benutzeraktionen sein. Dieses Event wird einem spezifischen
+                  Hover-Effekt oder eine Vielzahl anderer Benutzeraktionen sein. Dieses Event wird einem
+                  spezifischen
                   HTML-Element im JavaScript-Code zugeordnet. Der Browser überwacht dann dieses Event auf dem
-                  entsprechenden HTML-Element. Zum Beispiel, wenn ein Event für einen Mausklick definiert ist, wird eine
-                  bestimmte Aktion oder Funktion ausgelöst, sobald ein Klick auf diesem Element erfolgt. So könnt ihr
+                  entsprechenden HTML-Element. Zum Beispiel, wenn ein Event für einen Mausklick definiert ist,
+                  wird eine
+                  bestimmte Aktion oder Funktion ausgelöst, sobald ein Klick auf diesem Element erfolgt. So könnt
+                  ihr
                   interaktive Funktionalitäten auf eurer Webseite implementieren.
                </p>
 
@@ -744,16 +873,21 @@
 </code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"></pre>
                </div>
                <p>
-                  Im folgenden Beispiel nutzen wir die gleiche Variable wie im vorherigen Code. Dem Button wird nun ein
+                  Im folgenden Beispiel nutzen wir die gleiche Variable wie im vorherigen Code. Dem Button wird
+                  nun ein
                   Event-Listener hinzugefügt, indem auf die Variable zugegriffen und mit der Methode <span
                      class="colorFunctionCall">addEventListener</span>() erweitert wird. Der String <span
-                     class="colorString">"click"</span> spezifiziert, auf welches Event geachtet werden soll. Hier könnt
+                     class="colorString">"click"</span> spezifiziert, auf welches Event geachtet werden soll. Hier
+                  könnt
                   ihr verschiedene Event-Typen angeben, allerdings immer nur einen pro Event-Listener.<br><br>
 
                   <b>3. Die Funktion:</b><br>
-                  Die Funktion definiert den Programmcode, der ausgeführt wird, sobald das Event auf dem HTML-Element
-                  ausgelöst wird. Ihr könnt die Funktion nach euren Bedürfnissen gestalten; sie kann alles von sehr
-                  einfachen Anweisungen bis hin zu komplexen Operationen enthalten. Diese Flexibilität ermöglicht es
+                  Die Funktion definiert den Programmcode, der ausgeführt wird, sobald das Event auf dem
+                  HTML-Element
+                  ausgelöst wird. Ihr könnt die Funktion nach euren Bedürfnissen gestalten; sie kann alles von
+                  sehr
+                  einfachen Anweisungen bis hin zu komplexen Operationen enthalten. Diese Flexibilität ermöglicht
+                  es
                   euch, auf Benutzeraktionen in vielfältiger Weise zu reagieren.
                </p>
 
@@ -767,11 +901,15 @@
                </div>
                <p>Im Event-Listener ist die Funktion: <span class="colorFunction">function</span>() {<span
                      class="colorComment">...</span>} zu sehen. Diese Schreibweise bezeichnet man als "anonyme
-                  Funktion", da die Funktion selbst keinen Namen hat. Wenn auf den Button auf der Webseite geklickt
-                  wird, wird die in der anonymen Funktion definierte Aktion ausgeführt, in diesem Fall wird der Text
+                  Funktion", da die Funktion selbst keinen Namen hat. Wenn auf den Button auf der Webseite
+                  geklickt
+                  wird, wird die in der anonymen Funktion definierte Aktion ausgeführt, in diesem Fall wird der
+                  Text
                   "Button wurde geklickt" in der Konsole ausgegeben.<br><br>
-                  Es besteht ebenfalls die Möglichkeit, eine zuvor definierte benannte Funktion zu verwenden. In solchen
-                  Fällen verweist ihr im Event-Listener einfach auf den Namen der Funktion, anstatt eine neue anonyme
+                  Es besteht ebenfalls die Möglichkeit, eine zuvor definierte benannte Funktion zu verwenden. In
+                  solchen
+                  Fällen verweist ihr im Event-Listener einfach auf den Namen der Funktion, anstatt eine neue
+                  anonyme
                   Funktion zu schreiben.<br><br>
                   <b>Beispiel:</b><br>
                </p>
@@ -786,10 +924,14 @@
                </div>
                <p>
                   Hier wird die Funktion <span class="colorFunctionCall">buttonClicked</span> im Event-Listener
-                  referenziert. Die Funktion selbst wird erst aufgerufen und der Programmcode innerhalb der Funktion
-                  ausgeführt, wenn das entsprechende Event – in diesem Fall ein Klick – auftritt. Es ist wichtig zu
-                  beachten, dass bei der Verwendung einer benannten Funktion im Event-Listener die Funktionsklammern ()
-                  weggelassen werden müssen. Andernfalls würde die Funktion sofort beim Erstellen des Event-Listeners
+                  referenziert. Die Funktion selbst wird erst aufgerufen und der Programmcode innerhalb der
+                  Funktion
+                  ausgeführt, wenn das entsprechende Event – in diesem Fall ein Klick – auftritt. Es ist wichtig
+                  zu
+                  beachten, dass bei der Verwendung einer benannten Funktion im Event-Listener die
+                  Funktionsklammern ()
+                  weggelassen werden müssen. Andernfalls würde die Funktion sofort beim Erstellen des
+                  Event-Listeners
                   ausgeführt, anstatt erst beim Eintreten des Ereignisses.
                </p>
                <br>
@@ -839,7 +981,8 @@
                   <li>Wenn die Zahl 1 ist, ist die Folge beendet.</li>
                </ul>
                <p>Wenn somit die Zahl 7 der Funktion übergeben wird, wirft diese mehrere Zahlen in der Konsole
-                  (<span class="colorVariable">console</span>.<span class="colorFunctionCall">log</span>()) aus, bis
+                  (<span class="colorVariable">console</span>.<span class="colorFunctionCall">log</span>()) aus,
+                  bis
                   die 1 erreicht wurde, dann hört die Funktion auf.</p>
                <p>Beispiel: Die Collatz-Folge für die Zahl 7 ist:</p>
                <p> 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1</p> <br>
