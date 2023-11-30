@@ -198,10 +198,9 @@
                         wahrheitswert (mit einem booleschen Wert true oder false), und nichts (mit dem Wert null). Gib
                         den Typ jeder Variable mit console.log(typeof variable) aus, was kannst du dort sehen?<br> <br>
                         <b class="colorBoolean">Übung 5:</b> <br>
-                        Aufgabe: Erstelle eine Konstante MAX_ANZAHL und weise ihr den Wert 100 zu. Versuche, den Wert
+                        Erstelle eine Konstante MAX_ANZAHL und weise ihr den Wert 100 zu. Versuche, den Wert
                         von MAX_ANZAHL zu ändern und beobachte, was passiert. <br><br>
                         <b class="colorBoolean">Übung 6:</b> <br>
-                        Aufgabe:
                         Erstelle vier Variablen: vorname, nachname, beruf, und stadt.
                         Weise jeder dieser Variablen einen entsprechenden Wert zu (zum Beispiel deinen Vornamen,
                         Nachnamen, deinen Beruf und deine Stadt).
@@ -331,7 +330,7 @@
                         Erstelle ein Array tiere mit mindestens fünf Tierarten.
                         Verwende eine Schleife, um alle Tiere in der Konsole auszugeben.<br> <br>
                         <b class="colorString">Übung 4:</b> <br>
-                        Erstelle ein Array gemischteElemente mit verschiedenen Datentypen (Zahlen, Strings, Booleans).
+                        Erstelle ein Array "gemischteElemente" mit verschiedenen Datentypen (Zahlen, Strings, Booleans).
                         Verwende die Array-Methoden <a target="_blank"
                            href="https://www.w3schools.com/jsref/jsref_filter.asp">filter</a> und <a target="_blank"
                            href="https://www.w3schools.com/jsref/jsref_map.asp">map</a>, um zuerst alle Strings zu
@@ -339,14 +338,14 @@
                         Länge auszugeben.<br> <br>
                         <b>Fortgeschrittene Übungen</b> <br> <br>
                         <b class="colorBoolean">Übung 5:</b> <br>
-                        Erstelle ein zweidimensionales Array matrix, das als einfache 3x3-Matrix mit numerischen Werten
+                        Erstelle ein zweidimensionales Array "matrix", das als einfache 3x3-Matrix mit numerischen
+                        Werten
                         gefüllt ist. Schreibe eine Funktion (siehe Funktionen), die die Diagonalelemente der Matrix
                         ausgibt.<br> <br>
                         <b class="colorString">Übung 6:</b> <br>
-                        Erstelle ein Array personen, das mehrere Objekte enthält, wobei jedes Objekt eine Person mit
+                        Erstelle ein Array "personen", das mehrere Objekte enthält, wobei jedes Objekt eine Person mit
                         Eigenschaften wie name, alter und beruf darstellt.
-                        Verwende eine Kombination aus forEach oder <a
-                           href="https://www.w3schools.com/jsref/jsref_foreach.asp">ForEach</a> und filter, um bestimmte
+                        Verwende eine Kombination aus forEach oder map und filter, um bestimmte
                         Informationen aus den
                         Objekten zu extrahieren und auszugeben, z. B. alle Namen der Personen über 30 Jahre.<br>
                      </p>
@@ -499,7 +498,96 @@
                   Wenn der Wert weder kleiner noch gleich <span class="colorType">20</span> ist, wird mit "<span
                      class="colorIf">else</span>" automatisch angenommen, dass age größer als <span
                      class="colorType">20</span> ist.<br> <br>
+
+                  If-Bedingung können auch unterschiedliche Bedingung enthalten. <br>
+                  <b>Beispiel:</b> <br>
                </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">age</span> = <span class="colorType">20</span>;
+<span class="colorFunction">let</span> <span class="colorVariable">name</span> = <span class="colorString">"Max"</span>;
+
+<span class="colorIf">if</span> (<span class="colorVariable">age</span> &lt; <span class="colorType">20</span> &amp;&amp; <span class="colorVariable">name</span> == <span class="colorString">"Max"</span>) {
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are younger than 20 and your name is Max"</span>);
+} <span class="colorIf">else if</span> (<span class="colorVariable">age</span> == <span class="colorType">20</span> &amp;&amp; <span class="colorVariable">name</span> == <span class="colorString">"Max"</span>) {
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are 20 y.o and your name is Max"</span>);
+} <span class="colorIf">else</span> {
+   <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are older than 20 and your name is Max"</span>);
+} </code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"> </pre>
+
+               </div>
+               <p> In diesem Beispiel wird der Wert <span class="colorType">20</span> in die Variable "<span
+                     class="colorVariable">age</span>" und der Wert <span class="colorString">"Max"</span> in die
+                  Variable "<span class="colorVariable">name</span>" zugewiesen. <br>
+                  Diese Variablen werden nun in mehrern Schritten überprüft. <br>
+                  Zuerst wird überprüft, ob der Wert kleiner als <span class="colorType">20</span> ist und ob der
+                  Wert
+                  gleich <span class="colorString">"Max"</span> ist, wenn ja wird
+                  der Text <span class="colorString">"You are younger than 20 and your name is Max"</span>
+                  ausgegeben. <br>
+                  Wenn der Wert nicht kleiner als <span class="colorType">20</span> ist und der Wert nicht gleich
+                  <span class="colorString">"Max"</span> ist, wird überprüft, ob der Wert gleich <span
+                     class="colorType">20</span> ist und ob der Wert gleich <span class="colorString">"Max"</span>
+                  ist, wenn ja wird
+                  der Text <span class="colorString">"You are 20 y.o and your name is Max"</span> ausgegeben. <br>
+                  Wenn der Wert weder kleiner noch gleich <span class="colorType">20</span> ist und der Wert nicht
+                  gleich <span class="colorString">"Max"</span> ist, wird mit "<span class="colorIf">else</span>"
+                  automatisch angenommen, dass age größer als <span class="colorType">20</span> ist und der Wert
+                  gleich <span class="colorString">"Max"</span> ist.<br> <br> Neben dem Und-Operator (&&) gibt es noch
+                  den Oder-Operator (||). <br>
+                  <span class="colorIf">if</span> (<span class="colorVariable">age</span> &lt; <span
+                     class="colorType">20</span> || <span class="colorVariable">name</span> == <span
+                     class="colorString">"Max"</span>) { <br> <br>
+                  Der Oder-Operator (||) gibt true zurück, wenn mindestens einer der Operanden true ist. <br> <br>
+                  If-Bedingungen können auch verschachtelt sein: <br>
+                  <b>Beispiel:</b> <br>
+               </p>
+               <div class="codeBlock my-1 position-relative">
+                  <pre><code><span class="colorFunction">let</span> <span class="colorVariable">age</span> = <span class="colorType">20</span>;
+<span class="colorFunction">let</span> <span class="colorVariable">name</span> = <span class="colorString">"Max"</span>;
+
+<span class="colorIf">if</span> (<span class="colorVariable">age</span> &lt; <span class="colorType">20</span>) {
+   <span class="colorIf">if</span> (<span class="colorVariable">name</span> == <span class="colorString">"Max"</span>) {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are younger than 20 and your name is Max"</span>);
+   } <span class="colorIf">else</span> {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are younger than 20 and your name is not Max"</span>);
+   }
+} <span class="colorIf">else if</span> (<span class="colorVariable">age</span> == <span class="colorType">20</span>) {
+   <span class="colorIf">if</span> (<span class="colorVariable">name</span> == <span class="colorString">"Max"</span>) {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are 20 y.o and your name is Max"</span>);
+   } <span class="colorIf">else</span> {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are 20 y.o and your name is not Max"</span>);
+   }
+
+} <span class="colorIf">else</span> {
+   <span class="colorIf">if</span> (<span class="colorVariable">name</span> == <span class="colorString">"Max"</span>) {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are older than 20 and your name is Max"</span>);
+   } <span class="colorIf">else</span> {
+      <span class="colorConsole">console</span>.<span class="colorFunctionCall">log</span>(<span class="colorString">"You are older than 20 and your name is not Max"</span>);
+   }
+} </code><img class="copyToClipboard" src="./assets/img/copyToClipboard.png"> </pre>
+               </div>
+               <p> In diesem Beispiel wird der Wert <span class="colorType">20</span> in die Variable "<span
+                     class="colorVariable">age</span>" und der Wert <span class="colorString">"Max"</span> in die
+                  Variable "<span class="colorVariable">name</span>" zugewiesen. <br>
+                  Diese Variablen werden nun in mehrern Schritten überprüft. <br>
+                  Zuerst wird überprüft, ob der Wert kleiner als <span class="colorType">20</span> ist, wenn ja
+                  wird
+                  überprüft, ob der Wert gleich <span class="colorString">"Max"</span> ist, wenn ja wird
+                  der Text <span class="colorString">"You are younger than 20 and your name is Max"</span>
+                  ausgegeben. <br>
+                  Wenn der Wert nicht kleiner als <span class="colorType">20</span> ist, wird überprüft, ob der
+                  Wert gleich <span class="colorType">20</span> ist, wenn ja wird
+                  überprüft, ob der Wert gleich <span class="colorString">"Max"</span> ist, wenn ja wird
+                  der Text <span class="colorString">"You are 20 y.o and your name is Max"</span> ausgegeben. <br>
+                  Wenn der Wert weder kleiner noch gleich <span class="colorType">20</span> ist, wird mit "<span
+                     class="colorIf">else</span>" automatisch angenommen, dass age größer als <span
+                     class="colorType">20</span> ist und der Wert gleich <span class="colorString">"Max"</span> ist.
+                  <br>
+                  Wenn der Wert weder kleiner noch gleich <span class="colorType">20</span> ist, wird mit "<span
+                     class="colorIf">else</span>" automatisch angenommen, dass age größer als <span
+                     class="colorType">20</span> ist und der Wert nicht gleich <span class="colorString">"Max"</span>
+                  ist. <br>
+                  <br>
                <a target="_blank" href="https://www.w3schools.com/js/js_if_else.asp">Weitere Informationen zum
                   Thema If/else</a> <br>
                <h3 id="vsc" class="topic__subheader accordion">Übungen<span class="arrow right"></span></h3>
@@ -507,7 +595,7 @@
                   <div class="overflow-hidden">
                      <a target="_blank"
                         href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_conditions1">Übungen zum
-                        Thema If/else auf w3schools</a> <br> <br>
+                        Thema If/else auf w3schools</a> <br> <br>fgemischteElemente
                      <p>
                      <p class="warn"><svg class="mr-1" fill="none" xmlns="http://www.w3.org/2000/svg"
                            viewBox="0 0 24 24">
